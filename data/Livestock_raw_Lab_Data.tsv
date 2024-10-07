@@ -1,0 +1,960 @@
+SN	Date	HerdID	form_ID	species	AnimalID	Earing	Breed 	Age	Sex	Lactating	Healthy	Sick	Recovered	SampleID 	Sector 	Cell	Village	RBT_sample 	RBTDate	ELISA_sample	ELISADate 	RBT_ELISA
+1	28/03/2023	A	RWE001A	goat	G001	Cyasha cy'impuga	Local	Adult	F	Yes				RPA001	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+2		A	RWE001A	goat	G002	Buregeya	Local	Adult	F	Yes				RPA002	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+3		A	RWE001A	goat	G003	Mukara	Local	Adult	F	Yes				RPA003	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+4		A	RWE001A	goat	G004	Mpuga	Local	Adult	F	Yes				RPA004	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+5		A	RWE001A	goat	G005	no name	Local	Adult	F	No				RPA005	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+6		A	RWE001A	goat	G006	Kajisho	Local	Adult	F	No				RPA006	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+7		A	RWE001A	goat	G007	Rucocero	Local	Adult	F	No				RPA007	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+8		A	RWE001A	goat	G008	Nkungu	Local	Adult	F	Yes				RPA008	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+9		A	RWE001A	goat	G009	Bugondo	Local	Adult	F	Yes				RPA009	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+10		A	RWE001A	goat	G010	Ruhaya	Local	Adult	M	No				RPA010	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+11		A	RWE001A	goat	G011	Gisa	Local	Adult	F	Yes				RPA011	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+12		A	RWE001A	goat	G012	Cyoya	Local	Adult	F	No				RPA012	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+13		A	RWE001A	goat	G013	Biyenji	Local	Adult	F	Yes				RPA013	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+14		A	RWE001A	goat	G014	Rusa	Local	Adult	M	No				RPA014	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+15		A	RWE001A	goat	G015	Rubere	Local	Adult	F	Yes				RPA015	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+16		A	RWE001A	goat	G016	Kibibi	Local	Young	M	No				RPA016	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+17		A	RWE001A	goat	G017	Gakungu k'icyasha	Local	Young	M	No				RPA017	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+18		A	RWE001A	goat	G018	Gacecero	Local	Young	F	No				RPA018	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+19		A	RWE001A	goat	G019	Ruvuro	Local	Young	M	No				RPA019	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+20		A	RWE001A	goat	G020	Kozi	Local	Young	F	No				RPA020	Rwempasha	Rugarama 	Rugarama	Negative		Negative	11/14/23	Negative 
+21		A	RWE001A	cattle	C001	zero970754	Cross	Adult	F	No	Yes			RPA021	Rwempasha	Rugarama 	Rugarama	Positive		Positive	6/11/23	Positive
+22		A	RWE001A	cattle	C002	zero970752	Cross	Young	F	No	Yes			RPA022	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+23		A	RWE001A	cattle	C003	zero970729	Cross	Adult	F	Yes	Yes			RPA023	Rwempasha	Rugarama 	Rugarama	Positive		Positive	6/11/23	Positive
+24		A	RWE001A	cattle	C004	mukobwa wa buhuga	Cross	Adult	F	No	Yes			RPA024	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+25		A	RWE001A	cattle	C005	zero970734	Cross	Adult	M	No	Yes			RPA025	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+26		A	RWE001A	cattle	C006	zero970731	Cross	Adult	F	No	Yes			RPA026	Rwempasha	Rugarama 	Rugarama	Negative		Positive	6/11/23	
+27		A	RWE001A	cattle	C007	zero970750	Cross	Adult	F	Yes	Yes			RPA027	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+28		A	RWE001A	cattle	C008	zero224077	Cross	Adult	F	No	Yes			RPA028	Rwempasha	Rugarama 	Rugarama	Positive		Positive	6/11/23	Positive
+29		A	RWE001A	cattle	C009	zero970709	Cross	Adult	F	No	Yes			RPA029	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+30		A	RWE001A	cattle	C010	zero224052	Cross	Adult	F	No	Yes			RPA030	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+31		A	RWE001A	cattle	C011	zero970751	Cross	Adult	F	Yes	Yes			RPA031	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+32		A	RWE001A	cattle	C012	zero970748	Cross	Young	F	No	Yes			RPA032	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+33		A	RWE001A	cattle	C013	zero970720	Cross	Young	M	No	Yes			RPA033	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+34		A	RWE001A	cattle	C014	zero970736	Cross	Adult	F	Yes	Yes			RPA034	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+35		A	RWE001A	cattle	C015	zero970723	Cross	Young	F	No	Yes			RPA035	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+36		A	RWE001A	cattle	C016	zero970758	Cross	Adult	F	Yes	Yes			RPA036	Rwempasha	Rugarama 	Rugarama	Negative		Positive	6/11/23	
+37		A	RWE001A	cattle	C017	zero970745	Cross	Adult	F	Aborted	Yes			RPA037	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+38		A	RWE001A	cattle	C018	zero970739	Cross	Adult	F	Yes	Yes			RPA038	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+39		A	RWE001A	cattle	C019	zero970730	Cross	Adult	F	Yes	Yes			RPA039	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+40		A	RWE001A	cattle	C020	zero970737	Cross	Adult	F	No	Yes			RPA040	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+41		A	RWE001A	cattle	C021	zero970756	Cross	Adult	F	No	Yes			RPA041	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+42		A	RWE001A	cattle	C022	zero970738	Cross	Adult	F	Yes	Yes			RPA042	Rwempasha	Rugarama 	Rugarama	Positive		Positive	6/11/23	Positive
+43		A	RWE001A	cattle	C023	zero970715	Cross	Young	F	No	Yes			RPA043	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+44		A	RWE001A	cattle	C024	zero970755	Cross	Adult	F	No	Yes			RPA044	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+45		A	RWE001A	cattle	C025	zero970716	Cross	Young	F	No	Yes			RPA045	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+46		A	RWE001A	cattle	C026	zero970713	Cross	Young	F	No	Yes			RPA046	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+47		A	RWE001A	cattle	C027	Akamasa ka buhuga	Cross	Young	M	No	Yes			RPA047	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+48		A	RWE001A	cattle	C028	Akanyana ka stama	Cross	Young	F	No	Yes			RPA048	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+49		A	RWE001A	cattle	C029	Akanyana ka	Cross	Young	F	No	Yes			RPA049	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+50		A	RWE001A	cattle	C030	Akanyana ka bugondo	Cross	Young	F	No	Yes			RPA050	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+51		A	RWE001A	cattle	C031	zero970746	Cross	Adult	F	No	Yes			RPA051	Rwempasha	Rugarama 	Rugarama	Positive		Negative	6/11/23	
+52		A	RWE001A	cattle	C032	Rugabo	Exotic	Adult	M	No	Yes			RPA052	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+53		A	RWE001A	cattle	C033	zero970725	Exotic	Adult	F	No	Yes			RPA053	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+54		A	RWE001A	cattle	C034	zero451504	Exotic	Adult	F	No	Yes			RPA054	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+55		A	RWE001A	cattle	C035	zero818462	Exotic	Adult	F	No	Yes			RPA055	Rwempasha	Rugarama 	Rugarama	Negative		Negative	6/11/23	Negative 
+56	29/03/2023	B	RWE002B	cattle	C036	Nkuga	Exotic	Adult	F	Yes	No	Blind		RWEC056	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+57		B	RWE002B	cattle	C037	1195343	Exotic	Adult	F	Yes	No	Blind		RWEC057	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+58		B	RWE002B	cattle	C038	927643	Exotic	Adult	F	Yes	Yes			RWEC058	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+59		B	RWE002B	cattle	C039	1185341	Exotic	Adult	F	Yes	No	Blind 1 eye		RWEC059	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+60		B	RWE002B	cattle	C040	Mfunda	Exotic	Adult	F	Yes	Yes			RWEC060	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+61		B	RWE002B	cattle	C041	1185351	Exotic	Adult	F	Yes	No			RWEC061	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+62		B	RWE002B	cattle	C042	1185352	Exotic	Adult	F	Yes	No			RWEC062	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+63		B	RWE002B	cattle	C043	1185344	Exotic	Adult	F	Yes	Yes			RWEC063	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+64		B	RWE002B	cattle	C044	1185354	Exotic	Adult	F	Yes	Yes			RWEC064	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+65		B	RWE002B	cattle	C045	1185345	Exotic	Adult	F	Yes	Yes			RWEC065	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+66		B	RWE002B	cattle	C046	818626	Exotic	Adult	F	Yes	No	Blind 1 eye		RWEC066	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+67		B	RWE002B	cattle	C047	1185347	Cross	Adult	F	No	Yes			RWEC067	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+68		B	RWE002B	cattle	C048	1185356	Exotic	Adult	F	No	Yes			RWEC068	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+69		B	RWE002B	cattle	C049	1185346	Cross	Adult	F	Yes	Yes			RWEC069	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+70		B	RWE002B	cattle	C050	1185350	Exotic	Adult	F	Yes	Yes			RWEC070	Rwempasha	Rutare	Rutare	Positive		Negative	6/11/23	
+71		B	RWE002B	cattle	C051	Nkanfundo	Exotic	Adult	F	No	Yes			RWEC071	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+72		B	RWE002B	cattle	C052	1185331	Exotic	Adult	F	No	Yes			RWEC072	Rwempasha	Rutare	Rutare	Positive		Negative	6/11/23	
+73		B	RWE002B	cattle	C053	Kantarimara	Exotic	Adult	F	No	Yes			RWEC073	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+74		B	RWE002B	cattle	C054	Ka Janet	Exotic	Adult	F	No	Yes			RWEC074	Rwempasha	Rutare	Rutare	Negative		Negative	6/11/23	Negative 
+75		C	RWE003C	cattle	C055	1117342	Exotic	Adult	F	Yes	emaciated			RWEC075	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+76		C	RWE003C	cattle	C056	1107603	Cross	Adult	F	Yes	Yes			RWEC076	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+77		C	RWE003C	cattle	C057	Shamayitu	Cross	Adult	F	Yes	Yes			RWEC077	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+78		C	RWE003C	cattle	C058	Ngabo	Cross	Adult	F	Yes	Yes			RWEC078	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+79		C	RWE003C	cattle	C059	Mayenji	Cross	Adult	F	Yes	Yes			RWEC079	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+80		C	RWE003C	cattle	C060	1117316	Exotic	Adult	F	Yes	Aborted			RWEC080	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+81		C	RWE003C	cattle	C061	1117345	Cross	Adult	F	Yes	Aborted			RWEC081	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+82		C	RWE003C	cattle	C062	1117339	Cross	Adult	F	Yes	Yes			RWEC082	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+83		C	RWE003C	cattle	C063	1117352	Cross	Adult	F	Yes	Yes			RWEC083	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+84		C	RWE003C	cattle	C064	Nshama	Exotic	Adult	F	Yes	Yes			RWEC084	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+85		C	RWE003C	cattle	C065	1117338	Cross	Adult	F	Yes	Yes			RWEC085	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+86		C	RWE003C	cattle	C066	1117351	Cross	Adult	F	Yes	Yes			RWEC086	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+87		C	RWE003C	cattle	C067	1117348	Cross	Adult	F	Yes	Yes			RWEC087	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+88		C	RWE003C	cattle	C068	Mpuga	Exotic	Adult	F	Yes	Yes			RWEC088	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+89		C	RWE003C	cattle	C069	Ngabo	Cross	Adult	F	Yes	Yes			RWEC089	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+90		C	RWE003C	cattle	C070	1117349	Cross	Adult	F	Yes	Yes			RWEC090	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+91		C	RWE003C	cattle	C071	1117347	Cross	Adult	F	Yes	Aborted			RWEC091	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+92		C	RWE003C	cattle	C072	1117319	Cross	Adult	F	Yes	Yes			RWEC092	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+93		C	RWE003C	cattle	C073	1116362	Cross	Adult	F	Yes	Yes			RWEC093	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+94		C	RWE003C	cattle	C074	1117331	Cross	Adult	F	Yes	Yes			RWEC094	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+95		C	RWE003C	sheep	S001	Ntama	Local	Adult	F	No	Yes			RWES095	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+96		C	RWE003C	goat	G021	Mushene	Local	Young	F	No	Yes			RWEG096	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+97		C	RWE003C	goat	G022	Mukara	Local	Adult	F	Yes	No			RWEG097	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+98		C	RWE003C	goat	G023	Nkungu	Local	Adult	F	Yes	Yes			RWEG098	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+99		C	RWE003C	goat	G024	Buregeya	Local	Young	M	No	No			RWEG099	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+100		C	RWE003C	goat	G025	Musherinkungu	Local	Young	M	No	Yes			RWEG100	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+101		C	RWE003C	goat	G026	Igaju	Local	Young	F	No	Yes			RWEG101	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+102		C	RWE003C	goat	G027	Mwene	Local	Young	F	No	Yes			RWEG102	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+103		C	RWE003C	goat	G028	Ruhaya	Local	Young	F	No	Yes			RWEG103	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+104		C	RWE003C	goat	G029	Mutamu	Local	Young	F	No	Yes			RWEG104	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+105	30/03/2023	D	RWE004D	goat	G030	Mayenji	Local	Adult	F	Yes	No			RWEG105	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+106		D	RWE004D	goat	G031	Mukara	Local	Adult	F	Yes	No			RWEG106	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+107		D	RWE004D	goat	G032	384363	Local	Adult	F	No	No			RWEG107	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+108		D	RWE004D	goat	G033	Bihogo	Local	Adult	F	No	No			RWEG108	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+109		D	RWE004D	goat	G034	Gaju	Local	Adult	F	Yes	No			RWEG109	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+110		D	RWE004D	goat	G035	Gitabwa	Local	Adult	F	Yes	No			RWEG110	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+111		D	RWE004D	goat	G036	Kibamba	Local	Adult	F	Yes	Yes			RWEG111	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+112		D	RWE004D	goat	G037	Cyoya	Local	Adult	F	No	Yes			RWEG112	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+113		D	RWE004D	goat	G038	Rutamu	Local	Adult	F	No	Yes			RWEG113	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+114		D	RWE004D	goat	G039	Ruhaya	Local	Adult	M	No	No	Has Orf		RWEG114	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+115		D	RWE004D	cattle	C075	1015245	Cross	Adult	M	No	No			RWEC115	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+116		D	RWE004D	cattle	C076	1630110	Cross	Adult	F	No	No			RWEC116	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+117		D	RWE004D	cattle	C077	1630085	Cross	Adult	F	No	No			RWEC117	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+118		D	RWE004D	cattle	C078	1630141	Local	Adult	F	Yes	No			RWEC118	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+119		D	RWE004D	cattle	C079	Gateteyi	Cross	Adult	F	Yes	No			RWEC119	Rwempasha	Gasinga 	Rwabushorogoto	Positive		Positive	6/11/23	Positive
+120		D	RWE004D	cattle	C080	1630146	Cross	Adult	F	Yes	No			RWEC120	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+121		D	RWE004D	cattle	C081	1630148	Cross	Adult	F	Yes	No			RWEC121	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+122		D	RWE004D	cattle	C082	Mayenji	Cross	Adult	F	Yes	No			RWEC122	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+123		D	RWE004D	cattle	C083	1630123	Local	Adult	F	No	No			RWEC123	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+124		D	RWE004D	cattle	C084	1630147	Cross	Adult	F	Yes	No			RWEC124	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+125		D	RWE004D	cattle	C085	1630140	Local	Adult	F	Yes	No			RWEC125	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+126		D	RWE004D	cattle	C086	1630157	Cross	Adult	F	Yes	No			RWEC126	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+127		D	RWE004D	cattle	C087	1630010	Cross	Adult	F	Yes	No			RWEC127	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Positive	6/11/23	
+128		D	RWE004D	cattle	C088	1630128	Cross	Adult	F	Yes	No			RWEC128	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+129		D	RWE004D	cattle	C089	1630011	Cross	Adult	F	Yes	No			RWEC129	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+130		D	RWE004D	cattle	C090	1630148	Cross	Adult	F	Yes	No			RWEC130	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+131		D	RWE004D	cattle	C091	1630120	Cross	Adult	F	Yes	No			RWEC131	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+132		D	RWE004D	cattle	C092	1630013	Cross	Adult	F	Yes	No			RWEC132	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+133		D	RWE004D	cattle	C093	1630119	Cross	Adult	F	Yes	No			RWEC133	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+134		D	RWE004D	cattle	C094	1630129	Cross	Adult	F	Yes	No			RWEC134	Rwempasha	Gasinga 	Rwabushorogoto	Negative		Negative	6/11/23	Negative 
+135	30/03/2023	E	RWE005E	cattle	C095	1513794	Cross	Adult	F	Yes	No	Aborted		RWEC135	Rwempasha			Negative		Negative	6/11/23	Negative 
+136		E	RWE005E	cattle	C096	1513833	Cross	Adult	F	No	No	Conceiption failure		RWEC136	Rwempasha			Negative		Negative	6/11/23	Negative 
+137		E	RWE005E	cattle	C097	1513829	Cross	Adult	F	No	Yes	No		RWEC137	Rwempasha			Negative		Negative	6/11/23	Negative 
+138		E	RWE005E	cattle	C098	1523801	Cross	Adult	F	Yes	Yes	No		RWEC138	Rwempasha			Negative		Positive	6/11/23	
+139		E	RWE005E	cattle	C099	1513855	Cross	Adult	F	No	No	Aborted		RWEC139	Rwempasha			Negative		Negative	6/11/23	Negative 
+140		E	RWE005E	cattle	C100	1513841	Cross	Adult	F	No	No	Aborted		RWEC140	Rwempasha			Negative		Negative	6/11/23	Negative 
+141		E	RWE005E	cattle	C101	1513759	Cross	Adult	F	No	No	Aborted		RWEC141	Rwempasha			Negative		Negative	6/11/23	Negative 
+142		E	RWE005E	cattle	C102	1513826	Cross	Adult	F	No	No	Aborted		RWEC142	Rwempasha			Negative		Negative	6/11/23	Negative 
+143		E	RWE005E	cattle	C103	1513793	Exotic	Adult	F	Yes	No	Aborted		RWEC143	Rwempasha			Negative		Negative	6/11/23	Negative 
+144		E	RWE005E	cattle	C104	1513814	Cross	Adult	F	No	Yes	No		RWEC144	Rwempasha			Negative		Negative	6/11/23	Negative 
+145		E	RWE005E	cattle	C105	1513770	Cross	Adult	F	No	No	Aborted		RWEC145	Rwempasha			Negative		Negative	6/11/23	Negative 
+146		E	RWE005E	cattle	C106	1513814	Cross	Adult	F	No	No	Aborted		RWEC146	Rwempasha			Negative		Negative	6/11/23	Negative 
+147		E	RWE005E	cattle	C107	1513786	Cross	Adult	F	No	No	Aborted		RWEC147	Rwempasha			Negative		Negative	6/11/23	Negative 
+148		E	RWE005E	cattle	C108	1513832	Cross	Adult	F	No	No	Aborted		RWEC148	Rwempasha			Negative		Negative	6/11/23	Negative 
+149		E	RWE005E	cattle	C109	1513782	Cross	Adult	F	No	No	Abortion + conceiption failure		RWEC149	Rwempasha			Negative		Negative	6/11/23	Negative 
+150		E	RWE005E	cattle	C110	1513803	Cross	Adult	F	No	No	Abortion 		RWEC150	Rwempasha			Negative		Positive	6/11/23	
+151		E	RWE005E	cattle	C111	1513813	Cross	Adult	F	No	No	Abortion		RWEC151	Rwempasha			Negative		Negative	6/11/23	Negative 
+152		E	RWE005E	cattle	C112	1513787	Cross	Adult	F	No	No	Abortion + conceiption failure		RWEC152	Rwempasha			Negative		Negative	6/11/23	Negative 
+153		E	RWE005E	cattle	C113	1513974	Cross	Adult	M	No	Yes	No		RWEC153	Rwempasha			Negative		Negative	6/11/23	Negative 
+154		E	RWE005E	cattle	C114	1513783	Cross	Young	M	No	Yes	No		RWEC154	Rwempasha			Negative		Negative	6/11/23	Negative 
+155		E	RWE005E	goat	G40	Mushene	Local	Adult	F	No	No	Aborted		RWEG155	Rwempasha			Negative		Negative	6/11/23	Negative 
+156		E	RWE005E	goat	G41	Rubaya	Local	Adult	F	No	Yes	No		RWEG156	Rwempasha			Negative		Negative	6/11/23	Negative 
+157		E	RWE005E	goat	G42	Cyanwa	Local	Adult	F	No	Yes	No		RWEG157	Rwempasha			Negative		Negative	6/11/23	Negative 
+158		E	RWE005E	goat	G43	Mukara	Local	Adult	F	No	Yes	No		RWEG158	Rwempasha			Negative		Negative	6/11/23	Negative 
+159		E	RWE005E	goat	G44	Gatobo	Local	Adult	F	No	Yes	No		RWEG159	Rwempasha			Positive		Negative	6/11/23	
+160		E	RWE005E	goat	G45	Kaserume	Local	Young	F	No	Yes	No		RWEG160	Rwempasha			Negative		Negative	6/11/23	Negative 
+161		E	RWE005E	goat	G46	Kabaya	Local	Young	F	No	Yes	No		RWEG161	Rwempasha			Negative		Negative	6/11/23	Negative 
+162	31/03/2023	F	RWE006F	cattle	C115	1646348	Cross	Adult	F	Yes	Yes	No		RWEC162	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+163		F	RWE006F	cattle	C116	1646346	Cross	Adult	F	Yes	Yes	No		RWEC163	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+164		F	RWE006F	cattle	C117	1646315	Cross	Adult	F	Yes	Yes	No		RWEC164	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+165		F	RWE006F	cattle	C118	1646341	Cross	Adult	F	Yes	Yes	No		RWEC165	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+166		F	RWE006F	cattle	C119	1646344	Cross	Adult	F	Yes	Yes	No		RWEC166	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+167		F	RWE006F	cattle	C120	1646309	Cross	Adult	F	Yes	Yes	No		RWEC167	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+168		F	RWE006F	cattle	C121	1646343	Cross	Adult	F	Yes	Yes	No		RWEC168	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+169		F	RWE006F	cattle	C122	1646340	Cross	Adult	F	Yes	Yes	No		RWEC169	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+170		F	RWE006F	cattle	C123	1646339	Cross	Adult	F	Yes	Yes	No		RWEC170	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+171		F	RWE006F	cattle	C124	1646312	Cross	Adult	F	Yes	Yes	No		RWEC171	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+172		F	RWE006F	cattle	C125	1646310	Cross	Adult	F	Yes	Yes	No		RWEC172	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+173		F	RWE006F	cattle	C126	1646311	Cross	Adult	F	No	Yes	No		RWEC173	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+174		F	RWE006F	cattle	C127	1646327	Cross	Adult	F	Yes	Yes	No		RWEC174	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+175		F	RWE006F	cattle	C128	Ikimasa	Cross	Adult	M	No	Yes	No		RWEC175	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+176		F	RWE006F	sheep	S002	Mutesi	Cross	Adult	F	No	Yes	No		RWES176	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+177		F	RWE006F	sheep	S003	Mahoro	Cross	Adult	F	No	Yes	No		RWES177	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+178		F	RWE006F	sheep	S004	Mukara	Cross	Adult	F	No	Yes	No		RWES178	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+179		F	RWE006F	sheep	S005	Rugeyo	Cross	Adult	M	No	Yes	No		RWES179	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+180		F	RWE006F	sheep	S006	Mbaga	Cross	Adult	F	No	Yes	No		RWES180	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+181		F	RWE006F	sheep	S007	Rugamba	Cross	Adult	M	No	Yes	No		RWES181	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+182		F	RWE006F	sheep	S008	Muzungu	Cross	Adult	F	No	Yes	No		RWES182	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+183		F	RWE006F	sheep	S009	Murebwa	Cross	Adult	F	No	Yes	No		RWES183	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+184		F	RWE006F	sheep	S010	Cyatukwire	Cross	Adult	F	No	Yes	No		RWES184	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+185		F	RWE006F	sheep	S011	Mweru	Cross	Adult	F	No	Yes	No		RWES185	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+186		F	RWE006F	sheep	S012	Muhoza	Cross	Adult	F	No	Yes	No		RWES186	Rwempasha	Mishenyi		Negative		Negative	6/11/23	Negative 
+187	3/4/23	G	RWE007G	cattle	C129	1516538	Cross	Adult	F	Yes	Yes			RWEC187	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+188		G	RWE007G	cattle	C130	1516613	Cross	Adult	F	Yes	Yes			RWEC188	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+189		G	RWE007G	cattle	C131	1516619	Cross	Adult	F	Yes	Yes			RWEC189	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+190		G	RWE007G	cattle	C132	1516638	Cross	Adult	F	Yes	Yes			RWEC190	Rwempasha	Kazaza	Gakindo	no serum		no serum	Only milk was collected so remove it from the list 	
+191		G	RWE007G	cattle	C133	1516529	Cross	Adult	F	Yes	Yes			RWEC191	Rwempasha	Kazaza	Gakindo	no serum		no serum	Only milk was collected so remove it from the list 	
+192		G	RWE007G	cattle	C134	1516646	Cross	Adult	F	Yes	Yes			RWEC192	Rwempasha	Kazaza	Gakindo	Negative		Positive	6/11/23	
+193		G	RWE007G	cattle	C135	1516537	Cross	Adult	F	Yes	Yes			RWEC193	Rwempasha	Kazaza	Gakindo	no serum		no serum	Only milk was collected so remove it from the list 	
+194		G	RWE007G	cattle	C136	1516537	Cross	Adult	F	Yes	Yes			RWEC194	Rwempasha	Kazaza	Gakindo	no serum		no serum	Only milk was collected so remove it from the list 	
+195		G	RWE007G	cattle	C137	1516609	Cross	Adult	F	Yes	Yes			RWEC195	Rwempasha	Kazaza	Gakindo	Negative		Positive	6/11/23	
+196		G	RWE007G	cattle	C138	1516534	Cross	Adult	F	Yes	Yes			RWEC196	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+197		G	RWE007G	cattle	C139	1516631	Cross	Adult	F	Yes	Yes			RWEC197	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+198		G	RWE007G	cattle	C140	1516614	Cross	Adult	M	No	Hygroma			RWEC198	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+199		G	RWE007G	cattle	C141	1516626	Cross	Adult	F	Yes	Yes			RWEC199	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+200		G	RWE007G	cattle	C142	1516558	Cross	Adult	F	Yes	Yes			RWEC200	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+201		G	RWE007G	cattle	C143	1516543	Exotic	Adult	F	Yes	Yes			RWEC201	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+202		G	RWE007G	cattle	C144	1516714	Cross	Adult	F	Yes	Yes			RWEC202	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+203		G	RWE007G	cattle	C145	1516629	Cross	Adult	F	Yes	Yes			RWEC203	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+204		G	RWE007G	cattle	C146	1516617	Cross	Adult	F	Yes	Yes			RWEC204	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+205		G	RWE007G	cattle	C147	1516637	Cross	Adult	F	Yes	Yes			RWEC205	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+206		G	RWE007G	cattle	C148	1516618	Cross	Adult	F	Yes	Yes			RWEC206	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+207		G	RWE007G	cattle	C149	1516554	Cross	Adult	F	Yes	Yes			RWEC207	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+208		G	RWE007G	cattle	C150	Cyasha	Cross	Adult	F	Yes	Yes			RWEC208	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+209		G	RWE007G	cattle	C151	1516635	Cross	Adult	F	Yes	Yes			RWEC209	Rwempasha	Kazaza	Gakindo	Negative		Negative	6/11/23	Negative 
+210	3/4/23	H	RWE008H	cattle	C152	1648773	Cross	Adult	F	No	Yes			RWEC210	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+211		H	RWE008H	cattle	C153	1648792	Cross	Adult	F	Yes	Yes			RWEC211	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+212		H	RWE008H	cattle	C154	1648786	Cross	Adult	F	No	No			RWEC212	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+213		H	RWE008H	cattle	C155	1648779	Cross	Adult	M	No	Yes			RWEC213	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+214		H	RWE008H	cattle	C156	1648774	Cross	Adult	F	Yes	Yes			RWEC214	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+215		H	RWE008H	cattle	C157	1648805	Cross	Adult	F	Yes	Aborted			RWEC215	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+216		H	RWE008H	cattle	C158	1648787	Cross	Adult	F	Yes	Yes			RWEC216	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+217		H	RWE008H	cattle	C159	1648764	Cross	Adult	F	Yes	Yes			RWEC217	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+218		H	RWE008H	cattle	C160	1648762	Cross	Adult	F	Yes	Aborted			RWEC218	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+219		H	RWE008H	cattle	C161	1648797	Cross	Adult	F	Yes	Yes			RWEC219	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+220		H	RWE008H	cattle	C162	1648768	Cross	Adult	F	Yes	Aborted			RWEC220	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+221		H	RWE008H	cattle	C163	1648291	Cross	Adult	M	No	Yes			RWEC221	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+222		H	RWE008H	cattle	C164	1648798	Cross	Adult	F	Yes	Aborted			RWEC222	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+223		H	RWE008H	cattle	C165	1648806	Cross	Adult	F	Yes	Aborted			RWEC223	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+224		H	RWE008H	cattle	C166	1426244	Cross	Adult	F	Yes	Yes			RWEC224	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+225		H	RWE008H	cattle	C167	1648808	Cross	Adult	F	Yes	Yes			RWEC225	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+226		H	RWE008H	cattle	C168	1648803	Cross	Adult	F	Yes	Aborted			RWEC226	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+227		H	RWE008H	cattle	C169	1648796	Cross	Adult	F	Yes	Repeat breeder			RWEC227	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+228		H	RWE008H	cattle	C170	1648771	Cross	Adult	F	Yes	Yes			RWEC228	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+229		H	RWE008H	cattle	C171	1648790	Cross	Adult	F	Yes	Aborted			RWEC229	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+230		H	RWE008H	sheep	S013	Ngabo	Local	Adult	F	Yes	Yes			RWES230	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+231		H	RWE008H	sheep	S014	Frano	Local	Adult	F	Yes	Yes			RWES231	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+232		H	RWE008H	sheep	S015	Kibumba	Local	Adult	F	Yes	Yes			RWES232	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+233		H	RWE008H	sheep	S016	Sine	Local	Adult	F	Yes	Yes			RWES233	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+234		H	RWE008H	sheep	S017	Barasi	Local	Adult	F	Yes	Yes			RWES234	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+235		H	RWE008H	sheep	S018	Ruyensi	Local	Adult	M	No	Yes			RWES235	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+236		H	RWE008H	sheep	S019	Bugondo	Local	Adult	F	Yes	Yes			RWES236	Rwempasha	Gasinga 		Negative		Negative	6/11/23	Negative 
+237	4/4/23	I	RWI001I	cattle	C172	Cyozi	Cross	Adult	F	No	Yes			RWIC237	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+238		I	RWI001I	cattle	C173	664794	Cross	Adult	F	Yes	Yes			RWIC238	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+239		I	RWI001I	cattle	C174	34731	Cross	Adult	F	Yes	Yes			RWIC239	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+240		I	RWI001I	cattle	C175	664761	Cross	Adult	F	No	Yes			RWIC240	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+241		I	RWI001I	cattle	C176	664769	Cross	Adult	F	Yes	Yes			RWIC241	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+242		I	RWI001I	cattle	C177	664767	Cross	Adult	F	Yes	Yes			RWIC242	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+243		I	RWI001I	cattle	C178	34712	Cross	Adult	F	No	Yes			RWIC243	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+244		I	RWI001I	cattle	C179	664686	Cross	Adult	F	Yes	Yes			RWIC244	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+245		I	RWI001I	cattle	C180	35822	Cross	Adult	M	No	Yes			RWIC245	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+246		I	RWI001I	cattle	C181	34711	Cross	Adult	F	Yes	Yes			RWIC246	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+247		I	RWI001I	cattle	C182	664781	Cross	Adult	F	No	Aborted + Repeat breeder			RWIC247	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+248		I	RWI001I	cattle	C183	664677	Cross	Adult	F	Yes	Yes			RWIC248	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+249		I	RWI001I	cattle	C184	7521	Cross	Adult	F	Yes	Yes			RWIC249	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+250		I	RWI001I	cattle	C185	66466	Cross	Adult	F	Yes	Yes			RWIC250	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+251		I	RWI001I	cattle	C186	664792	Cross	Adult	F	Yes	Yes			RWIC251	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	9/11/23	
+252		I	RWI001I	cattle	C187	664657	Cross	Adult	F	Yes	Yes			RWIC252	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+253		I	RWI001I	cattle	C188	664674	Cross	Adult	F	Yes	Yes			RWIC253	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+254		I	RWI001I	cattle	C189	Mpare	Cross	Adult	F	Yes	Yes			RWIC254	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+255		I	RWI001I	cattle	C190	66476	Cross	Adult	F	Yes	Yes			RWIC255	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+256		I	RWI001I	cattle	C191	664662	Cross	Adult	F	Yes	Yes			RWIC256	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+257		I	RWI001I	cattle	C192	1503923	Cross	Adult	M	No	Yes			RWIC257	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+258		I	RWI001I	goat	G047	Gihuga	Local	Adult	F	No	Yes			RWIG258	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+259		I	RWI001I	goat	G048	Ruhaya	Local	Adult	M	No	Yes			RWIG259	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+260		I	RWI001I	goat	G049	Ndegeya	Local	Adult	F	Yes	Yes			RWIG260	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+261		I	RWI001I	goat	G050	Cyasha	Local	Adult	F	Yes	Yes			RWIG261	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+262		I	RWI001I	goat	G051	Bicocero	Local	Adult	F	Yes	Yes			RWIG262	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+263		I	RWI001I	goat	G052	Masogisi	Local	Adult	F	Yes	Yes			RWIG263	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+264		I	RWI001I	goat	G053	Bicocero	Local	Adult	F	Yes	Yes			RWIG264	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+265		I	RWI001I	goat	G054	Cyakana nkweto	Local	Adult	F	Yes	Yes			RWIG265	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+266		I	RWI001I	goat	G055	Kanigi	Local	Adult	M	No	Yes			RWIG266	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+267		I	RWI001I	goat	G056	Masogisi Kabiri	Local	Adult	F	Yes	Yes			RWIG267	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+268		I	RWI001I	goat	G057	Guhwi	Local	Adult	F	Yes	Yes			RWIG268	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+269		I	RWI001I	goat	G058	Musheru	Local	Adult	F	Yes	Yes			RWIG269	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+270	4/4/23	J	RWI002J	cattle	C193	128061	Cross	Young	F	No	Yes			RWIC270	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+271		J	RWI002J	cattle	C194	866534	Cross	Young	F	No	Yes			RWIC271	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+272		J	RWI002J	cattle	C195	72394	Cross	Young	F	No	Yes			RWIC272	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+273		J	RWI002J	cattle	C196	Ngabo	Cross	Adult	F	Yes	Yes			RWIC273	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+274		J	RWI002J	cattle	C197	1114047	Cross	Young	F	No	Yes			RWIC274	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+275		J	RWI002J	cattle	C198	1631309	Cross	Young	F	No	Yes			RWIC275	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+276		J	RWI002J	cattle	C199	87490	Cross	Young	F	No	Yes			RWIC276	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+277		J	RWI002J	cattle	C200	128760	Cross	Adult	F	No	Aborted			RWIC277	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+278		J	RWI002J	cattle	C201	1631126	Cross	Young	F	No	Yes			RWIC278	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+279		J	RWI002J	cattle	C202	128150	Cross	Young	F	No	Yes			RWIC279	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+280		J	RWI002J	cattle	C203	1631133	Cross	Young	F	No	Yes			RWIC280	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+281		J	RWI002J	cattle	C204	87366	Cross	Young	F	No	Yes			RWIC281	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+282		J	RWI002J	cattle	C205	128772	Cross	Young	F	No	Yes			RWIC282	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+283		J	RWI002J	cattle	C206	1631130	Cross	Adult	M		Yes			RWIC283	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+284		J	RWI002J	cattle	C207	72427	Cross	Young	F	No	Yes			RWIC284	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+285		J	RWI002J	cattle	C208	87880	Cross	Young	F	No	Yes			RWIC285	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+286		J	RWI002J	cattle	C209	128783	Cross	Young	F	No	Yes			RWIC286	Rwimiyaga	Kirebe	Rukindo	Negative		Positive	9/11/23	
+287		J	RWI002J	cattle	C210	128162	Cross	Young	F	No	Yes			RWIC287	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+288		J	RWI002J	cattle	C211	28903	Cross	Young	F	No	Yes			RWIC288	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+289		J	RWI002J	cattle	C212	1631339	Cross	Adult	F	No	Aborted			RWIC289	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+290		J	RWI002J	goat	G59	Mukara	Local	Young	F	No	Yes			RWIG290	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+291		J	RWI002J	goat	G60	Nkungu	Local	Adult	F	Yes	Yes			RWIG291	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+292		J	RWI002J	goat	G61	Cyasha	Local	Adult	F	No	Yes			RWIG292	Rwimiyaga	Kirebe	Rukindo	Negative		Positive	9/11/23	
+293		J	RWI002J	goat	G62	Gihuga	Local	Adult	F	Yes	Aborted			RWIG293	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+294		J	RWI002J	goat	G63	Musheru	Local	Adult	F	Yes	Yes			RWIG294	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+295		J	RWI002J	goat	G64	Gihuga 2	Local	Adult	F	Yes	Yes			RWIG295	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+296		J	RWI002J	goat	G65	Ruhaya	Local	Adult	M	No	Yes			RWIG296	Rwimiyaga	Kirebe	Rukindo	Negative		Negative	9/11/23	Negative 
+297		J	RWI002J	goat	G66	Musheru 2	Local	Adult	F	Yes	Yes			RWIG297	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	9/11/23	
+298		J	RWI002J	goat	G67	Kibara	Local	Adult	F	Yes	Yes			RWIG298	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+299		J	RWI002J	goat	G68	Cyasha	Local	Adult	F	Yes	Yes			RWIG299	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+300		J	RWI002J	goat	G69	Musheru purse	Local	Adult	F	Yes	Yes			RWIG300	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+301		J	RWI002J	goat	G70	Gasogisi	Local	Adult	F	No	Aborted			RWIG301	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+302		J	RWI002J	goat	G71	Mukara	Local	Adult	F	No	aborted			RWIG302	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	9/11/23	Negative 
+303	5/4/23	K	RWI003K	cattle	C213	375151	Cross	Adult	M	No	Yes			RWIC303	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+304		K	RWI003K	cattle	C214	664609	Cross	Adult	F	Yes	Yes			RWIC304	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+305		K	RWI003K	cattle	C215	664745	Cross	Adult	F	Yes	Yes			RWIC305	Rwimiyaga	Kirebe	Kirebe	Positive		Positive	7/11/23	Positive
+306		K	RWI003K	cattle	C216	664717	Cross	Adult	F	Yes	Yes			RWIC306	Rwimiyaga	Kirebe	Kirebe	Positive		Positive	7/11/23	Positive
+307		K	RWI003K	cattle	C217	664729	Cross	Adult	F	Yes	Yes			RWIC307	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+308		K	RWI003K	cattle	C218	664727	Cross	Adult	F	Yes	Yes			RWIC308	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	7/11/23	
+309		K	RWI003K	cattle	C219	664931	Cross	Adult	F	Yes	Yes			RWIC309	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+310		K	RWI003K	cattle	C220	664657	Cross	Adult	F	Yes	Yes			RWIC310	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+311		K	RWI003K	cattle	C221	664728	Cross	Adult	F	Yes	Yes			RWIC311	Rwimiyaga	Kirebe	Kirebe	Positive		Positive	7/11/23	Positive
+312		K	RWI003K	cattle	C222	664732	Cross	Adult	F	Yes	Yes			RWIC312	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+313		K	RWI003K	cattle	C223	664647	Cross	Adult	F	Yes	Yes			RWIC313	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+314		K	RWI003K	cattle	C224	664947	Cross	Adult	F	Yes	Yes			RWIC314	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+315		K	RWI003K	cattle	C225	664936	Cross	Adult	F	No	Yes			RWIC315	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+316		K	RWI003K	cattle	C226	664714	Cross	Adult	F	No	Yes			RWIC316	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+317		K	RWI003K	cattle	C227	664952	Cross	Adult	F	No	Yes			RWIC317	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	7/11/23	
+318		K	RWI003K	cattle	C228	654754	Cross	Adult	F	No	Aborted			RWIC318	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	7/11/23	
+319		K	RWI003K	cattle	C229	652386	Cross	Adult	F	No	Repeat breeder			RWIC319	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+320		K	RWI003K	cattle	C230	664637	Cross	Adult	F	No	Aborted			RWIC320	Rwimiyaga	Kirebe	Kirebe	Positive		Positive	7/11/23	Positive
+321		K	RWI003K	cattle	C231	664918	Cross	Adult	F	No	Repeat breeder			RWIC321	Rwimiyaga	Kirebe	Kirebe	Negative		Positive	7/11/23	
+322		K	RWI003K	cattle	C232	664746	Cross	Adult	F	Yes	Yes			RWIC323	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+323	5/4/23	L	RWI004L	cattle	C233	1667728	Cross	Adult	F	No	Repeat breeder			RWIC324	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+324		L	RWI004L	cattle	C234	1608026	Cross	Adult	F	No	Repeat breeder			RWIC325	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+325		L	RWI004L	cattle	C235	1667570	Cross	Adult	F	No	Repeat breeder			RWIC326	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+326		L	RWI004L	cattle	C236	1667587	Cross	Adult	F	No	Repeat breeder			RWIC327	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+327		L	RWI004L	cattle	C237	1667559	Cross	Adult	F	No	Repeat breeder			RWIC328	Rwimiyaga	Kirebe	Kirebe	Negative		Negative	7/11/23	Negative 
+328	5/4/23	M	RWI005M	cattle	C238	736904	Cross	Adult	F	No	Yes			RWIC329	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+329		M	RWI005M	cattle	C239	815052	Cross	Adult	F	Yes	Yes			RWIC330	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+330		M	RWI005M	cattle	C240	1571091	Cross	Adult	F	No	Repeat breeder			RWIC331	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+331		M	RWI005M	cattle	C241	1571100	Local	Adult	F	No	Repeat breeder			RWIC332	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+332		M	RWI005M	cattle	C242	334074	Exotic	Adult	M	No	Yes			RWIC333	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+333		M	RWI005M	cattle	C243	1606302	Cross	Adult	F	No	Repeat breeder			RWIC334	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+334		M	RWI005M	cattle	C244	1571093	Cross	Adult	F	Yes	Yes			RWIC335	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+335		M	RWI005M	cattle	C245	1571107	Cross	Adult	F	Yes	Yes			RWIC336	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+336		M	RWI005M	cattle	C246	1571104	Cross	Adult	F	No	Repeat breeder			RWIC337	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+337		M	RWI005M	cattle	C247	1571105	Cross	Adult	F	Yes	Yes			RWIC338	Rwimiyaga	Kirebe	Gatebe 2 	Negative		Negative	7/11/23	Negative 
+338		M	RWI005M	cattle	C248	1606300	Cross	Adult	M	No	Yes			RWIC339	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+339		M	RWI005M	cattle	C249	1571090	Cross	Adult	F	No	Repeat breeder			RWIC340	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+340		M	RWI005M	goat	G72	Gatobo 1	Local	Adult	F	No	Aborted			RWIG341	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+341		M	RWI005M	goat	G73	Gahuga 2	Local	Adult	F	No	Aborted			RWIG342	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+342		M	RWI005M	goat	G74	Gahuga 3	Local	Adult	F	No	Aborted			RWIG343	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+343		M	RWI005M	goat	G75	Isekurume	Local	Adult	M	No	Yes			RWIG344	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+344		M	RWI005M	goat	G76	Gatobo 2	Local	Adult	F	Yes	Yes			RWIG345	Rwimiyaga	Kirebe	Gatebe 2	Negative		Negative	7/11/23	Negative 
+345	6/4/23	N	RWI006N	cattle	C250	Mushabazi	Cross	Adult	F	No	Repeat breeder			RWIC346	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+346		N	RWI006N	cattle	C251	1847046	Cross	Adult	F	Yes	Yes	Wound on teat		RWIC347	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Positive	7/11/23	
+347		N	RWI006N	cattle	C252	1847026	Cross	Adult	F	Yes	Yes			RWIC348	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+348		N	RWI006N	cattle	C253	1847043	Cross	Adult	F	Yes	Yes	Mastitisdue to milk color		RWIC349	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+349		N	RWI006N	cattle	C254	1847022	Cross	Adult	F	Yes	Yes	Wound on teat		RWIC350	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Positive	7/11/23	
+350		N	RWI006N	cattle	C255	1847013	Cross	Adult	F	Yes	Yes	Wound on teat		RWIC351	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+351		N	RWI006N	cattle	C256	1847033	Cross	Adult	F	Yes	Yes	Wound on teat		RWIC352	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+352		N	RWI006N	cattle	C257	1847034	Cross	Adult	F	Yes	Yes			RWIC353	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+353		N	RWI006N	cattle	C258	1847058	Cross	Adult	F	No	Repeat breeder			RWIC354	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+354		N	RWI006N	cattle	C259	Imfizi	Cross	Adult	M	No	Yes			RWIC355	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+355		N	RWI006N	sheep	S020	Gasifu	Local	Adult	M	No	Yes			RWIS356	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+356		N	RWI006N	sheep	S021		Local	Adult	F	No	Yes			RWIS357	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+357		N	RWI006N	sheep	S022	umweru	Local	Adult	F	No	Yes			RWIS358	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+358		N	RWI006N	sheep	S023	Gitare	Local	Adult	F	No	Yes			RWIS359	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+359		N	RWI006N	sheep	S024	Mayenji	Local	Adult	F	No	Yes			RWIS360	Rwimiyaga	Gacundezi	Rukundo 3	Negative		Negative	7/11/23	Negative 
+360	7/11/23	O	RWI007O	cattle	C260	697406	Cross	Adult	F	No	Yes			RWIC361	Rwimiyaga	Rutungo	?	Negative		Positive	7/11/23	
+361		O	RWI007O	cattle	C261	1748122	Cross	Adult	F	No	Yes			RWIC362	Rwimiyaga	Rutungo	?	Negative		Negative	7/11/23	Negative 
+362		O	RWI007O	cattle	C262	Mpuga 	Cross	Adult	F	Yes	Repeat breeder			RWIC363	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+363		O	RWI007O	cattle	C263	960070	Cross	Adult	F	No	Repeat breeder			RWIC364	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+364		O	RWI007O	cattle	C264	Kimasa Ruhuga	Cross	Adult	M	No	Yes			RWIC365	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+365		O	RWI007O	cattle	C265	1014694	Cross	Adult	F	Yes	Yes			RWIC366	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+366		O	RWI007O	cattle	C266	1015154	Cross	Adult	F	Yes	Yes			RWIC367	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+367		O	RWI007O	cattle	C267	1107956	Cross	Adult	F	Yes	Yes			RWIC368	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+368		O	RWI007O	cattle	C268	697434	Cross	Adult	F	Yes	Aborted			RWIC369	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+369		O	RWI007O	cattle	C269	1014665	Cross	Adult	F	Yes	Yes			RWIC370	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+370		O	RWI007O	cattle	C270	421037	Cross	Adult	F	Yes	Yes			RWIC371	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+371		O	RWI007O	cattle	C271	1748110	Cross	Adult	M	No	Yes			RWIC372	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+372		O	RWI007O	cattle	C272	1629364	Cross	Adult	M	No	Yes			RWIC373	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+373		O	RWI007O	cattle	C273	1108132	Cross	Adult	F	Yes	Yes			RWIC374	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+374		O	RWI007O	cattle	C274	1107909	Cross	Adult	F	Yes	Yes			RWIC375	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+375		O	RWI007O	cattle	C275	1108156	Exotic	Adult	F	Yes	Yes			RWIC376	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+376		O	RWI007O	cattle	C276	Mayenji	Cross	Adult	F	Yes	Yes			RWIC377	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+377		O	RWI007O	cattle	C277	1748135	Cross	Adult	F	Yes	Yes			RWIC378	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+378		O	RWI007O	cattle	C278	1015122	Cross	Adult	F	Yes	Yes			RWIC379	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+379		O	RWI007O	cattle	C279	Ruhuga Rwasha	Cross	Young Adult 	M	No	Yes			RWIC380	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+380		O	RWI007O	sheep	S025	Rweru	Local	Adult	F	Yes	Yes			RWIS381	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+381		O	RWI007O	sheep	S026	Rugondo	Local	Adult	F	Yes	Yes			RWIS382	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+382		O	RWI007O	sheep	S027	Cyamatwi	Local	Adult	F	Yes	Yes			RWIS383	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+383		O	RWI007O	sheep	S028	Maso	Local	Adult	F	No	Yes			RWIS384	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+384		O	RWI007O	sheep	S029	Rwagisembo	Local	Adult	F	Yes	Yes			RWIS385	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+385		O	RWI007O	goat	G77	Mukara	Local	Adult	F	No	Aborted			RWIG386	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+386		O	RWI007O	goat	G78	Musheru	Local	Adult	F	Yes	Yes			RWIG387	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+387		O	RWI007O	goat	G79	Buregeya Mukara	Local	Adult	F	Yes	Yes			RWIG388	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+388		O	RWI007O	goat	G80	Nzungu	Local	Adult	F	Yes	Yes			RWIG389	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+389		O	RWI007O	goat	G81	Emile	Local	Adult	F	No	Yes			RWIG390	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+390		O	RWI007O	goat	G82	Ndayizeye	Local	Adult	F	Yes	Yes			RWIG391	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+391		O	RWI007O	goat	G83	Mushaija	Local	Adult	F	Yes	Yes			RWIG392	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+392	7/11/23	P	RWI008P	cattle	C280	1015007	Cross	Adult	F	Yes	Yes			RWIC393	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+393		P	RWI008P	cattle	C281	1108320	Cross	Adult	F	Yes	Yes			RWIC394	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+394		P	RWI008P	cattle	C282	1108323	Cross	Adult	F	Yes	Yes			RWIC395	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+395		P	RWI008P	cattle	C283	1014998	Cross	Adult	F	Yes	Yes			RWIC396	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+396		P	RWI008P	cattle	C284	1015006	Cross	Adult	F	Yes	Yes			RWIC397	Rwimiyaga	Rutungo		Positive		Negative	7/11/23	
+397		P	RWI008P	cattle	C285	1108315	Cross	Adult	M	No	Yes			RWIC398	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+398		P	RWI008P	cattle	C286	1015003	Cross	Adult	F	No	Yes			RWIC399	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+399		P	RWI008P	cattle	C287	1015006	Cross	Adult	F	Yes	Yes			RWIC400	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+400		P	RWI008P	cattle	C288	1014997	Cross	Adult	F	No	Yes			RWIC401	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+401		P	RWI008P	cattle	C289	1014993	Cross	Adult	F	Yes	Yes			RWIC402	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+402		P	RWI008P	goat	G84	1	Local	Adult	F	No	Yes			RWIG403	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+403		P	RWI008P	goat	G85	2	Local	Adult	F	Yes	Yes			RWIG404	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+404		P	RWI008P	goat	G86	3	Local	Young Adult 	F	No	Aborted			RWIG405	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+405		P	RWI008P	goat	G87	4	Local	Adult	F	Yes	Yes			RWIG406	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+406		P	RWI008P	goat	G88	5	Local	Adult	F	No	Aborted			RWIG407	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+407		P	RWI008P	goat	G89	6	Local	Adult	F	No	Aborted			RWIG408	Rwimiyaga	Rutungo		Negative		Negative	7/11/23	Negative 
+408		P	RWI008P	goat	G90	7	Local	Adult	F	No	Aborted			RWIG409	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+409		P	RWI008P	goat	G91	8	Local	Adult	F	Yes	Yes			RWIG410	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+410		P	RWI008P	goat	G92	9	Local	Adult	F	Yes	Yes			RWIG411	Rwimiyaga	Rutungo		Positive		Positive	7/11/23	Positive
+411		P	RWI008P	goat	G93	10	Local	Adult	F	Yes	Yes			RWIG412	Rwimiyaga	Rutungo		Negative		Positive	7/11/23	
+412	7/12/23	Q	RWI009Q	cattle	C290	945898	Cross	Adult	F	Yes	Yes			RWIC413	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+413		Q	RWI009Q	cattle	C291	945899	Cross	Adult	F	Yes	Yes			RWIC414	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+414		Q	RWI009Q	cattle	C292	945893	Cross	Adult	F	Yes	Yes			RWIC415	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+415		Q	RWI009Q	cattle	C293	945869	Cross	Adult	F	Yes	Retained placenta			RWIC416	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+416		Q	RWI009Q	cattle	C294	945877	Cross	Adult	F	Yes	Yes			RWIC417	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+417		Q	RWI009Q	cattle	C295	945904	Cross	Adult	F	Yes	Repeat breeder			RWIC418	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+418		Q	RWI009Q	cattle	C296	946048	Cross	Adult	F	Yes	Yes			RWIC419	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+419		Q	RWI009Q	cattle	C297	946055	Cross	Adult	F	Yes	Retained placenta			RWIC420	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+420		Q	RWI009Q	cattle	C298	945873	Cross	Adult	F	Yes	Repeat breeder			RWIC421	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+421		Q	RWI009Q	cattle	C299	945897	Cross	Adult	F	Yes	Yes			RWIC422	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+422		Q	RWI009Q	cattle	C300	946017	Cross	Adult	F	No	Repeat breeder			RWIC423	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+423		Q	RWI009Q	cattle	C301	Mirundi	Cross	Adult	F	Yes	Yes			RWIC424	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+424		Q	RWI009Q	cattle	C302	945903	Cross	Adult	F	Yes	Repeat breeder			RWIC425	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+425		Q	RWI009Q	cattle	C303	946057	Cross	Adult	F	Yes	Yes			RWIC426	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+426		Q	RWI009Q	cattle	C304	945890	Cross	Adult	F	No	Yes			RWIC427	Rwimiyaga	Rutungo	Gatovu	Positive		Positive	9/11/23	Positive
+427		Q	RWI009Q	cattle	C305	946058	Cross	Adult	F	Yes	Yes			RWIC428	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+428		Q	RWI009Q	cattle	C306	946045	Cross	Adult	F	Yes	Yes			RWIC429	Rwimiyaga	Rutungo	Gatovu	Positive		Positive	9/11/23	Positive
+429		Q	RWI009Q	cattle	C307	945870	Cross	Adult	F	Yes	Yes			RWIC430	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+430		Q	RWI009Q	cattle	C308	946052	Cross	Adult	F	Yes	Yes			RWIC431	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+431		Q	RWI009Q	cattle	C309	945889	Cross	Adult	F	Yes	Yes			RWIC432	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+432		Q	RWI009Q	cattle	C310	946050	Cross	Adult	F	Yes	Yes			RWIC433	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+433		Q	RWI009Q	cattle	C311	945891	Cross	Adult	F	Yes	Yes			RWIC434	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+434		Q	RWI009Q	cattle	C312	945886	Cross	Adult	F	Yes	Yes			RWIC435	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+435		Q	RWI009Q	cattle	C313	946051	Cross	Adult	F	Yes	Yes			RWIC436	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+436		Q	RWI009Q	cattle	C314	Gacyara	Cross	Adult	F	Yes	Repeat breeder			RWIC437	Rwimiyaga	Rutungo	Gatovu	Negative		Positive	9/11/23	
+437	7/12/23	R	RWI010R	goat	G94	Gitobo	Local	Adult	F	No	Yes			RWIG438	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+438		R	RWI010R	goat	G95	Mukara	Local	Adult	F	No	Yes			RWIG439	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+439		R	RWI010R	goat	G96	Kagina	Local	Adult	F	No	Yes			RWIG440	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+440		R	RWI010R	cattle	C315	1437827	Cross	Adult	F	Yes	Yes			RWIC441	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+441		R	RWI010R	cattle	C316	1437826	Cross	Adult	F	Yes	Yes			RWIC442	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+442		R	RWI010R	cattle	C317	1437823	Cross	Adult	F	No	Yes			RWIC443	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+443		R	RWI010R	cattle	C318	Cyozi y'amahembe	Cross	Adult	F	Yes	Yes			RWIC444	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+444		R	RWI010R	cattle	C319	1437842	Cross	Adult	F	No	Yes			RWIC445	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+445		R	RWI010R	sheep	S030	1	Local	Adult	M	No	Yes			RWIS446	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+446		R	RWI010R	sheep	S031	2	Local	Adult	F	No	Yes			RWIS447	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+447		R	RWI010R	sheep	S032	3	Local	Adult	F	No	Yes			RWIS448	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+448		R	RWI010R	sheep	S033	4	Local	Adult	F	No	Yes			RWIS449	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+449		R	RWI010R	sheep	S034	5	Local	Adult	F	No	Yes			RWIS450	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+450		R	RWI010R	sheep	S035	6	Local	Adult	M	No	Yes			RWIS451	Rwimiyaga	Rutungo	Gatovu	Negative		Negative	9/11/23	Negative 
+451	7/13/23	S	RWI011S	cattle	C320	1820193	Cross	Adult	F	Yes	Yes			RWIC452	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+452		S	RWI011S	cattle	C321	2064625	Cross	Adult	F	Yes	Yes			RWIC453	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+453		S	RWI011S	cattle	C322	1492858	Cross	Adult	F	Yes	Yes			RWIC454	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+454		S	RWI011S	cattle	C323	1667365	Cross	Adult	F	No	Yes			RWIC455	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+455		S	RWI011S	cattle	C324	1820183	Cross	Adult	F	No	Yes			RWIC456	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+456		S	RWI011S	cattle	C325	1555712	Cross	Adult	F	Yes	Yes			RWIC457	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+457		S	RWI011S	cattle	C326	1641788	Cross	Adult	F	Yes	Yes			RWIC458	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+458		S	RWI011S	cattle	C327	1820194	Cross	Adult	F	Yes	Yes			RWIC459	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+459		S	RWI011S	cattle	C328	1104895	Cross	Adult	F	No	Aborted			RWIC460	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	7/11/23	Positive
+460		S	RWI011S	cattle	C329	1820198	Cross	Adult	F	Yes	Yes			RWIC461	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+461		S	RWI011S	cattle	C330	1820195	Cross	Adult	F	Yes	Yes			RWIC462	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+462		S	RWI011S	cattle	C331	1667364	Cross	Adult	F	Yes	Yes			RWIC463	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+463		S	RWI011S	cattle	C332	1667368	Cross	Adult	F	Yes	Repeat breeder			RWIC464	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+464		S	RWI011S	cattle	C333	1820196	Cross	Adult	F	No	Yes			RWIC465	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+465		S	RWI011S	cattle	C334	1820186	Cross	Adult	F	Yes	Yes			RWIC466	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+466		S	RWI011S	cattle	C335	1820187	Cross	Adult	F	Yes	Yes			RWIC467	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+467		S	RWI011S	cattle	C336	1820190	Cross	Adult	F	No	Yes			RWIC468	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+468		S	RWI011S	cattle	C337	1820182	Cross	Adult	F	No	Yes			RWIC469	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+469		S	RWI011S	cattle	C338	1104863	Cross	Adult	F	No	Yes			RWIC470	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+470		S	RWI011S	cattle	C339	Rusine	Cross	Adult	M	No	Yes			RWIC471	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+471		S	RWI011S	cattle	C340	1820181	Cross	Adult	M	No	Yes			RWIC472	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+472		S	RWI011S	cattle	C341	Kiremba	Cross	Adult	F	No	Yes			RWIC473	Rwimiyaga	Kirebe	Gatebe1	Negative		Positive	7/11/23	
+473		S	RWI011S	cattle	C342	1667767	Cross	Adult	F	No	Yes			RWIC474	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+474	7/13/23	T	RWI012T	cattle	C343	Shama	Exotic	Adult	F	Yes	Yes			RWIC475	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+475		T	RWI012T	cattle	C344	Mpuga 	Cross	Adult	F	No	Yes			RWIC476	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+476		T	RWI012T	cattle	C345	1605390	Cross	Adult	F	Yes	Yes			RWIC477	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+477		T	RWI012T	cattle	C346	Shama y'ihembe	Cross	Adult	F	Yes	Yes			RWIC478	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+478		T	RWI012T	cattle	C347	1605392	Cross	Adult	F	No	Yes			RWIC479	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+479		T	RWI012T	cattle	C348	1605389	Cross	Adult	F	No	Yes			RWIC480	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+480		T	RWI012T	cattle	C349	1162645	Cross	Adult	F	No	Yes			RWIC481	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+481		T	RWI012T	cattle	C350	1605393	Cross	Adult	F	No	Repeat breeder			RWIC482	Rwimiyaga	Kirebe	Gatebe1	Negative		Positive	7/11/23	
+482		T	RWI012T	cattle	C351	1605381	Cross	Adult	F	No	Repeat breeder			RWIC483	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+483		T	RWI012T	cattle	C352	1349720	Cross	Adult	F	Yes	Yes			RWIC484	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+484		T	RWI012T	cattle	C353	1162655	Cross	Adult	F	No	Yes			RWIC485	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+485		T	RWI012T	cattle	C354	1605394	Cross	Adult	F	No	Yes			RWIC486	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+486		T	RWI012T	goat	G97	Kireju	Local	Adult	F	No	Yes			RWIG487	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+487		T	RWI012T	goat	G98	Cyasha	Local	Adult	F	No	Yes			RWIG488	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+488		T	RWI012T	goat	G99	Inkungu	Local	Adult	F	Yes	Yes			RWIG489	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+489		T	RWI012T	goat	G100	Gihuga	Local	Adult	F	No	Yes			RWIG490	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+490		T	RWI012T	goat	G101	Musheru	Local	Adult	F	No	Yes			RWIG491	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+491		T	RWI012T	goat	G102	Cyasha y'amahembe	Local	Adult	F	No	Yes			RWIG492	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+492		T	RWI012T	goat	G103	Nkungu y'umukara	Local	Adult	F	No	Yes			RWIG493	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+493		T	RWI012T	goat	G104	Musheru w'icyasha	Local	Adult	F	No	Yes			RWIG494	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+494		T	RWI012T	goat	G105	Mukara y'inkungu	Local	Adult	F	No	Yes			RWIG495	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+495		T	RWI012T	goat	G106	Gihuga	Local	Adult	F	No	Yes			RWIG496	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	7/11/23	Negative 
+496	7/14/23	U	RWI013U	cattle	C355	436837	Cross	Adult	F	Yes	Yes			RWIC497	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+497		U	RWI013U	cattle	C356	666004	Cross	Adult	F	No	Aborted & Repeat breeder			RWIC498	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+498		U	RWI013U	cattle	C357	665997	Cross	Adult	F	No	Repeat breeder			RWIC499	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+499		U	RWI013U	cattle	C358	665950	Cross	Adult	F	Yes	Aborted			RWIC500	Rwimiyaga	Kirebe	Gatebe1	Negative		Positive	8/11/23	
+500		U	RWI013U	cattle	C359	665786	Cross	Adult	F	Yes	Aborted			RWIC501	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+501		U	RWI013U	cattle	C360	665765	Cross	Adult	F	Yes	Yes			RWIC502	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+502		U	RWI013U	cattle	C361	436844	Cross	Adult	F	Yes	Aborted			RWIC503	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+503		U	RWI013U	cattle	C362	665827	Cross	Adult	F	Yes	Aborted			RWIC504	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+504		U	RWI013U	cattle	C363	665990	Cross	Adult	F	Yes	Yes			RWIC505	Rwimiyaga	Kirebe	Gatebe1	Negative		Positive	8/11/23	
+505		U	RWI013U	cattle	C364	665953	Cross	Adult	F	Yes	Yes			RWIC506	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+506		U	RWI013U	cattle	C365	1167839	Cross	Adult	M	No	Yes			RWIC507	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+507		U	RWI013U	cattle	C366	665957	Cross	Adult	F	Yes	Yes			RWIC508	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+508		U	RWI013U	cattle	C367	666011	Cross	Adult	F	Yes	Aborted			RWIC509	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+509		U	RWI013U	cattle	C368	665983	Cross	Adult	F	Yes	Aborted			RWIC510	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+510		U	RWI013U	cattle	C369	665815	Cross	Adult	F	Yes	Aborted			RWIC511	Rwimiyaga	Kirebe	Gatebe1	Positive		Positive	8/11/23	Positive
+511		U	RWI013U	cattle	C370	665776	Cross	Adult	F	Yes	Yes			RWIC512	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+512		U	RWI013U	cattle	C371	665978	Cross	Adult	F	Yes	Yes			RWIC513	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+513		U	RWI013U	cattle	C372	1499596	Cross	Adult	F	Yes	Yes			RWIC514	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+514		U	RWI013U	cattle	C373	666100	Cross	Adult	F	Yes	Yes			RWIC515	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+515		U	RWI013U	cattle	C374	665984	Cross	Adult	F	Yes	Yes			RWIC516	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+516		U	RWI013U	goat	G107	Gitobo	Local	Adult	F	Yes	Yes			RWIG517	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+517		U	RWI013U	goat	G108	Mpuga 	Local	Adult	F	Yes	Yes			RWIG518	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+518		U	RWI013U	goat	G109	Flaro	Local	Adult	F	Yes	Yes			RWIG519	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+519		U	RWI013U	goat	G110	Bikomo	Local	Adult	F	Yes	Yes			RWIG520	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+520		U	RWI013U	goat	G111	Bikomo noya	Local	Adult	F	Yes	Yes			RWIG521	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+521		U	RWI013U	goat	G112	Kivuzo	Local	Adult	F	No	Yes			RWIG522	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+522		U	RWI013U	goat	G113	Kivuzo y'intuku	Local	Adult	F	No	Yes			RWIG523	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+523		U	RWI013U	goat	G114	Mpfizi y'umusheru	Local	Adult	M	No	Yes			RWIG524	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+524		U	RWI013U	goat	G115	Rutare	Local	Adult	M	No	Yes			RWIG525	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+525		U	RWI013U	goat	G116	Musheru y'umukecuru	Local	Adult	F	No	Pregnant			RWIG526	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+526		U	RWI013U	goat	G117	Karungi	Local	Adult	F	No	Pregnant			RWIG527	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+527		U	RWI013U	goat	G118	Nkungu y'ibikomo	Local	Adult	F	No	Pregnant			RWIG528	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+528		U	RWI013U	goat	G119	Nkungu y'uburegeya y' kigina	Local	Adult	F	No	Yes			RWIG529	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+529		U	RWI013U	goat	G120	Nkungu y'umukara	Local	Adult	F	Yes	Yes			RWIG530	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+530		U	RWI013U	goat	G121	Majingo y'umukara	Local	Adult	F	No	Pregnant			RWIG531	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+531		U	RWI013U	goat	G122	Bikomo y'ikigina	Local	Adult	F	Yes	Yes			RWIG532	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+532		U	RWI013U	goat	G123	Gitobo y'ikigina	Local	Adult	F	No	Pregnant			RWIG533	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+533		U	RWI013U	goat	G124	Matwi	Local	Adult	F	No	Pregnant			RWIG534	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+534		U	RWI013U	goat	G125	Buregeya bwa karungi	Local	Adult	F	No	Pregnant			RWIG535	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+535		U	RWI013U	goat	G126	Mukuru wa buregeye bwa karungi	Local	Adult	F	No	Pregnant			RWIG536	Rwimiyaga	Kirebe	Gatebe1	Negative		Negative	8/11/23	Negative 
+536	7/17/23	V	RWE009V	cattle	C375	1835525	Cross	Adult	F	Yes	Yes			RWEC537	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+537		V	RWE009V	cattle	C376	1835544	Cross	Adult	F	Yes	Yes			RWEC538	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+538		V	RWE009V	cattle	C377	1835524	Cross	Adult	F	Yes	Yes			RWEC539	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+539		V	RWE009V	cattle	C378	1835527	Cross	Adult	F	Yes	Repeat breeder			RWEC540	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+540		V	RWE009V	cattle	C379	1835522	Cross	Adult	F	Yes	Yes			RWEC541	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+541		V	RWE009V	cattle	C380	1835512	Cross	Adult	F	Yes	Yes			RWEC542	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+542		V	RWE009V	cattle	C381	1835509	Cross	Adult	F	Yes	Yes			RWEC543	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+543		V	RWE009V	cattle	C382	1610822	Cross	Adult	F	Yes	Repeat breeder			RWEC544	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+544		V	RWE009V	cattle	C383	1835526	Cross	Adult	F	No	Yes			RWEC545	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+545		V	RWE009V	cattle	C384	1835528	Cross	Adult	F	No	Yes			RWEC546	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+546		V	RWE009V	cattle	C385	1835543	Cross	Adult	F	No	Yes			RWEC547	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+547		V	RWE009V	cattle	C386	Ruyenji	Cross	Adult	M	No	Yes			RWEC548	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+548		V	RWE009V	goat	C387	Ruhuga 	Local	Adult	M	No	Yes			RWEC549	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+549		V	RWE009V	goat	G127	Musheru	Local	Adult	F	Yes	Yes			RWEG550	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+550		V	RWE009V	goat	G128	Cyasha	Local	Adult	F	Yes	Yes			RWEG551	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+551		V	RWE009V	goat	G129	Mukara	Local	Adult	F	Yes	Yes			RWEG552	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+552		V	RWE009V	goat	G130	Ruhuga	Local	Adult	F	Yes	Yes			RWEG553	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+553		V	RWE009V	goat	G131	Musheru kagondo	Local	Adult	F	Yes	Yes			RWEG554	Rwempasha	Rwempasha	Uwinkiko	Negative		Positive	8/11/23	
+554		V	RWE009V	goat	G132	Gihuga	Local	Adult	F	Yes	Yes			RWEG555	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+555		V	RWE009V	goat	G133	Ruhaya	Local	Adult	M	No	Yes			RWEG556	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+556		V	RWE009V	goat	G134	Mukara y'ihembe	Local	Adult	F	Yes	Yes			RWEG557	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+557		V	RWE009V	goat	G135	Kibara	Local	Adult	F	Yes	Yes			RWEG558	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+558		V	RWE009V	goat	G136	Ndegeya	Local	Adult	F	Yes	Yes			RWEG559	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+559		V	RWE009V	goat	G137	Nkungu ntoya	Local	Adult	F	Yes	Yes			RWEG560	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+560		V	RWE009V	goat	G138	Nkungu nkuru	Local	Adult	F	Yes	Yes			RWEG561	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+561		V	RWE009V	sheep	S036	Nyinawazo	Local	Adult	F	No	Yes			RWES562	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+562		V	RWE009V	sheep	S037	Muhunguwayo	Local	Adult	M	No	Yes			RWES563	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+563		V	RWE009V	sheep	S038	Rugina	Local	Adult	M	No	Yes			RWES564	Rwempasha	Rwempasha	Uwinkiko	Negative		Negative	8/11/23	Negative 
+564	7/18/23	W	KAR001W	cattle	C388	967721	Cross	Adult	F	Yes	Repeat breeder			KARC565	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+565		W	KAR001W	cattle	C389	Gahuga	Cross	Adult	F	No	Repeat breeder			KARC566	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+566		W	KAR001W	cattle	C390	967716	Cross	Adult	F	No	Yes			KARC567	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+567		W	KAR001W	cattle	C391	967714	Cross	Adult	F	Yes	Yes			KARC568	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+568		W	KAR001W	cattle	C392	Ngabo	Cross	Adult	F	Yes	Yes			KARC569	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+569		W	KAR001W	cattle	C393	967715	Cross	Adult	F	No	Yes			KARC570	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+570		W	KAR001W	cattle	C394	Karungi	Cross	Adult	F	Yes	Yes			KARC571	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+571		W	KAR001W	cattle	C395	967737	Cross	Adult	F	Yes	Repeat breeder			KARC572	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+572		W	KAR001W	cattle	C396	967720	Cross	Adult	F	Yes	Repeat breeder			KARC573	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+573		W	KAR001W	cattle	C397	967709	Cross	Adult	F	Yes	Yes			KARC574	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+574		W	KAR001W	cattle	C398	Mpfundo	Cross	Adult	F	No	Yes			KARC575	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+575		W	KAR001W	cattle	C399	Ndebunyurwe	Cross	Adult	F	No	Yes			KARC576	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+576		W	KAR001W	cattle	C400	967733	Cross	Adult	F	No	Yes			KARC577	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+577		W	KAR001W	cattle	C401	528549	Cross	Adult	F	No	Yes			KARC578	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+578		W	KAR001W	cattle	C402	967717	Cross	Adult	F	Yes	Yes			KARC579	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+579		W	KAR001W	cattle	C403	Cyasha	Cross	Adult	F	No	Pregnant			KARC580	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+580		W	KAR001W	cattle	C404	967736	Cross	Adult	F	No	Yes			KARC581	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+581		W	KAR001W	cattle	C405	Ihinda	Cross	Adult	F	Yes	Yes			KARC582	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+582		W	KAR001W	cattle	C406	Musengo/ Shaburini	Cross	Adult	F	No	Yes			KARC583	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+583		W	KAR001W	cattle	C407	Bunyana	Cross	Adult	F	Yes	Yes			KARC584	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+584		W	KAR001W	cattle	C408	967711	Cross	Adult	F	No	Yes			KARC585	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+585		W	KAR001W	cattle	C409	Rugabo/ Impfizi	Cross	Adult	M	No	Yes			KARC586	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+586		W	KAR001W	cattle	C410	Ruhugarutoya	Cross	Adult	M	No	Yes			KARC587	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+587		W	KAR001W	goat	G139	Ndegeya	Local	Adult	F	Yes	Yes			KARG588	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+588		W	KAR001W	goat	G140	Mukara	Local	Adult	F	Yes	Yes			KARG589	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+589		W	KAR001W	goat	G141	Musheru Buregeya	Local	Adult	F	Yes	Yes			KARG590	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+590		W	KAR001W	goat	G142	Kagabo	Local	Adult	F	Yes	Yes			KARG591	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+591		W	KAR001W	goat	G143	Isekurume Rutobo	Local	Adult	M	No	Yes			KARG592	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+592		W	KAR001W	goat	G144	Gahene	Local	Adult	F	Yes	Yes			KARG593	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+593		W	KAR001W	goat	G145	Kavuzo	Local	Adult	F	Yes	Yes			KARG594	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+594		W	KAR001W	goat	G146	Ngabo	Local	Adult	F	Yes	Yes			KARG595	Karangazi	Karama	Rundiro	Negative		Negative	7/11/23	Negative 
+595	7/18/23	X	KAR002X	cattle	C411	664517	Cross	Adult	F	Yes	Aborted and repeat breeder			KARC596	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+596		X	KAR002X	cattle	C412	664515	Cross	Adult	F	No	Aborted			KARC597	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+597		X	KAR002X	cattle	C413	664533 vaccinated	Cross	Adult	F	No	Aborted			KARC598	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+598		X	KAR002X	cattle	C414	664534	Cross	Adult	F	No	Repeat breeder			KARC599	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+599		X	KAR002X	cattle	C415	664528	Cross	Adult	F	No	Repeat breeder and abortion 			KARC600	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+600		X	KAR002X	cattle	C416	664531	Cross	Adult	F	Yes	Yes			KARC601	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+601		X	KAR002X	cattle	C417	664521	Cross	Adult	F	Yes	Aborted			KARC602	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+602		X	KAR002X	cattle	C418	Mpuga 	Cross	Adult	F	No	Yes			KARC603	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+603		X	KAR002X	cattle	C419	664535	Cross	Adult	F	No	Yes			KARC604	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+604		X	KAR002X	cattle	C420	664514 vaccinated	Cross	Adult	F	No	Repeat breeder and abortion 			KARC605	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+605		X	KAR002X	cattle	C421	1830634	Cross	Adult	F	No	Aborted			KARC606	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+606		X	KAR002X	sheep	S039	Mukuruwazo	Local	Adult	F	No	Aborted			KARS607	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+607		X	KAR002X	sheep	S040	Kamugisha	Local	Adult	M	No	Yes			KARS608	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+608		X	KAR002X	sheep	S041	Jackson	Local	Adult	F	No	Yes			KARG609	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+609		X	KAR002X	sheep	S042	Vatiri	Local	Adult	M	No	Yes			KARS610	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+610		X	KAR002X	sheep	S043	Manzi	Local	Adult	F	No	Yes			KARS611	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+611	7/18/23	Y	KAR003Y	cattle	C422	Rugabo	Cross	Adult	M	No	Yes			KARC612	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+612		Y	KAR003Y	cattle	C423	664470	Cross	Adult	F	Yes	Yes			KARC613	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+613		Y	KAR003Y	cattle	C424	664461	Cross	Adult	F	No	Yes			KARC614	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+614		Y	KAR003Y	cattle	C425	664460	Cross	Adult	F	No	Yes			KARC615	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+615		Y	KAR003Y	cattle	C426	664467	Cross	Adult	F	No	Yes			KARC616	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+616		Y	KAR003Y	cattle	C427	664469	Cross	Adult	F	Yes	Repeat breeder			KARC617	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+617		Y	KAR003Y	cattle	C428	664463	Cross	Adult	F	Yes	Yes			KARC618	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+618		Y	KAR003Y	cattle	C429	664476	Cross	Adult	F	Yes	Yes			KARC619	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+619		Y	KAR003Y	cattle	C430	664475	Cross	Adult	F	Yes	Yes			KARC620	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+620		Y	KAR003Y	cattle	C431	664480	Cross	Adult	F	Yes	Yes			KARC621	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+621		Y	KAR003Y	cattle	C432	664459	Cross	Adult	F	Yes	Yes			KARC622	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+622		Y	KAR003Y	cattle	C433	664458	Cross	Adult	F	Yes	Yes			KARC623	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+623		Y	KAR003Y	cattle	C434	664484	Cross	Adult	F	No	Yes			KARC624	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+624		Y	KAR003Y	cattle	C435	664477	Cross	Adult	F	No	Yes			KARC625	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+625		Y	KAR003Y	cattle	C436	Madamu	Cross	Adult	F	No	Yes			KARC626	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+626		Y	KAR003Y	goat	G147	1	Local	Adult	F	Yes	Yes			KARG627	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+627		Y	KAR003Y	goat	G148	2	Local	Adult	F	Yes	Yes			KARG628	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+628		Y	KAR003Y	goat	G149	3	Local	Adult	F	No	Yes			KARG629	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+629		Y	KAR003Y	goat	G150	4	Local	Adult	F	Yes	Yes			KARG630	Karangazi	Karama	Karama	Negative		Negative	7/11/23	Negative 
+630		Y	KAR003Y	goat	G151	5	Local	Adult	F	No	Pregnant			KARG631	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+631		Y	KAR003Y	goat	G152	6	Local	Adult	F	No	Pregnant			KARG632	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+632		Y	KAR003Y	goat	G153	7	Local	Adult	F	No	Pregnant			KARG633	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+633		Y	KAR003Y	goat	G154	8	Local	Adult	F	No	Pregnant			KARG634	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+634		Y	KAR003Y	goat	G155	9	Local	Adult	M	No	Yes			KARG635	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+635		Y	KAR003Y	goat	G156	10	Local	Adult	F	No	Pregnant			KARG636	Karangazi	Karama	Karama	Negative		Negative	9/11/23	Negative 
+636	7/19/23	Z	KAR004Z	cattle	C437	452820	Cross	Adult	F	No	Yes			KARC637	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+637		Z	KAR004Z	cattle	C438	1183533	Cross	Adult	F	Yes	Yes			KARC638	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+638		Z	KAR004Z	cattle	C439	1180757	Cross	Adult	F	Yes	Yes			KARC639	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+639		Z	KAR004Z	cattle	C440	Inyange	Cross	Adult	F	Yes	Yes			KARC640	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+640		Z	KAR004Z	cattle	C441	379334	Cross	Adult	F	Yes	Yes			KARC641	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+641		Z	KAR004Z	cattle	C442	1079169	Cross	Adult	F	Yes	Yes			KARC642	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+642		Z	KAR004Z	cattle	C443	452459	Cross	Adult	F	Yes	Repeat breeder			KARC643	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+643		Z	KAR004Z	cattle	C444	538863	Cross	Adult	F	Yes	Yes			KARC644	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+644		Z	KAR004Z	cattle	C445	1550792	Cross	Adult	F	Yes	Yes			KARC645	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+645		Z	KAR004Z	cattle	C446	748203	Cross	Adult	F	Yes	Yes			KARC646	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+646		Z	KAR004Z	cattle	C447	1008498	Cross	Adult	M	No	Yes			KARC647	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+647		Z	KAR004Z	cattle	C448	1550784	Cross	Adult	F	Yes	Yes			KARC648	Karangazi	Ndama	Akayange 1	Negative		Negative	8/11/23	Negative 
+648	7/19/23	AA	KAR005AA	cattle	C449	Cyasha	Cross	Adult	F	Yes	Yes			KARC649	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+649		AA	KAR005AA	cattle	C450	1501538	Cross	Adult	F	Yes	Yes			KARC650	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+650		AA	KAR005AA	cattle	C451	1501544	Cross	Adult	F	No	Aborted			KARC651	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+651		AA	KAR005AA	cattle	C452	1501540	Cross	Adult	F	Yes	Yes			KARC652	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+652		AA	KAR005AA	cattle	C453	1501532	Cross	Adult	M	No	Yes			KARC653	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+653		AA	KAR005AA	cattle	C454	Musengo	Cross	Adult	F	Yes	Yes			KARC654	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+654		AA	KAR005AA	cattle	C455	1501545	Cross	Adult	F	Yes	Yes			KARC655	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+655		AA	KAR005AA	cattle	C456	Ruyenji	Cross	Adult	F	No	Yes			KARC656	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+656		AA	KAR005AA	cattle	C457	1501661	Cross	Adult	F	Yes	Yes			KARC657	Karangazi	Ndama	Akayange 2	Positive		Positive	8/11/23	Positive
+657		AA	KAR005AA	cattle	C458	Rugabo	Cross	Adult	M	No	Yes			KARC658	Karangazi	Ndama	Akayange 2	Negative		Negative	8/11/23	Negative 
+658	7/19//2023	AB	KAR006AB	cattle	C459	1110567	Cross	Adult	F	Yes	Repeat breeder			KARC659	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+659		AB	KAR006AB	cattle	C460	1110586	Cross	Adult	F	No	Yes			KARC660	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+660		AB	KAR006AB	cattle	C461	1483209	Cross	Adult	F	Yes	Yes			KARC661	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+661		AB	KAR006AB	cattle	C462	1834399	Cross	Adult	F	Yes	Aborted			KARC662	Karangazi	Ndama	Rwabiharamba	Positive		Positive	8/11/23	Positive
+662		AB	KAR006AB	cattle	C463	1110580	Cross	Adult	F	No	Yes			KARC663	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+663		AB	KAR006AB	cattle	C464	1482858	Cross	Adult	F	Yes	Yes			KARC664	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+664		AB	KAR006AB	cattle	C465	1483215	Cross	Adult	F	Yes	Yes			KARC665	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+665		AB	KAR006AB	cattle	C466	1482854	Cross	Adult	F	Yes	Yes			KARC666	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+666		AB	KAR006AB	cattle	C467	1670125	Cross	Adult	F	No	Yes			KARC667	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+667		AB	KAR006AB	cattle	C468	1099354	Cross	Adult	F	Yes	Yes			KARC668	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+668		AB	KAR006AB	cattle	C469	1482842	Cross	Adult	M	No	Yes			KARC669	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+669		AB	KAR006AB	cattle	C470	1482828	Cross	Adult	F	No	Repeat breeder			KARC670	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+670		AB	KAR006AB	cattle	C471	1482851	Cross	Adult	F	Yes	Repeat breeder			KARC671	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+671		AB	KAR006AB	cattle	C472	1482832	Cross	Adult	F	No	Repeat breeder			KARC672	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+672		AB	KAR006AB	cattle	C473	1110584	Cross	Adult	F	Yes	Yes			KARC673	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+673		AB	KAR006AB	cattle	C474	1099345	Cross	Adult	F	No	Repeat breeder			KARC674	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+674		AB	KAR006AB	cattle	C475	1482848	Cross	Adult	F	No	Yes			KARC675	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+675		AB	KAR006AB	cattle	C476	1483214	Cross	Adult	F	No	Yes			KARC676	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+676		AB	KAR006AB	cattle	C477	1482852	Cross	Adult	F	No	Yes			KARC677	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+677		AB	KAR006AB	cattle	C478	1110559	Cross	Adult	F	Yes	Yes			KARC678	Karangazi	Ndama	Rwabiharamba	Negative		Positive	8/11/23	
+678		AB	KAR006AB	goat	G157	Nkungu	Local	Adult	F	Yes	Aborted			KARG679	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+679		AB	KAR006AB	goat	G158	Cyasha	Local	Adult	F	Yes	Yes			KARG680	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+680		AB	KAR006AB	goat	G159	Ndegeya	Local	Adult	F	Yes	Yes			KARG681	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+681		AB	KAR006AB	goat	G160	Gihuga	Local	Adult	F	Yes	Yes			KARG682	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+682		AB	KAR006AB	goat	G161	kigabo	Local	Adult	F	Yes	Yes			KARG683	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+683		AB	KAR006AB	goat	G162	Musheru	Local	Adult	F	Yes	Yes			KARG684	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+684		AB	KAR006AB	goat	G163	Gicocero	Local	Adult	F	Yes	Yes			KARG685	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+685		AB	KAR006AB	goat	G164	Mbarasi	Local	Adult	F	No	Pregnant			KARG686	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+686		AB	KAR006AB	goat	G165	Mukara	Local	Adult	F	No	Aborted but pregnant now			KARG687	Karangazi	Ndama	Rwabiharamba	Negative		Negative	8/11/23	Negative 
+687	7/20/23	AC	KAR007AC	cattle	C479	1110445	Cross	Adult	F	No	Aborted			KARC688	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+688		AC	KAR007AC	cattle	C480	1110442	Cross	Adult	F	No	Yes			KARC689	Karangazi	Kamate	Bugarama	Negative		Positive	8/11/23	
+689		AC	KAR007AC	cattle	C481	1110444	Cross	Adult	F	No	Yes			KARC690	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+690		AC	KAR007AC	cattle	C482	1110437	Cross	Adult	F	No	Aborted			KARC691	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+691		AC	KAR007AC	cattle	C483	1156164	Cross	Adult	F	No	Aborted			KARC692	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+692		AC	KAR007AC	cattle	C484	1483096	Cross	Adult	F	Yes	Yes			KARC693	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+693		AC	KAR007AC	cattle	C485	1110449	Cross	Adult	F	Yes	aborted			KARC694	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+694		AC	KAR007AC	cattle	C486	1110434	Cross	Adult	M	No	Yes			KARC695	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+695		AC	KAR007AC	cattle	C487	1156159	Cross	Adult	F	Yes	aborted			KARC696	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+696		AC	KAR007AC	cattle	C488	1110454	Cross	Adult	F	Yes	aborted			KARC697	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+697		AC	KAR007AC	cattle	C489	1110452	Cross	Adult	F	Yes	Yes			KARC698	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+698		AC	KAR007AC	cattle	C490	1110438	Cross	Young Adult 	F	No	Yes			KARC699	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+699		AC	KAR007AC	cattle	C491	1156165	Cross	Adult	F	Yes	Yes			KARC700	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+700		AC	KAR007AC	cattle	C492	Ruhuga	Cross	Adult	M	No	Yes			KARC701	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+701		AC	KAR007AC	cattle	C493	1110432	Cross	Adult	F	No	Yes			KARC702	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+702		AC	KAR007AC	cattle	C494	1110443	Cross	Adult	F	No	Yes			KARC703	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+703		AC	KAR007AC	cattle	C495	1156198	Cross	Adult	F	Yes	Yes			KARC704	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+704		AC	KAR007AC	cattle	C496	Mayenji	Cross	Adult	F	Yes	Yes			KARC705	Karangazi	Kamate	Bugarama	Positive		Positive	8/11/23	Positive
+705		AC	KAR007AC	goat	G166	Kabarasi	Local	Adult	F	No	Pregnant			KARG706	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+706		AC	KAR007AC	goat	G167	Nyirandegeya	Local	Adult	F	No	Pregnant			KARG707	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+707		AC	KAR007AC	goat	G168	Bicocero	Local	Adult	F	No	Pregnant			KARG708	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+708		AC	KAR007AC	goat	G169	Mukara	Local	Adult	F	No	Yes			KARG709	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+709		AC	KAR007AC	goat	G170	Gihuga	Local	Adult	F	No	Pregnant			KARG710	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+710		AC	KAR007AC	goat	G171	Kibibi	Local	Adult	F	No	Pregnant			KARG711	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+711		AC	KAR007AC	goat	G172	Barasi	Local	Adult	F	No	Pregnant			KARG712	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+712		AC	KAR007AC	goat	G173	Gacocero	Local	Adult	F	No	Yes			KARG713	Karangazi	Kamate	Bugarama	Negative		Negative	8/11/23	Negative 
+713	7/20/23	AD	KAR008AD	cattle	C497	1199542	Cross	Adult	F	Yes	Yes			KARC714	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+714		AD	KAR008AD	cattle	C498	1521033	Cross	Adult	F	Yes	Yes			KARC715	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+715		AD	KAR008AD	cattle	C499	1109822	Cross	Young Adult 	F	No	Yes			KARC716	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+716		AD	KAR008AD	cattle	C500	1521005	Cross	Adult	F	Yes	Yes			KARC717	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+717		AD	KAR008AD	cattle	C501	Mbabazi	Cross	Adult	F	No	Yes			KARC718	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+718		AD	KAR008AD	cattle	C502	1483296	Cross	Adult	F	Yes	Yes			KARC719	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+719		AD	KAR008AD	cattle	C503	1521045	Cross	Adult	F	No	Yes			KARC720	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+720		AD	KAR008AD	cattle	C504	1499910	Cross	Adult	F	No	Yes			KARC721	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+721		AD	KAR008AD	cattle	C505	1521035	Cross	Adult	F	Yes	Yes			KARC722	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+722		AD	KAR008AD	cattle	C506	1521051	Cross	Adult	F	No	Pregnant			KARC723	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+723		AD	KAR008AD	cattle	C507	1521056	Cross	Young Adult 	F	No	Yes			KARC724	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+724		AD	KAR008AD	cattle	C508	Rwasha	Cross	Adult	M	No	Yes			KARC725	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+725		AD	KAR008AD	cattle	C509	1521053	Cross	Young Adult 	F	No	Yes			KARC726	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+726		AD	KAR008AD	goat	G174	Kigina	Local	Adult	F	No	Yes			KARG727	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+727		AD	KAR008AD	goat	G175	Kabbibi	Local	Adult	F	No	Yes			KARG728	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+728		AD	KAR008AD	goat	G176	Gihuga	Local	Adult	F	No	Yes			KARG729	Karangazi	Kamate	Buhongora	Positive		Positive	8/11/23	Positive
+729		AD	KAR008AD	goat	G177	Mukara	Local	Adult	F	No	Yes			KARG730	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+730		AD	KAR008AD	goat	G178	Musheru	Local	Adult	F	No	Yes			KARG731	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+731		AD	KAR008AD	goat	G179	Mvuyekure	Local	Adult	F	No	Aborted			KARG732	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+732		AD	KAR008AD	goat	G180	Kasha	Local	Adult	F	No	Yes			KARG733	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+733		AD	KAR008AD	goat	G181	Gitobo	Local	Adult	F	No	Yes			KARG734	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+734		AD	KAR008AD	goat	G182	Gacumba	Local	Adult	F	No	Yes			KARG735	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+735		AD	KAR008AD	goat	G183	Kagondo	Local	Adult	F	No	Yes			KARG736	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+736		AD	KAR008AD	goat	G184	Ruhaya	Local	Adult	M	No	Yes			KARG737	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+737		AD	KAR008AD	goat	G185	Kigabo	Local	Adult	M	No	Yes			KARG738	Karangazi	Kamate	Buhongora	Negative		Negative	8/11/23	Negative 
+738	7/25/23	AE	KAR009AE	cattle	C510	1731334	Cross	Adult	F	No	Repeat breeder			KARC739	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+739		AE	KAR009AE	cattle	C511	1731343	Cross	Adult	F	Yes	Repeat breeder			KARC740	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+740		AE	KAR009AE	cattle	C512	1731210	Cross	Adult	F	Yes	Repeat breeder and vaccinated			KARC741	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+741		AE	KAR009AE	cattle	C513	1731235	Cross	Adult	F	Yes	Repeat breeder and abortion 			KARC742	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+742		AE	KAR009AE	cattle	C514	1731220	Cross	Adult	F	Yes	Repeat breeder			KARC743	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+743		AE	KAR009AE	cattle	C515	1731332	Cross	Adult	F	No	Yes			KARC744	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+744		AE	KAR009AE	cattle	C516	1731216	Cross	Adult	F	Yes	Yes			KARC745	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+745		AE	KAR009AE	cattle	C517	1731213	Cross	Adult	F	Yes	Repeat breeder			KARC746	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+746		AE	KAR009AE	cattle	C518	1731358	Cross	Adult	F	No	Repeat breeder			KARC747	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+747		AE	KAR009AE	cattle	C519	1731356	Cross	Adult	M	No	Yes			KARC748	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+748		AE	KAR009AE	cattle	C520	1731224	Cross	Adult	F	Yes	Repeart breeder			KARC749	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+749		AE	KAR009AE	cattle	C521	Kangabo y'akajwara	Cross	Adult	F	No	Repeart breeder			KARC750	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+750		AE	KAR009AE	cattle	C522	1731234	Cross	Adult	F	Yes	Repeart breeder and abortion			KARC751	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+751		AE	KAR009AE	cattle	C523	1731229	Cross	Adult	F	Yes	Repeart breeder			KARC752	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+752		AE	KAR009AE	cattle	C524	Kakarara	Cross	Adult	F	No	Repeart breeder			KARC753	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+753		AE	KAR009AE	cattle	C525	1731236	Cross	Adult	F	Yes	Yes			KARC754	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+754		AE	KAR009AE	cattle	C526	1731214	Cross	Adult	F	Yes	Repeat breeder			KARC755	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+755		AE	KAR009AE	cattle	C527	1731227	Cross	Adult	F	Yes	Repeat breeder			KARC756	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+756		AE	KAR009AE	cattle	C528	1731217	Cross	Adult	F	No	Repeat breeder			KARC757	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+757		AE	KAR009AE	cattle	C529	1731211	Cross	Adult	F	No	Repeat breeder			KARC758	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+758		AE	KAR009AE	sheep	S044	Ange	Local	Adult	F	No	Yes			KARS759	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+759		AE	KAR009AE	sheep	S045	Rugeyo	Local	Adult	M	No	Yes			KARS760	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+760		AE	KAR009AE	sheep	S046	Clarisse	Local	Adult	F	No	Yes			KARS761	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+761		AE	KAR009AE	sheep	S047	Bwiza	Local	Adult	F	No	Yes			KARS762	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+762		AE	KAR009AE	sheep	S048	Dusabe	Local	Adult	F	No	Yes			KARS763	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+763		AE	KAR009AE	sheep	S049	Kivumbi	Local	Adult	F	No	Yes			KARS764	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+764		AE	KAR009AE	sheep	S050	Messi	Local	Adult	M	No	Yes			KARS765	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+765		AE	KAR009AE	sheep	S051	Martin	Local	Young Adult 	M	No	Yes			KARS766	Karangazi	Kamate	Kamate	Negative	6/11/23	Negative	7/11/23	Negative 
+766	7/25/23	AF	KAR010AF	cattle	C530	402045	Cross	Adult	F	No	Repeat breeder and abortion 			KARC767	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+767		AF	KAR010AF	cattle	C531	66198	Cross	Adult	F	Yes	Repeat breeder			KARC768	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+768		AF	KAR010AF	cattle	C532	100904	Cross	Adult	F	Yes	Repeat breeder			KARC769	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+769		AF	KAR010AF	cattle	C533	100903	Cross	Adult	F	No	Repeat breeder			KARC770	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+770		AF	KAR010AF	cattle	C534	66199	Cross	Adult	F	No	Pregnant			KARC771	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+771		AF	KAR010AF	cattle	C535	Kanjera	Cross	Young Adult 	F	No	Yes			KARC772	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+772		AF	KAR010AF	cattle	C536	100907	Cross	Adult	F	Yes	Repeat breeder			KARC773	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+773		AF	KAR010AF	cattle	C537	100777	Cross	Adult	F	No	Yes			KARC774	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+774		AF	KAR010AF	cattle	C538	Rwangabo	Cross	Adult	M	No	Yes			KARC775	Karangazi	Ndama	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+775	7/26/23	AG	KAR011AG	cattle	C539	Kadozi	Cross	Adult	F	Yes	Yes			KARC776	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+776		AG	KAR011AG	cattle	C540	1199380	Cross	Adult	F	Yes	Yes			KARC777	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+777		AG	KAR011AG	cattle	C541	1199360	Cross	Adult	F	Yes	Yes			KARC778	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+778		AG	KAR011AG	cattle	C542	1199403	Cross	Adult	F	Yes	Yes			KARC779	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+779		AG	KAR011AG	cattle	C543	1199382	Cross	Adult	F	No	Pregnant			KARC780	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+780		AG	KAR011AG	cattle	C544	1199478	Cross	Adult	F	No	Repeat breeder and abortion 			KARC781	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+781		AG	KAR011AG	cattle	C545	1163116	Cross	Adult	F	Yes	Repeat breeder			KARC782	Karangazi	Ndama	Ndama	Positive	6/11/23	Positive	7/11/23	Positive
+782		AG	KAR011AG	cattle	C546	1199476	Cross	Adult	F	No	Repeat breeder			KARC783	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+783		AG	KAR011AG	cattle	C547	1199388	Cross	Adult	F	Yes	Yes			KARC784	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+784		AG	KAR011AG	cattle	C548	970536	Cross	Adult	M	No	Yes			KARC785	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+785		AG	KAR011AG	cattle	C549	1609295	Cross	Young Adult 	M	No	Yes			KARC786	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+786		AG	KAR011AG	goat	G186	Kellen	Local	Adult	F	Yes	Aborted			KARG787	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+787		AG	KAR011AG	goat	G187	Nyenyeri	Local	Adult	F	Yes	Aborted			KARG788	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+788		AG	KAR011AG	goat	G188	Mutijima	Local	Adult	F	No	Pregnant			KARG789	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+789		AG	KAR011AG	goat	G189	Mutoni	Local	Adult	F	Yes	Yes			KARG790	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+790		AG	KAR011AG	goat	G190	Kanyana	Local	Adult	F	No	Aborted			KARG791	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+791		AG	KAR011AG	goat	G191	Nziza	Local	Adult	F	Yes	Aborted			KARG792	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+792		AG	KAR011AG	goat	G192	Gisheru	Local	Adult	F	Yes	Yes			KARG793	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+793		AG	KAR011AG	goat	G193	Kaguru	Local	Adult	F	Yes	Yes			KARG794	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+794		AG	KAR011AG	goat	G194	Chris	Local	Adult	F	Yes	Aborted			KARG795	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+795		AG	KAR011AG	goat	G195	Doreen	Local	Adult	F	No	Yes			KARG796	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+796		AG	KAR011AG	goat	G196	Mucyo	Local	Adult	F	No	Pregnant			KARG797	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+797		AG	KAR011AG	goat	G197	Rwema	Local	Adult	F	Yes	Yes			KARG798	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+798		AG	KAR011AG	goat	G198	Rudasingwa	Local	Adult	M	No	Yes			KARG799	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+799		AG	KAR011AG	goat	G199	Ketty	Local	Adult	M	No	Yes			KARG800	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+800		AG	KAR011AG	goat	G200	Kavara	Local	Young Adult 	F	No	Yes			KARG801	Karangazi	Ndama	Ndama	Negative	6/11/23	Negative	7/11/23	Negative 
+801	7/27/23	AH	KAR012AH	cattle	C550	Cyasha cy'amirundi	Cross	Adult	F	Yes	Repeat breeder			KARC802	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+802		AH	KAR012AH	cattle	C551	Kagacweka	Cross	Young Adult 	F	No	Repeat breeder			KARC803	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+803		AH	KAR012AH	cattle	C552	shallon 	Cross	Adult	F	Yes	Repeat breeder			KARC804	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+804		AH	KAR012AH	cattle	C553	57165	Cross	Adult	F	No	Repeat breeder			KARC805	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+805		AH	KAR012AH	cattle	C554	Mpuga Jersey	Cross	Adult	F	No	Still birth			KARC806	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+806		AH	KAR012AH	cattle	C555	Mirundi	Cross	Adult	F	Yes	Yes			KARC807	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+807		AH	KAR012AH	cattle	C556	Mucyo	Cross	Adult	F	No	Pregnant			KARC808	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+808		AH	KAR012AH	cattle	C557	Gahinda	Exotic	Young Adult 	F	No	Aborted			KARC809	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+809		AH	KAR012AH	cattle	C558	Mubyeyi	Exotic	Adult	F	Yes	Yes			KARC810	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+810		AH	KAR012AH	cattle	C559	44383	Cross	Adult	F	Yes	Yes			KARC811	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+811		AH	KAR012AH	cattle	C560	Mpuga	Cross	Adult	F	Yes	Repeat breeder			KARC812	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+812		AH	KAR012AH	cattle	C561	Indushabandi	Cross	Adult	F	Yes	Repeat breeder			KARC813	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+813		AH	KAR012AH	cattle	C562	Kiremba	Cross	Adult	F	Yes	Repeat breeder			KARC814	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+814		AH	KAR012AH	cattle	C563	Mbazi	Cross	Adult	F	Yes	Repeat breeder			KARC815	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+815		AH	KAR012AH	cattle	C564	Rutebezambuga	Cross	Adult	F	Yes	Repeat breeder			KARC816	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+816		AH	KAR012AH	cattle	C565	Ngabo y'akigali	Cross	Adult	F	Yes	Repeat breeder			KARC817	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+817		AH	KAR012AH	cattle	C566	Cyasha cy'ashiri	Cross	Adult	F	Yes	Repeat breeder			KARC818	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+818		AH	KAR012AH	cattle	C567	Runyete	Cross	Adult	F	Yes	Repeat breeder			KARC819	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+819		AH	KAR012AH	cattle	C568	Gacunda	Cross	Adult	F	No	Repeat breeder			KARC820	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+820		AH	KAR012AH	cattle	C569	Inkumburwa	Cross	Adult	F	Yes	Repeat breeder			KARC821	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+821		AH	KAR012AH	cattle	C570	Ngabo y'a flaro	Cross	Adult	F	Yes	Repeat breeder			KARC822	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+822		AH	KAR012AH	goat	G201	Gitobo	Exotic	Adult	F	No	Aborted			KARG823	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+823		AH	KAR012AH	goat	G202	Ihembe	Exotic	Adult	F	No	Aborted			KARG824	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+824		AH	KAR012AH	goat	G203	Gihuga	Exotic	Adult	F	No	Yes			KARG825	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+825		AH	KAR012AH	goat	G204	Ruhaya	Exotic	Adult	M	No	Yes			KARG826	Karangazi	Kamate	Byimana	Negative	6/11/23	Positive	7/11/23	
+826		AH	KAR012AH	goat	G205	Nkungu	Exotic	Adult	F	No	Yes			KARG827	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+827		AH	KAR012AH	goat	G206	Kabarasi	Exotic	Adult	F	No	Yes			KARG828	Karangazi	Kamate	Byimana	Negative	6/11/23	Negative	7/11/23	Negative 
+828	7/28/23	AI	RWE010AI	cattle	C571	1497960	Cross	Adult	F	Yes	Yes			RWEC829	Rwempasha	Kabare	Kabare	Negative	6/11/23	Positive	7/11/23	
+829		AI	RWE010AI	cattle	C572	1497958	Cross	Adult	F	Yes	Yes			RWEC830	Rwempasha	Kabare	Kabare	Negative	6/11/23	Positive	7/11/23	
+830		AI	RWE010AI	cattle	C573	1497959	Cross	Adult	F	Yes	Yes			RWEC831	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+831		AI	RWE010AI	cattle	C574	1497961	Cross	Adult	F	Yes	Yes			RWEC832	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+832		AI	RWE010AI	cattle	C575	1497969	Cross	Adult	F	Yes	Repeat breeder			RWEC833	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+833		AI	RWE010AI	cattle	C576	1497965	Cross	Adult	F	No	Repeat breeder			RWEC834	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+834		AI	RWE010AI	cattle	C577	1497970	Cross	Adult	F	Yes	Yes			RWEC835	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+835		AI	RWE010AI	cattle	C578	1497966	Cross	Adult	F	Yes	Yes			RWEC836	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+836		AI	RWE010AI	cattle	C579	1497971	Cross	Adult	F	Yes	Yes			RWEC837	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+837		AI	RWE010AI	cattle	C580	1497963	Cross	Adult	F	Yes	Yes			RWEC838	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+838		AI	RWE010AI	cattle	C581	1838933	Cross	Adult	M	No	Yes			RWEC839	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+839		AI	RWE010AI	cattle	C582	1497973	Cross	Adult	F	Yes	Yes			RWEC840	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+840		AI	RWE010AI	cattle	C583	1497962	Cross	Adult	F	No	Yes			RWEC841	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+841		AI	RWE010AI	cattle	C584	Kakiremba	Cross	Young Adult 	F	No	Yes			RWEC842	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+842		AI	RWE010AI	cattle	C585	Kayenji	Cross	Young Adult 	F	No	Yes			RWEC843	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+843		AI	RWE010AI	cattle	C586	Kozi	Cross	Young Adult 	F	No	Yes			RWEC844	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+844		AI	RWE010AI	cattle	C587	Kagabo	Cross	Young Adult 	F	No	Yes			RWEC845	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+845		AI	RWE010AI	sheep	S052	Kibara	Local	Adult	F	No	Yes			RWES846	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+846		AI	RWE010AI	sheep	S053	Ntalongo	Local	Adult	F	No	Yes			RWES847	Rwempasha	Kabare	Kabare	Negative	6/11/23	Positive	7/11/23	
+847		AI	RWE010AI	sheep	S054	Rugeyo	Local	Adult	M	No	Yes			RWES848	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+848		AI	RWE010AI	sheep	S055	Gasekurume	Local	Adult	F	No	Yes			RWES849	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+849		AI	RWE010AI	sheep	S056	Gitare	Local	Adult	M	No	Yes			RWES850	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+850		AI	RWE010AI	sheep	S057	Gihuga	Local	Adult	F	No	Yes			RWES851	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+851		AI	RWE010AI	sheep	S058	Mweru	Local	Adult	F	No	Yes			RWES852	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+852		AI	RWE010AI	sheep	S059	Intama Angel	Local	Adult	F	No	Yes			RWES853	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+853		AI	RWE010AI	sheep	S060	Ndege	Local	Adult	F	No	Yes			RWES854	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+854		AI	RWE010AI	sheep	S061	Ndege 2	Local	Adult	F	No	Yes			RWES855	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+855		AI	RWE010AI	sheep	S062	Pamella	Local	Adult	F	No	Yes			RWES856	Rwempasha	Kabare	Kabare	Negative	6/11/23	Negative	7/11/23	Negative 
+856	8/1/23	AJ	KAR013AJ	cattle	C588	1806614	Cross	Adult	F	Yes	Repeat breeder			KARC857	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+857		AJ	KAR013AJ	cattle	C589	Ngabo	Cross	Adult	F	No	Pregnant			KARC858	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+858		AJ	KAR013AJ	cattle	C590	1806649	Cross	Adult	F	Yes	Repeat breeder			KARC859	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+859		AJ	KAR013AJ	cattle	C591	1555901	Cross	Adult	F	Yes	Repeat breeder			KARC860	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+860		AJ	KAR013AJ	cattle	C592	1806625	Cross	Adult	F	Yes	Repeat breeder			KARC861	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+861		AJ	KAR013AJ	cattle	C593	1639784	Cross	Adult	F	Yes	Yes			KARC862	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+862		AJ	KAR013AJ	cattle	C594	1806620	Cross	Adult	F	Yes	Aborted+Repeat breeder			KARC863	Karangazi	Kamate	Muzehe	Negative	6/11/23	Positive	7/11/23	
+863		AJ	KAR013AJ	cattle	C595	1806611	Cross	Adult	F	No	Repeat breeder			KARC864	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+864		AJ	KAR013AJ	cattle	C596	1455052	Cross	Adult	F	No	Repeat breeder			KARC865	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+865		AJ	KAR013AJ	cattle	C597	1806618	Cross	Adult	F	Yes	Repeat breeder			KARC866	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+866		AJ	KAR013AJ	cattle	C598	1806621	Cross	Adult	F	Yes	Repeat breeder + abortion			KARC867	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+867		AJ	KAR013AJ	cattle	C599	1154227	Cross	Adult	M	No	Yes			KARC868	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+868		AJ	KAR013AJ	cattle	C600	Kamirundi	Cross	Adult	F	No	Abortion			KARC869	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+869		AJ	KAR013AJ	goat	G207	Nkungu yonsa ndegeya	Cross	Adult	F	Yes	Yes			KARG870	Karangazi	Kamate	Muzehe	Negative	6/11/23	Positive	7/11/23	
+870		AJ	KAR013AJ	goat	G208	Gitare kibere	Cross	Adult	F	Yes	Yes			KARG871	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+871		AJ	KAR013AJ	goat	G209	Gitobo	Cross	Adult	F	No	Pregnant			KARG872	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+872		AJ	KAR013AJ	goat	G210	Ruhaya	Cross	Adult	M	No	Yes			KARG873	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+873		AJ	KAR013AJ	goat	G211	Cyasha mukara	Cross	Adult	F	Yes	Yes			KARG874	Karangazi	Kamate	Muzehe	Negative	6/11/23	Positive	7/11/23	
+874		AJ	KAR013AJ	goat	G212	Cyasha mutamu	Cross	Adult	F	Yes	Yes			KARG875	Karangazi	Kamate	Muzehe	Positive	6/11/23	Negative	7/11/23	
+875		AJ	KAR013AJ	goat	G213	Kanyonyozi	Cross	Adult	F	Yes	Abortion			KARG876	Karangazi	Kamate	Muzehe	Negative	6/11/23	Positive	7/11/23	
+876		AJ	KAR013AJ	goat	G214	Mweru	Cross	Adult	F	Yes	Yes			KARG877	Karangazi	Kamate	Muzehe	Positive	6/11/23	Negative	7/11/23	
+877		AJ	KAR013AJ	goat	G215	Ngabo	Cross	Adult	F	No	Pregnant			KARG878	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+878		AJ	KAR013AJ	goat	G216	Nkungu ntoya	Cross	Adult	F	Yes	Yes			KARG879	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+879		AJ	KAR013AJ	goat	G217	Gitobo gitukura	Cross	Adult	F	Yes	Yes			KARG880	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+880	8/1/23	AK	KAR014AK	cattle	C601	748353	Cross	Adult	F	No	Repeat breeder and abortion			KARC881	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+881		AK	KAR014AK	cattle	C602	748357	Cross	Adult	F	Yes	Repeat breeder and abortion			KARC882	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+882		AK	KAR014AK	cattle	C603	748355	Cross	Adult	F	Yes	Yes			KARC883	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+883		AK	KAR014AK	cattle	C604	748351	Cross	Adult	F	No	Repeat breeder			KARC884	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+884		AK	KAR014AK	cattle	C605	748358	Cross	Adult	F	Yes	Repeat breeder			KARC885	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+885		AK	KAR014AK	cattle	C606	1550415	Cross	Adult	F	Yes	Repeat breeder			KARC886	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+886		AK	KAR014AK	cattle	C607	1550409	Cross	Adult	F	Yes	Repeat breeder			KARC887	Karangazi	Kamate	Kajume	Negative	6/11/23	Negative	7/11/23	Negative 
+887	8/2/23	AL	KAR015AL	cattle	C608	597350	Cross	Adult	F	Yes	Repeat breeder			KARC888	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+888		AL	KAR015AL	cattle	C609	338360	Cross	Adult	F	Yes	Aborted			KARC889	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+889		AL	KAR015AL	cattle	C610	1455049	Cross	Adult	F	Yes	Repeat breeder			KARC890	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+890		AL	KAR015AL	cattle	C611	Indibori	Cross	Adult	F	Yes	Repeat breeder			KARC891	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+891		AL	KAR015AL	cattle	C612	1454970	Cross	Adult	F	No	Repeat breeder			KARC892	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+892		AL	KAR015AL	cattle	C613	1178607	Cross	Adult	F	Yes	Repeat breeder			KARC893	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+893		AL	KAR015AL	cattle	C614	908461	Exotic	Adult	F	No	Repeat breeder			KARC894	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+894		AL	KAR015AL	cattle	C615	338897	Cross	Adult	F	No	Pregnant			KARC895	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+895		AL	KAR015AL	cattle	C616	883711	Cross	Adult	F	No	Repeat breeder			KARC896	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+896		AL	KAR015AL	cattle	C617	1454975	Cross	Adult	F	Yes	Yes			KARC897	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+897		AL	KAR015AL	cattle	C618	Mabere atatu	Cross	Adult	F	No	Pregnant			KARC898	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+898		AL	KAR015AL	cattle	C619	416614	Cross	Adult	F	No	Pregnant			KARC899	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+899		AL	KAR015AL	cattle	C620	869816	Cross	Adult	F	Yes	Repeat breeder			KARC900	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+900		AL	KAR015AL	cattle	C621	Mbabazi	Cross	Adult	F	Yes	Repeat breeder			KARC901	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+901		AL	KAR015AL	cattle	C622	1454981	Cross	Young Adult 	F	No	Repeat breeder and pregnant			KARC902	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+902		AL	KAR015AL	cattle	C623	1454978	Cross	Young Adult 	F	No	Yes			KARC903	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+903		AL	KAR015AL	cattle	C624	Gahembe	Cross	Young Adult 	F	No	Repeat breeder			KARC904	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+904		AL	KAR015AL	cattle	C625	1454959	Cross	Young Adult 	F	No	Yes			KARC905	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+905		AL	KAR015AL	cattle	C626	Murari	Cross	Young Adult 	F	No	Repeat breeder			KARC906	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+906		AL	KAR015AL	cattle	C627	1455058	Cross	Young Adult 	F	No	Yes			KARC907	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+907		AL	KAR015AL	cattle	C628	Kayenji	Cross	Young Adult 	F	No	Yes			KARC908	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+908		AL	KAR015AL	cattle	C629	Maribori	Cross	Adult	F	Yes	Aborted			KARC909	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+909		AL	KAR015AL	sheep	S063	Ijigija	Local	Adult	F	No	Yes			KARS910	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+910		AL	KAR015AL	sheep	S064	Mweru nkuru	Local	Adult	F	Yes	Yes			KARS911	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+911		AL	KAR015AL	sheep	S065	Nyamweru	Local	Adult	F	No	Yes			KARS912	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+912		AL	KAR015AL	sheep	S066	Marineti	Local	Young Adult 	F	No	Yes			KARS913	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+913		AL	KAR015AL	sheep	S067	Isekurume mukara	Local	Young Adult 	M	No	Yes			KARS914	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+914		AL	KAR015AL	goat	G218	Musheru	Local	Adult	F	Yes	Yes			KARG915	Karangazi	Kamate	Muzehe	Negative	6/11/23	Positive	7/11/23	
+915		AL	KAR015AL	goat	G219	87474	Local	Adult	F	Yes	Yes			KARG916	Karangazi	Kamate	Muzehe	Positive	6/11/23	Negative	7/11/23	
+916		AL	KAR015AL	goat	G220	87464	Local	Adult	F	No	Yes			KARG917	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+917		AL	KAR015AL	goat	G221	Rugabo	Local	Adult	F	Yes	Yes			KARG918	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+918		AL	KAR015AL	goat	G222	87440	Local	Adult	F	Yes	Yes			KARG919	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+919		AL	KAR015AL	goat	G223	Nkungu	Local	Adult	F	Yes	Pregnant			KARG920	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+920		AL	KAR015AL	goat	G224	Mbuzi	Local	Adult	F	Yes	Yes			KARG921	Karangazi	Kamate	Muzehe	Negative	6/11/23	Negative	7/11/23	Negative 
+921	8/3/23	AM	KAR016AM	cattle	C630	941773	Cross	Adult	F	Yes	Aborted			KARC922	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+922		AM	KAR016AM	cattle	C631	583542	Cross	Adult	F	Yes	Aborted			KARC923	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+923		AM	KAR016AM	cattle	C632	941789	Cross	Adult	F	No	Aborted and repeat breeder			KARC924	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+924		AM	KAR016AM	cattle	C633	34859	Cross	Adult	F	No	Aborted			KARC925	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+925		AM	KAR016AM	cattle	C634	941776	Cross	Adult	F	No	Repeat breeder			KARC926	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+926		AM	KAR016AM	cattle	C635	904158	Cross	Adult	F	Yes	Aborted			KARC927	Karangazi	Ndama 	Rwabiharamba	Positive	6/11/23	Positive	7/11/23	Positive
+927		AM	KAR016AM	cattle	C636	909788	Cross	Adult	M	No	Yes			KARC928	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Positive	7/11/23	
+928		AM	KAR016AM	cattle	C637	966213	Cross	Adult	M	No	Yes			KARC929	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Positive	7/11/23	
+929		AM	KAR016AM	goat	G225	Ihene gihuga	Cross	Adult	F	No	Pregnant			KARG930	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+930		AM	KAR016AM	goat	G226	Gitare	Cross	Adult	F	Yes	Yes			KARG931	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+931		AM	KAR016AM	goat	G227	Nkungu	Cross	Adult	F	Yes	Yes			KARG932	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+932		AM	KAR016AM	goat	G228	Gihuga bihembe	Cross	Adult	F	No	Yes			KARG933	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+933		AM	KAR016AM	goat	G229	Isekurume musheru	Cross	Adult	M	No	Yes			KARG934	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+934		AM	KAR016AM	goat	G230	Musheru	Cross	Adult	F	No	Pregnant			KARG935	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+935		AM	KAR016AM	goat	G231	Mutamu	Cross	Adult	F	No	Yes			KARG936	Karangazi	Ndama 	Rwabiharamba	Negative	6/11/23	Negative	7/11/23	Negative 
+936	8/3/23	AN	KAR017AN	cattle	C638	654252	Cross	Adult	F	Yes	Aborted			KARC937	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+937		AN	KAR017AN	cattle	C639	654241	Cross	Adult	F	Yes	Yes			KARC938	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+938		AN	KAR017AN	cattle	C640	654249	Cross	Adult	F	No	Yes			KARC939	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+939		AN	KAR017AN	cattle	C641	654270	Cross	Adult	F	Yes	Yes			KARC940	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+940		AN	KAR017AN	cattle	C642	654226	Cross	Adult	F	Yes	Repeat breeder			KARC941	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+941		AN	KAR017AN	cattle	C643	654271	Cross	Adult	F	No	Yes			KARC942	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+942		AN	KAR017AN	cattle	C644	654272	Cross	Adult	F	Yes	Yes			KARC943	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+943		AN	KAR017AN	cattle	C645	654214	Cross	Adult	F	Yes	Yes			KARC944	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+944		AN	KAR017AN	cattle	C646	654230	Cross	Adult	F	No	Yes			KARC945	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+945		AN	KAR017AN	cattle	C647	654267	Cross	Adult	F	Yes	Yes			KARC946	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+946		AN	KAR017AN	cattle	C648	654245	Cross	Adult	F	Yes	Yes			KARC947	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Positive	7/11/23	
+947		AN	KAR017AN	cattle	C649	654222	Cross	Adult	M	Yes	Yes			KARC948	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+948		AN	KAR017AN	cattle	C650	654238	Cross	Adult	F	Yes	Yes			KARC949	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+949		AN	KAR017AN	cattle	C651	1605369	Cross	Adult	F	No	Yes			KARC950	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+950		AN	KAR017AN	cattle	C652	654254	Cross	Adult	F	Yes	Yes			KARC951	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+951		AN	KAR017AN	cattle	C653	1580268	Cross	Adult	F	No	Repeat breeder			KARC952	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+952		AN	KAR017AN	cattle	C654	654224	Cross	Adult	F	No	Aborted			KARC953	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+953		AN	KAR017AN	cattle	C655	654262	Cross	Adult	F	Yes	Yes			KARC954	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+954		AN	KAR017AN	cattle	C656	654253	Cross	Adult	F	Yes	Yes			KARC955	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+955		AN	KAR017AN	cattle	C657	654250	Cross	Adult	F	Yes	Aborted			KARC956	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+956		AN	KAR017AN	sheep	S068	1 Ijigija	Local	Adult	F	No	Yes			KARC957	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+957		AN	KAR017AN	sheep	S069	2 Mukara	Local	Adult	F	No	Aborted			KARC958	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+958		AN	KAR017AN	sheep	S070	3 Patrick	Local	Adult	M	No	Yes			KARC959	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
+959		AN	KAR017AN	sheep	S071	4	Local	Young Adult 	F	No	Yes			KARC960	Karangazi	Kizirakombe	Kageyo	Negative	6/11/23	Negative	7/11/23	Negative 
