@@ -1,0 +1,107 @@
+---
+title: "Seroprevalence and Risk Factors of Human Brucellosis in Nyatatare Disrict of Rwanda"
+author: "Maurice Byukusenge"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the ............. journal. This code and associated data are made available to readers who would like to reproduce the results presented in the publication. 
+
+
+## Load necessary libraries
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)
+```
+
+### Read the dataset
+
+```{r}
+data1 <- read.csv('livestock_form1.tsv', sep = '\t')
+data2 <- read.csv('raw_data/sample_and_Lab_Data.tsv', sep = '\t')
+data2 <- data2 %>% dplyr::select(-c(SN, Date, Earing, Sector, Cell, Village, RBTDate, ELISADate)) # Removed: not needed for analysis or duplicated 
+dim(data2)
+```
+
+### Initial Data Cleaning
+
+```{r}
+#Remove samples from form Y since the questionnaire was not completed (due to issue with data entry)
+
+data2 <- data2 %>% filter(form_ID != 'KAR003Y')
+#Some records do not have ELISA data. Marked as "no serum".
+data2 <- data2 %>% filter(ELISA_sample != 'no serum')
+# write.table(data2, 'updated_sample_and_Lab_Data.tsv', quote = F, sep = '\t', row.names = F)
+data1 <- data1 %>% dplyr::select(-c(age, education, gender, Occupation)) # The respondents' demographic data not used for analysis
+
+# Merge forms 1 (questionnaire) and samples & Lab results
+mergedData <- merge(data1, data2, by = 'form_ID')
+
+# Check that all records were captured after merging the two forms?
+dim(data2)[1] == dim(mergedData)[1]
+```
+
+### Split disposal of aborted materials into separate variables
+
+```{r}
+mergedData <- mergedData %>% mutate(
+  buryingAbort = case_when(
+    grepl('Burying them in the ground', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ),
+  
+  animalFeedAbort = case_when(
+    grepl('Feeding them to other animals like dogs', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ),
+  
+ throwingAbort = case_when(
+    grepl('Throwing them to the field without burying them', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ), 
+  
+  .after =  disposal_aborted_materials
+)
+
+mergedData <- mergedData %>% dplyr::select(-c(disposal_aborted_materials, production_mode))
+
+colnames(mergedData) # verify that the column names make sense
+```
+
+
+### Prep the data for regression analysis
+
+```{r}
+# Remove variables that are not relevant for regression analysis
+regData <- mergedData %>% dplyr::select(-c(form_ID, date, lat, long, infertility_history, ELISA_herd, RBT_herd, HerdID, AnimalID, Healthy, Sick, Lactating, Recovered, SampleID, RBT_sample, RBT_ELISA, fetch_water_points))
+
+# Check to verify the balance in the level distribution
+for (i in colnames(regData)){
+  print(i)
+  print(table(regData[,i]))
+}
+
+# Remove variables that are dependent on others. To be reintroduced if the parent variables are significantly associated. This will help reduce potential multicollineality
+
+regData <- regData %>% dplyr::select(-c(introduction_time, introduction_origin, bull_origin, herd_size, cell, village))
+
+colnames(regData)
+
+
+# Remove animals that are vaccinated! This is because of imbalance in answers to this question. It was determined that may did not have information on vaccication status.
+regData <- regData %>% filter(vaccinated != 'Yes')
+regData <- regData %>% dplyr::select(- vaccinated)
+
+dim(regData)
+
+write.csv(regData, 'Livestock_regression_data.csv', row.names = FALSE)
+```
+
+
+

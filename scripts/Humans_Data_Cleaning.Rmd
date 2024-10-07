@@ -1,0 +1,104 @@
+---
+title: "Seroprevalence and Risk Factors of Human Brucellosis in Nyatatare Disrict of Rwanda"
+author: "Maurice Byukusenge"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the ............. journal. This code and associated data are made available to readers who would like to reproduce the results presented in the publication. 
+
+
+## Load necessary libraries
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)
+```
+
+### Read the dataset
+
+```{r}
+database <- read.csv('Humans_raw_Combined_Data')
+variables <- read.csv('Human_data_variables.csv')
+```
+
+###  Let's split the database into analysis dataframes
+
+This will allow us to create subdatasets for the high risk groups: veterinarians and butchers.
+
+```{r}
+all_variables <- variables$all_entries
+
+all_data <- database %>% select(all_of(all_variables))
+
+dim(all_data)
+
+# Make a sub-dataset for butchers
+butcher_variables <- variables$butchers[1:11]
+butchers <- database %>% filter(Professions == "Butcher or works at a slaughterhouse")
+
+butchers <- butchers %>% select(all_of(butcher_variables))
+dim(butchers)
+
+# Make a sub-dataset for veterinarians
+vet_variables <- variables$vets[1:6]
+vetData <- database %>% filter(Professions == "Veterinarian / para-veterinarian")
+vetData <- vetData %>% select(all_of(vet_variables))
+dim(vetData)
+```
+
+```{r}
+# Group profession categories for easy analysis
+all_data <- all_data %>% mutate(
+  OccupGroup = case_when(
+    Occupation == "Teacher" ~ "others", 
+    Occupation == "Security officer" ~ "others", 
+    Occupation == "None" ~ "others", 
+    Occupation == "Retired" ~ "others", 
+    Occupation == "Officer worker" ~ "others",
+    Occupation == "Student" ~ "others",
+    Occupation == "Farm assistant" ~ "livestock farmers", 
+    Occupation == "Farmer" ~ "livestock farmers",
+    Occupation == "livestock trader" ~ "livestock farmers",
+    Occupation == "MCC worker" ~ "milk handlers",
+    Occupation == "Milk transporter" ~ "milk handlers",
+    Occupation == "Butcher" ~ "meat handlers",
+    Occupation == "Slaughterhouse worker" ~ "meat handlers",
+    .default = Occupation),
+  .after = Occupation
+)
+
+all_data <- all_data %>% select(-Occupation) 
+```
+### Prep data for regression analyis
+
+```{r}
+# Remove varibles that are not useful for regression analysis
+all_data <- all_data %>% mutate_if(is.character, as.factor)
+all_data <- all_data %>% select(-c("Date", "Form_ID", "Latitude", "Longitude", "Sampling_area", "Cell", "Village", "District"))
+str(all_data)
+
+# Removing variables with unbalanced levels
+all_data <- all_data %>% select(-c("Sleeping_with_animals", "Cheese"))
+
+#Removing symptom variables (we can re-introduce them leter as a separate analysis together with pregancy and miscarriage information)
+rfData <- all_data %>% select(-c("fever", "Night_Sweats", "Fatigue", "Joint_pain", "Swollen_joints", "Muscular_pain", "Back_pain", "Headaches", "Loss_of_appetite", "fever_time", "fever_type", "Fever_duration", "Seek_health_care_If_feve", "Hospitalized", "Recovered"))
+
+## Removing Placeholders and RBT )
+rfData <- rfData  %>% select(-c("female", "pregrant", "live_births", "miscarrage_or_stillbirths", "RBT")) #rfData = Dataset for risk factors
+table(rfData$OccupGroup)
+
+# Set "livestock farmers" as the reference occupation category
+rfData$OccupGroup = relevel(rfData$OccupGroup, ref = "livestock farmers")
+colnames(rfData)
+
+# Write data to a file
+
+write.csv(rfData, 'Humans_regression_data.csv')
+```
+
