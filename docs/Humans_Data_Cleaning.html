@@ -329,35 +329,11 @@ float: none;
 .tabset-dropdown > .nav-tabs > li {
 display: none;
 }
-
-  /* Simple styles for navigation */
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #111;
-    }
-
 </style>
 
 <!-- code folding -->
+
+
 
 
 </head>
@@ -367,38 +343,117 @@ display: none;
 
 <div class="container-fluid main-container">
 
-  <div id="header">
-
-    <h1 class="title toc-ignore">Seroprevalence and Risk Factors of Human
-    Brucellosis in Nyatatare Disrict of Rwanda</h1>
-    <h4 class="author">Maurice Byukusenge</h4>
-    <h4 class="date">2024-10-08</h4>
-
-  </div>
 
 
-  <div id="introduction" class="section level2">
-    <h2>Introduction</h2>
-    <p>This document contains the code used for assessing the risk factors
-    associated with Brucellosis in the Nyagatare district of Rwanda. The
-    results of this analysis have been published in the …………. journal. This
-    code and associated data are made available to readers who would like to
-    reproduce the results presented in the publication.</p>
-  </div>
+
+<div id="header">
 
 
-  <div> 
 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="file1.html">Report 1</a></li>
-      <li><a href="file2.html">Report 2</a></li>
-      <li><a href="file3.html">Report 3</a></li>
-      <li><a href="file4.html">Report 4</a></li>
-    </ul>
+<h1 class="title toc-ignore">Seroprevalence and Risk Factors of Human
+Brucellosis in Nyatatare Disrict of Rwanda</h1>
+<h4 class="author">Maurice Byukusenge</h4>
+<h4 class="date">2024-10-08</h4>
 
-  </div>
+</div>
 
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This document contains the code used for assessing the risk factors
+associated with Brucellosis in the Nyagatare district of Rwanda. The
+results of this analysis have been published in the …………. journal. This
+code and associated data are made available to readers who would like to
+reproduce the results presented in the publication.</p>
+</div>
+<div id="load-necessary-libraries" class="section level2">
+<h2>Load necessary libraries</h2>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="read-the-dataset" class="section level3">
+<h3>Read the dataset</h3>
+<pre class="r"><code>database &lt;- read.csv(&#39;../data/Humans_raw_Combined_Data.csv&#39;)
+variables &lt;- read.csv(&#39;../data/Human_data_variables.csv&#39;)</code></pre>
+</div>
+<div id="lets-split-the-database-into-analysis-dataframes" class="section level3">
+<h3>Let’s split the database into analysis dataframes</h3>
+<p>This will allow us to create subdatasets for the high risk groups:
+veterinarians and butchers.</p>
+<pre class="r"><code>all_variables &lt;- variables$all_entries
+
+all_data &lt;- database %&gt;% select(all_of(all_variables))
+
+dim(all_data)</code></pre>
+<pre><code>## [1] 886  45</code></pre>
+<pre class="r"><code># Make a sub-dataset for butchers
+butcher_variables &lt;- variables$butchers[1:11]
+butchers &lt;- database %&gt;% filter(Professions == &quot;Butcher or works at a slaughterhouse&quot;)
+
+butchers &lt;- butchers %&gt;% select(all_of(butcher_variables))
+dim(butchers)</code></pre>
+<pre><code>## [1] 168  11</code></pre>
+<pre class="r"><code># Make a sub-dataset for veterinarians
+vet_variables &lt;- variables$vets[1:6]
+vetData &lt;- database %&gt;% filter(Professions == &quot;Veterinarian / para-veterinarian&quot;)
+vetData &lt;- vetData %&gt;% select(all_of(vet_variables))
+dim(vetData)</code></pre>
+<pre><code>## [1] 40  6</code></pre>
+</div>
+<div id="group-profession-categories-for-easy-analysis" class="section level3">
+<h3>Group profession categories for easy analysis</h3>
+<pre class="r"><code>all_data &lt;- all_data %&gt;% mutate(
+  OccupGroup = case_when(
+    Occupation == &quot;Teacher&quot; ~ &quot;others&quot;, 
+    Occupation == &quot;Security officer&quot; ~ &quot;others&quot;, 
+    Occupation == &quot;None&quot; ~ &quot;others&quot;, 
+    Occupation == &quot;Retired&quot; ~ &quot;others&quot;, 
+    Occupation == &quot;Officer worker&quot; ~ &quot;others&quot;,
+    Occupation == &quot;Student&quot; ~ &quot;others&quot;,
+    Occupation == &quot;Farm assistant&quot; ~ &quot;livestock farmers&quot;, 
+    Occupation == &quot;Farmer&quot; ~ &quot;livestock farmers&quot;,
+    Occupation == &quot;livestock trader&quot; ~ &quot;livestock farmers&quot;,
+    Occupation == &quot;MCC worker&quot; ~ &quot;milk handlers&quot;,
+    Occupation == &quot;Milk transporter&quot; ~ &quot;milk handlers&quot;,
+    Occupation == &quot;Butcher&quot; ~ &quot;meat handlers&quot;,
+    Occupation == &quot;Slaughterhouse worker&quot; ~ &quot;meat handlers&quot;,
+    .default = Occupation),
+  .after = Occupation
+)
+
+all_data &lt;- all_data %&gt;% select(-Occupation) </code></pre>
+</div>
+<div id="prep-data-for-regression-analyis" class="section level3">
+<h3>Prep data for regression analyis</h3>
+<pre class="r"><code># Remove varibles that are not useful for regression analysis
+all_data &lt;- all_data %&gt;% mutate_if(is.character, as.factor)
+all_data &lt;- all_data %&gt;% select(-c(&quot;Date&quot;, &quot;Form_ID&quot;, &quot;Latitude&quot;, &quot;Longitude&quot;, &quot;Sampling_area&quot;, &quot;Cell&quot;, &quot;Village&quot;, &quot;District&quot;))
+# str(all_data)
+
+# Removing variables with unbalanced levels
+all_data &lt;- all_data %&gt;% select(-c(&quot;Sleeping_with_animals&quot;, &quot;Cheese&quot;))
+
+#Removing symptom variables (we can re-introduce them leter as a separate analysis together with pregancy and miscarriage information)
+rfData &lt;- all_data %&gt;% select(-c(&quot;fever&quot;, &quot;Night_Sweats&quot;, &quot;Fatigue&quot;, &quot;Joint_pain&quot;, &quot;Swollen_joints&quot;, &quot;Muscular_pain&quot;, &quot;Back_pain&quot;, &quot;Headaches&quot;, &quot;Loss_of_appetite&quot;, &quot;fever_time&quot;, &quot;fever_type&quot;, &quot;Fever_duration&quot;, &quot;Seek_health_care_If_feve&quot;, &quot;Hospitalized&quot;, &quot;Recovered&quot;))
+
+## Removing Placeholders and RBT )
+rfData &lt;- rfData  %&gt;% select(-c(&quot;female&quot;, &quot;pregrant&quot;, &quot;live_births&quot;, &quot;miscarrage_or_stillbirths&quot;, &quot;RBT&quot;)) #rfData = Dataset for risk factors
+# table(rfData$OccupGroup)</code></pre>
+</div>
+<div id="output-the-clean-dataset-to-be-used-for-the-next-step-regression-analysis" class="section level3">
+<h3>Output the clean dataset to be used for the next step: Regression
+Analysis</h3>
+<pre class="r"><code># Set &quot;livestock farmers&quot; as the reference occupation category
+rfData$OccupGroup = relevel(rfData$OccupGroup, ref = &quot;livestock farmers&quot;)
+colnames(rfData)</code></pre>
+<pre><code>##  [1] &quot;Sector&quot;             &quot;Gender&quot;             &quot;Age&quot;               
+##  [4] &quot;Marital_status&quot;     &quot;Education&quot;          &quot;OccupGroup&quot;        
+##  [7] &quot;parturition&quot;        &quot;contact_with_waste&quot; &quot;aborted_fetus&quot;     
+## [10] &quot;milking&quot;            &quot;Herded_livestock&quot;   &quot;Slaughtered&quot;       
+## [13] &quot;boiled_milk&quot;        &quot;Raw_milk&quot;           &quot;ELISA&quot;</code></pre>
+<pre class="r"><code># Write data to a file.
+
+write.csv(rfData, &#39;../output/Humans_regression_data.csv&#39;, row.names = FALSE)</code></pre>
+</div>
+</div>
 
 
 

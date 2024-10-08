@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, message = FALSE}
+```{r setup, message = FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -23,8 +23,8 @@ library(tidyverse)
 ### Read the dataset
 
 ```{r}
-data1 <- read.csv('livestock_form1.tsv', sep = '\t')
-data2 <- read.csv('raw_data/sample_and_Lab_Data.tsv', sep = '\t')
+data1 <- read.csv('../data/Livestock_raw_form1.tsv', sep = '\t')
+data2 <- read.csv('../data/Livestock_raw_Lab_Data.tsv', sep = '\t')
 data2 <- data2 %>% dplyr::select(-c(SN, Date, Earing, Sector, Cell, Village, RBTDate, ELISADate)) # Removed: not needed for analysis or duplicated 
 dim(data2)
 ```
@@ -100,7 +100,7 @@ regData <- regData %>% dplyr::select(- vaccinated)
 
 dim(regData)
 
-write.csv(regData, 'Livestock_regression_data.csv', row.names = FALSE)
+write.csv(regData, '../output/Livestock_regression_data.csv', row.names = FALSE)
 ```
 
 

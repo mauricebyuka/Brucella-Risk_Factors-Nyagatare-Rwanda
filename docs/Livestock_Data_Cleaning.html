@@ -329,35 +329,11 @@ float: none;
 .tabset-dropdown > .nav-tabs > li {
 display: none;
 }
-
-  /* Simple styles for navigation */
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #111;
-    }
-
 </style>
 
 <!-- code folding -->
+
+
 
 
 </head>
@@ -367,38 +343,276 @@ display: none;
 
 <div class="container-fluid main-container">
 
-  <div id="header">
-
-    <h1 class="title toc-ignore">Seroprevalence and Risk Factors of Human
-    Brucellosis in Nyatatare Disrict of Rwanda</h1>
-    <h4 class="author">Maurice Byukusenge</h4>
-    <h4 class="date">2024-10-08</h4>
-
-  </div>
 
 
-  <div id="introduction" class="section level2">
-    <h2>Introduction</h2>
-    <p>This document contains the code used for assessing the risk factors
-    associated with Brucellosis in the Nyagatare district of Rwanda. The
-    results of this analysis have been published in the …………. journal. This
-    code and associated data are made available to readers who would like to
-    reproduce the results presented in the publication.</p>
-  </div>
+
+<div id="header">
 
 
-  <div> 
 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="file1.html">Report 1</a></li>
-      <li><a href="file2.html">Report 2</a></li>
-      <li><a href="file3.html">Report 3</a></li>
-      <li><a href="file4.html">Report 4</a></li>
-    </ul>
+<h1 class="title toc-ignore">Seroprevalence and Risk Factors of Human
+Brucellosis in Nyatatare Disrict of Rwanda</h1>
+<h4 class="author">Maurice Byukusenge</h4>
+<h4 class="date">2024-10-08</h4>
 
-  </div>
+</div>
 
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This document contains the code used for assessing the risk factors
+associated with Brucellosis in the Nyagatare district of Rwanda. The
+results of this analysis have been published in the …………. journal. This
+code and associated data are made available to readers who would like to
+reproduce the results presented in the publication.</p>
+</div>
+<div id="load-necessary-libraries" class="section level2">
+<h2>Load necessary libraries</h2>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="read-the-dataset" class="section level3">
+<h3>Read the dataset</h3>
+<pre class="r"><code>data1 &lt;- read.csv(&#39;../data/Livestock_raw_form1.tsv&#39;, sep = &#39;\t&#39;)
+data2 &lt;- read.csv(&#39;../data/Livestock_raw_Lab_Data.tsv&#39;, sep = &#39;\t&#39;)
+data2 &lt;- data2 %&gt;% dplyr::select(-c(SN, Date, Earing, Sector, Cell, Village, RBTDate, ELISADate)) # Removed: not needed for analysis or duplicated 
+dim(data2)</code></pre>
+<pre><code>## [1] 959  15</code></pre>
+</div>
+<div id="initial-data-cleaning" class="section level3">
+<h3>Initial Data Cleaning</h3>
+<pre class="r"><code>#Remove samples from form Y since the questionnaire was not completed (due to issue with data entry)
+
+data2 &lt;- data2 %&gt;% filter(form_ID != &#39;KAR003Y&#39;)
+#Some records do not have ELISA data. Marked as &quot;no serum&quot;.
+data2 &lt;- data2 %&gt;% filter(ELISA_sample != &#39;no serum&#39;)
+# write.table(data2, &#39;updated_sample_and_Lab_Data.tsv&#39;, quote = F, sep = &#39;\t&#39;, row.names = F)
+data1 &lt;- data1 %&gt;% dplyr::select(-c(age, education, gender, Occupation)) # The respondents&#39; demographic data not used for analysis
+
+# Merge forms 1 (questionnaire) and samples &amp; Lab results
+mergedData &lt;- merge(data1, data2, by = &#39;form_ID&#39;)
+
+# Check that all records were captured after merging the two forms?
+dim(data2)[1] == dim(mergedData)[1]</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="split-disposal-of-aborted-materials-into-separate-variables" class="section level3">
+<h3>Split disposal of aborted materials into separate variables</h3>
+<pre class="r"><code>mergedData &lt;- mergedData %&gt;% mutate(
+  buryingAbort = case_when(
+    grepl(&#39;Burying them in the ground&#39;, disposal_aborted_materials) ~ &#39;Yes&#39;,
+    .default = &#39;No&#39;
+  ),
+  
+  animalFeedAbort = case_when(
+    grepl(&#39;Feeding them to other animals like dogs&#39;, disposal_aborted_materials) ~ &#39;Yes&#39;,
+    .default = &#39;No&#39;
+  ),
+  
+ throwingAbort = case_when(
+    grepl(&#39;Throwing them to the field without burying them&#39;, disposal_aborted_materials) ~ &#39;Yes&#39;,
+    .default = &#39;No&#39;
+  ), 
+  
+  .after =  disposal_aborted_materials
+)
+
+mergedData &lt;- mergedData %&gt;% dplyr::select(-c(disposal_aborted_materials, production_mode))
+
+colnames(mergedData) # verify that the column names make sense</code></pre>
+<pre><code>##  [1] &quot;form_ID&quot;                  &quot;date&quot;                    
+##  [3] &quot;lat&quot;                      &quot;long&quot;                    
+##  [5] &quot;sector&quot;                   &quot;cell&quot;                    
+##  [7] &quot;village&quot;                  &quot;herd_size&quot;               
+##  [9] &quot;herd_size_cattle&quot;         &quot;herd_size_sheep&quot;         
+## [11] &quot;Herdsizegoats&quot;            &quot;animals_live_with_people&quot;
+## [13] &quot;farm_fenced&quot;              &quot;wildlife_interaction&quot;    
+## [15] &quot;shared_water&quot;             &quot;fetch_water_points&quot;      
+## [17] &quot;breeding_methods&quot;         &quot;bull_origin&quot;             
+## [19] &quot;having_vet&quot;               &quot;infertility_history&quot;     
+## [21] &quot;buryingAbort&quot;             &quot;animalFeedAbort&quot;         
+## [23] &quot;throwingAbort&quot;            &quot;aborted_animal_fate&quot;     
+## [25] &quot;new_introduction&quot;         &quot;introduction_time&quot;       
+## [27] &quot;introduction_origin&quot;      &quot;brucellosis_awareness&quot;   
+## [29] &quot;vaccinated&quot;               &quot;ELISA_herd&quot;              
+## [31] &quot;RBT_herd&quot;                 &quot;HerdID&quot;                  
+## [33] &quot;species&quot;                  &quot;AnimalID&quot;                
+## [35] &quot;Breed&quot;                    &quot;Age&quot;                     
+## [37] &quot;Sex&quot;                      &quot;Lactating&quot;               
+## [39] &quot;Healthy&quot;                  &quot;Sick&quot;                    
+## [41] &quot;Recovered&quot;                &quot;SampleID&quot;                
+## [43] &quot;RBT_sample&quot;               &quot;ELISA_sample&quot;            
+## [45] &quot;RBT_ELISA&quot;</code></pre>
+</div>
+<div id="prep-the-data-for-regression-analysis" class="section level3">
+<h3>Prep the data for regression analysis</h3>
+<pre class="r"><code># Remove variables that are not relevant for regression analysis
+regData &lt;- mergedData %&gt;% dplyr::select(-c(form_ID, date, lat, long, infertility_history, ELISA_herd, RBT_herd, HerdID, AnimalID, Healthy, Sick, Lactating, Recovered, SampleID, RBT_sample, RBT_ELISA, fetch_water_points))
+
+# Check to verify the balance in the level distribution
+for (i in colnames(regData)){
+  print(i)
+  print(table(regData[,i]))
+}</code></pre>
+<pre><code>## [1] &quot;sector&quot;
+## 
+## Karangazi Rwempasha Rwimiyaga 
+##       343       288       299 
+## [1] &quot;cell&quot;
+## 
+##  Gacundezi   Gasinga      Kabare     Kamate     Karama     Kazaza     Kirebe 
+##         15         87         28        164         47         19        193 
+## Kizirakome      Mbare   Mishenyi      Ndama  Rugarama      Rutare    Rutungu 
+##         24          7         25        101         55         19         91 
+##  Rwempasha      Ryeru 
+##         28         27 
+## [1] &quot;village&quot;
+## 
+##          Bwera     Cyamunyana        Gakindo       Gasinga        Gatebe I 
+##             14             25             19             27             85 
+##      Gatebe II         Kabare         Kageyo         Kajumo         Kamate 
+##             17             28             24              7             79 
+##         Karama         Kigazi         Kirebe       Mishenyi         Muzehe 
+##             47             27             58             25             58 
+##          Ndama         Rubira       Rugarama        Rukindo    Rukundo III 
+##             77             52             55             33             15 
+##         Rutare   Rwabiharamba Rwabishorogoto          Ryeru       Uwinkiko 
+##             19             24             60             27             28 
+## [1] &quot;herd_size&quot;
+## 
+##  11  12  15  20  24  25  27  34  37  52  53  57  58  60  61  62  63  64  66  70 
+##   9   7  12  10  19  14  16  23  48  46  26  28  47   5  30  22  27  25  28  50 
+##  72  75  77  81  85  95 110 112 117 120 138 145 155 
+##  27  15 105  26  29  20  17  32  33  27  33  34  40 
+## [1] &quot;herd_size_cattle&quot;
+## 
+##  11  12  14  15  17  19  20  21  24  26  31  32  34  35  38  42  47  49  50  51 
+##  23   7  24  12  16  22  25  28  19  26  24  25  53  17  59  52  28  55  30  19 
+##  53  54  60  64  65  70  80  83  90  92 106 152 
+##  20  26  34  15  59  25  34  20  33  33  27  40 
+## [1] &quot;herd_size_sheep&quot;
+## 
+##   0   1   6   7   9  10  11  14  19  20  21  22  45 
+## 532  50  52  19  33  31  39  25  28  28  27  32  34 
+## [1] &quot;Herdsizegoats&quot;
+## 
+##   0   1   3   7  10  11  14  18  20  21  23  24  25  27  28  30  32  43  46  75 
+## 252  15  54  27  30  20  83  33  34  25  24  20  61  52  55  28  15  52  33  17 
+## [1] &quot;animals_live_with_people&quot;
+## 
+##  No Yes 
+## 918  12 
+## [1] &quot;farm_fenced&quot;
+## 
+##  No Yes 
+##  73 857 
+## [1] &quot;wildlife_interaction&quot;
+## 
+##  No Yes 
+## 584 346 
+## [1] &quot;shared_water&quot;
+## 
+##  No Yes 
+## 616 314 
+## [1] &quot;breeding_methods&quot;
+## 
+## Artificial insemination   Both methods are used   Natural (using bulls) 
+##                      53                      27                     850 
+## [1] &quot;bull_origin&quot;
+## 
+##                                                              
+##                                                           53 
+## Bull sharing with neighbors (borrowing and/or renting bulls) 
+##                                                           39 
+##                                   Own bulls on the same farm 
+##                                                          838 
+## [1] &quot;having_vet&quot;
+## 
+##  No Yes 
+## 635 295 
+## [1] &quot;buryingAbort&quot;
+## 
+##  No Yes 
+## 642 288 
+## [1] &quot;animalFeedAbort&quot;
+## 
+##  No Yes 
+## 374 556 
+## [1] &quot;throwingAbort&quot;
+## 
+##  No Yes 
+## 764 166 
+## [1] &quot;aborted_animal_fate&quot;
+## 
+##   Kept in the herd     Not applicable Sold for slaughter 
+##                807                 83                 40 
+## [1] &quot;new_introduction&quot;
+## 
+##  No Yes 
+## 491 439 
+## [1] &quot;introduction_time&quot;
+## 
+##                  0 - 3 months ago 4 - 6 months ago 
+##              491              347               92 
+## [1] &quot;introduction_origin&quot;
+## 
+##                                       Dowry    From local markets 
+##                   491                    54                    31 
+##   From local markets  From neighbor farmers         other country 
+##                    55                   174                    17 
+##        other district 
+##                   108 
+## [1] &quot;brucellosis_awareness&quot;
+## 
+##  No Yes 
+## 107 823 
+## [1] &quot;vaccinated&quot;
+## 
+##      No unknown     Yes 
+##     697     107     126 
+## [1] &quot;species&quot;
+## 
+## cattle   goat  sheep 
+##    637    222     71 
+## [1] &quot;Breed&quot;
+## 
+##  Cross Exotic  Local 
+##    629     39    262 
+## [1] &quot;Age&quot;
+## 
+##        Adult        Young Young Adult  
+##          861           43           26 
+## [1] &quot;Sex&quot;
+## 
+##   F   M 
+## 844  86 
+## [1] &quot;ELISA_sample&quot;
+## 
+## Negative Positive 
+##      828      102</code></pre>
+<pre class="r"><code># Remove variables that are dependent on others. To be reintroduced if the parent variables are significantly associated. This will help reduce potential multicollineality
+
+regData &lt;- regData %&gt;% dplyr::select(-c(introduction_time, introduction_origin, bull_origin, herd_size, cell, village))
+
+colnames(regData)</code></pre>
+<pre><code>##  [1] &quot;sector&quot;                   &quot;herd_size_cattle&quot;        
+##  [3] &quot;herd_size_sheep&quot;          &quot;Herdsizegoats&quot;           
+##  [5] &quot;animals_live_with_people&quot; &quot;farm_fenced&quot;             
+##  [7] &quot;wildlife_interaction&quot;     &quot;shared_water&quot;            
+##  [9] &quot;breeding_methods&quot;         &quot;having_vet&quot;              
+## [11] &quot;buryingAbort&quot;             &quot;animalFeedAbort&quot;         
+## [13] &quot;throwingAbort&quot;            &quot;aborted_animal_fate&quot;     
+## [15] &quot;new_introduction&quot;         &quot;brucellosis_awareness&quot;   
+## [17] &quot;vaccinated&quot;               &quot;species&quot;                 
+## [19] &quot;Breed&quot;                    &quot;Age&quot;                     
+## [21] &quot;Sex&quot;                      &quot;ELISA_sample&quot;</code></pre>
+<pre class="r"><code># Remove animals that are vaccinated! This is because of imbalance in answers to this question. It was determined that may did not have information on vaccication status.
+regData &lt;- regData %&gt;% filter(vaccinated != &#39;Yes&#39;)
+regData &lt;- regData %&gt;% dplyr::select(- vaccinated)
+
+dim(regData)</code></pre>
+<pre><code>## [1] 804  21</code></pre>
+<pre class="r"><code>write.csv(regData, &#39;../output/Livestock_regression_data.csv&#39;, row.names = FALSE)</code></pre>
+</div>
+</div>
 
 
 

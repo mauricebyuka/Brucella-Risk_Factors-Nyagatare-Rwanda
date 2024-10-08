@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, message = FALSE}
+```{r setup, message = FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -23,8 +23,8 @@ library(tidyverse)
 ### Read the dataset
 
 ```{r}
-database <- read.csv('Humans_raw_Combined_Data')
-variables <- read.csv('Human_data_variables.csv')
+database <- read.csv('../data/Humans_raw_Combined_Data.csv')
+variables <- read.csv('../data/Human_data_variables.csv')
 ```
 
 ###  Let's split the database into analysis dataframes
@@ -52,8 +52,10 @@ vetData <- vetData %>% select(all_of(vet_variables))
 dim(vetData)
 ```
 
+
+### Group profession categories for easy analysis
+
 ```{r}
-# Group profession categories for easy analysis
 all_data <- all_data %>% mutate(
   OccupGroup = case_when(
     Occupation == "Teacher" ~ "others", 
@@ -75,13 +77,14 @@ all_data <- all_data %>% mutate(
 
 all_data <- all_data %>% select(-Occupation) 
 ```
+
 ### Prep data for regression analyis
 
 ```{r}
 # Remove varibles that are not useful for regression analysis
 all_data <- all_data %>% mutate_if(is.character, as.factor)
 all_data <- all_data %>% select(-c("Date", "Form_ID", "Latitude", "Longitude", "Sampling_area", "Cell", "Village", "District"))
-str(all_data)
+# str(all_data)
 
 # Removing variables with unbalanced levels
 all_data <- all_data %>% select(-c("Sleeping_with_animals", "Cheese"))
@@ -91,14 +94,18 @@ rfData <- all_data %>% select(-c("fever", "Night_Sweats", "Fatigue", "Joint_pain
 
 ## Removing Placeholders and RBT )
 rfData <- rfData  %>% select(-c("female", "pregrant", "live_births", "miscarrage_or_stillbirths", "RBT")) #rfData = Dataset for risk factors
-table(rfData$OccupGroup)
+# table(rfData$OccupGroup)
+```
 
+### Output the clean dataset to be used for the next step: Regression Analysis
+
+```{r}
 # Set "livestock farmers" as the reference occupation category
 rfData$OccupGroup = relevel(rfData$OccupGroup, ref = "livestock farmers")
 colnames(rfData)
 
-# Write data to a file
+# Write data to a file.
 
-write.csv(rfData, 'Humans_regression_data.csv')
+write.csv(rfData, '../output/Humans_regression_data.csv', row.names = FALSE)
 ```
 

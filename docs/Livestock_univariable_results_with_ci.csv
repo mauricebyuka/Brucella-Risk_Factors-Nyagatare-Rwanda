@@ -1,0 +1,42 @@
+"Factor","term","odds_ratio","lower_ci","upper_ci","p.value"
+"sector","(Intercept)",0.11,0.07,0.16,3.54843518669981e-26
+"sector","sectorRwempasha",0.55,0.28,1.04,0.0685762343539838
+"sector","sectorRwimiyaga",2.06,1.23,3.5,0.00651198095608864
+"herd_size_cattle","(Intercept)",0.09,0.06,0.16,4.72355311520854e-19
+"herd_size_cattle","herd_size_cattle",1.01,1,1.01,0.251678485576668
+"herd_size_sheep","(Intercept)",0.14,0.1,0.17,6.95704692037599e-55
+"herd_size_sheep","herd_size_sheep",0.98,0.96,1,0.149254861588395
+"Herdsizegoats","(Intercept)",0.11,0.08,0.16,1.1799892885455e-37
+"Herdsizegoats","Herdsizegoats",1,0.99,1.02,0.515798641025255
+"animals_live_with_people","(Intercept)",0.12,0.1,0.16,1.54313878631562e-75
+"animals_live_with_people","animals_live_with_peopleYes",0,NA,1558514611669838,0.983314568303229
+"farm_fenced","(Intercept)",0.06,0.02,0.14,3.06799531068017e-08
+"farm_fenced","farm_fencedYes",2.24,0.9,7.49,0.126167083067545
+"wildlife_interaction","(Intercept)",0.13,0.1,0.16,1.05969955505412e-52
+"wildlife_interaction","wildlife_interactionYes",0.94,0.57,1.5,0.784442197085562
+"shared_water","(Intercept)",0.12,0.09,0.16,1.76037967837033e-52
+"shared_water","shared_waterYes",1.02,0.63,1.62,0.937875784129389
+"breeding_methods","(Intercept)",0.02,0,0.09,9.07232021470921e-05
+"breeding_methods","breeding_methodsBoth methods are used",2,0.08,51.94,0.628931522443602
+"breeding_methods","breeding_methodsNatural (using bulls)",7.01,1.51,124.8,0.0552883413823636
+"having_vet","(Intercept)",0.13,0.1,0.17,2.11788505074967e-53
+"having_vet","having_vetYes",0.83,0.5,1.35,0.473735414363809
+"animalFeedAbort","(Intercept)",0.08,0.06,0.12,7.03950523814889e-35
+"animalFeedAbort","animalFeedAbortYes",1.82,1.14,2.96,0.0141612784443853
+"throwingAbort","(Intercept)",0.11,0.08,0.14,1.49338758101605e-68
+"throwingAbort","throwingAbortYes",2.27,1.29,3.88,0.00335998138643471
+"new_introduction","(Intercept)",0.18,0.13,0.23,8.91249158154011e-38
+"new_introduction","new_introductionYes",0.39,0.23,0.63,0.00017301311501761
+"brucellosis_awareness","(Intercept)",0.04,0.01,0.09,1.80753128957861e-10
+"brucellosis_awareness","brucellosis_awarenessYes",3.53,1.43,11.73,0.0158193924395284
+"species","(Intercept)",0.13,0.1,0.17,1.81349827777048e-53
+"species","speciesgoat",1,0.58,1.66,0.996555026623825
+"species","speciessheep",0.12,0.01,0.56,0.0378474331497227
+"Breed","(Intercept)",0.1,0.06,0.16,6.90192658556475e-23
+"Breed","BreedCross",1.3,0.79,2.23,0.319417426084677
+"Breed","BreedExotic",0.52,0.08,1.87,0.386704317746993
+"Age","(Intercept)",0.02,0,0.11,0.000220733080329493
+"Age","AgeAdult",5.52,1.18,98.54,0.0933071075009771
+"Age","AgeYoung Adult ",2.1,0.08,54.95,0.606404087618069
+"Sex","(Intercept)",0.13,0.1,0.16,3.63870546976892e-69
+"Sex","SexM",0.33,0.08,0.9,0.0618262421945213

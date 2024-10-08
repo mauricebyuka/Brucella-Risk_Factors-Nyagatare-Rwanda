@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, message = FALSE}
+```{r setup, message = FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -17,7 +17,7 @@ This document contains the code used for assessing the risk factors associated w
 ### Load necessary libraries
 
 ```{r message = FALSE, warning = FALSE}
-library(dplyr)      # For data wrangling when necessary
+library(tidyverse)      # For data wrangling when necessary
 library(ggplot2)    # For data visualization
 library(broom)      # For making tidy tibles from stats objects
 library(boot)       # For cross-validation analysis
@@ -32,10 +32,10 @@ library(ResourceSelection) # For  Hosmer–Lemeshow test
 ### Read the dataset
 
 ```{r}
-data <- read.csv('Humans_regression_data.csv') # Output of the previous step
+data <- read.csv('../output/Humans_regression_data.csv') # Output of the previous step
 ```
 
-### Convert categorical variables to factors and set reference categories for saome variables.
+### Convert categorical variables to factors and set reference categories for some variables.
 
 All the other variables will keep their default reference categories. For example, all Yes or No variables have "No" as their ref category.
 
@@ -54,7 +54,7 @@ data$OccupGroup <- relevel(data$OccupGroup, ref = "livestock farmers")
 
 ```{r}
 # List of predictor variables for univariable logistic regression
-predictors <- c("Gender", "Age", "Marital_status", "Education", "OccupGroup", 
+predictors <- c("Sector", "Gender", "Age", "Marital_status", "Education", "OccupGroup", 
                 "parturition", "contact_with_waste", "aborted_fetus", 
                 "milking", "Herded_livestock", "Slaughtered", 
                 "boiled_milk", "Raw_milk")
@@ -75,6 +75,11 @@ run_univariable_logistic <- function(predictor, data) {
            upper_ci = round(exp(conf.high), 2),
            p.value = round(p.value, 2)) %>%
     filter(term != "(Intercept)")  # Exclude the intercept
+  
+  # Extract the variable name (e.g., "Male" instead of "GenderMale")
+  tidy_model <- tidy_model %>%
+    mutate(term = str_replace(term, paste0(predictor), ""))  # Remove predictor from term
+
   
   # Add reference category (first category in each group)
   reference_category <- data %>%
@@ -101,12 +106,15 @@ run_univariable_logistic <- function(predictor, data) {
            p.value = as.character(p.value))
   
   # Combine reference category with the model results
-  tidy_model <- bind_rows(reference_row, tidy_model)
-  
+    tidy_model <- bind_rows(reference_row, tidy_model)
+    
   # Select relevant columns: odds ratios, confidence intervals, and p-values
-  tidy_model <- tidy_model %>%
-    select(term, odds_ratio, lower_ci, upper_ci, p.value) %>%
-    mutate(predictor = predictor)  # Add the predictor name to the result
+   tidy_model <- tidy_model %>%
+    select(predictor, term, odds_ratio, lower_ci, upper_ci, p.value)
+  
+    #  tidy_model <- tidy_model %>%
+    # select(term, odds_ratio, lower_ci, upper_ci, p.value) %>%
+    # mutate(predictor = predictor)  # Add the predictor name to the result
   
   return(tidy_model)
 }
@@ -114,12 +122,16 @@ run_univariable_logistic <- function(predictor, data) {
 
 
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 # Run univariable logistic regression for each predictor and store results in a list
 results_list <- lapply(predictors, run_univariable_logistic, data = data)
 
 # Combine all results into a single data frame
 univariable_results <- bind_rows(results_list)
+
+# Replace NA values in the Predictor column with empty strings
+univariable_results <- univariable_results %>%
+  replace_na(list(predictor = ""))
 
 # Rename the columns for better presentation
 univariable_results <- univariable_results %>%
@@ -134,7 +146,7 @@ univariable_results <- univariable_results %>%
 print(univariable_results)
 
 # Save results to a CSV file
-# write.csv(univariable_results, "humans_univariable_logistic.csv", row.names = FALSE)
+write.csv(univariable_results, "../output/humans_univariable_logistic.csv", row.names = FALSE)
 ```
 
 
@@ -142,7 +154,7 @@ print(univariable_results)
 
 ####  Step 1: Fit the full logistic regression model with all predictors
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 
 set.seed(123)
 full_model <- glm(ELISA ~ Gender + Age + Marital_status + Education + OccupGroup + 
@@ -152,6 +164,7 @@ full_model <- glm(ELISA ~ Gender + Age + Marital_status + Education + OccupGroup
 ```
 
 #### Step 2: Check for multicollinearity using VIF
+
 This step was run by curiosity. The following step should be enough to take care of predictors with multicollineality.
 This is because predictive accuracy of the model is more important to us than it interpretability.
 
@@ -165,11 +178,13 @@ print(vif_values)  # Print VIF values
 
 #### Step 3: Perform stepwise model selection using AIC to reduce variables
 
-```{r}
-step_model <- step(full_model, direction = "both")
+```{r, message=FALSE, warning=FALSE, results = FALSE}
+step_model <- step(full_model, direction = "backward")
+```
 
+```{r}
 # Display summary of the best model from stepwise regression
-summary(step_model)
+# summary(step_model)
 
 tbl_regression(step_model, exponentiate = TRUE)
 ```
@@ -219,21 +234,49 @@ significant_terms <- tidy_model %>%
 print(significant_terms)
 ```
 
-####  Step 6: Plot the odds ratios for the significant risk factors
-This was not reported as I believe that the tabular format is a better presentation of these data is it shows the reference categories and exact vlues of the parameters.
+####  Step 6: Plot the odds ratios 
 
 ```{r}
-significant_terms %>%
-  ggplot(aes(x = reorder(term, odds_ratio), y = odds_ratio)) +
+# Use broom::tidy to get coefficients from the best model
+tidy_model <- tidy(step_model, conf.int = TRUE)  # Include confidence intervals
+
+# Add a column to distinguish between significant and non-significant factors
+# p-value < 0.05 is considered significant
+tidy_model <- tidy_model %>%
+  mutate(significance = ifelse(p.value < 0.05, "Significant", "Non-significant"))
+
+# Convert the coefficients (log-odds) into odds ratios and adjust the confidence intervals
+tidy_model <- tidy_model %>%
+  mutate(odds_ratio = exp(estimate),
+         lower_ci = exp(conf.low),
+         upper_ci = exp(conf.high)) %>%
+  filter(term != "(Intercept)")  # Exclude the intercept
+
+# Modify the variable name to include a colon to separate variables and categories
+tidy_model <- tidy_model %>%
+  mutate(term = case_when(
+    str_detect(term, "Gender") ~ str_replace(term, "Gender", "Gender:"),
+    str_detect(term, "Age") ~ str_replace(term, "Age", "Age:"),
+    str_detect(term, "Education") ~ str_replace(term, "Education", "Education:"),
+    str_detect(term, "OccupGroup") ~ str_replace(term, "OccupGroup", "OccupGroup:"),
+    str_detect(term, "contact_with_waste") ~ str_replace(term, "contact_with_waste", "contact_with_waste:"),
+    str_detect(term, "aborted_fetus") ~ str_replace(term, "aborted_fetus", "aborted_fetus:"),
+    str_detect(term, "milking") ~ str_replace(term, "milking", "milking:"),
+    str_detect(term, "Herded_livestock") ~ str_replace(term, "Herded_livestock", "Herded_livestock:"),
+    str_detect(term, "Slaughtered") ~ str_replace(term, "Slaughtered", "Slaughtered:")
+  ))
+
+# Step 7: Plot the odds ratios for all risk factors and color significant ones differently
+tidy_model %>%
+  ggplot(aes(x = term, y = odds_ratio, color = significance)) +
   geom_point() +
   geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), width = 0.2) +
-  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +  # Reference line at OR = 1
   coord_flip() +
-  labs(title = "Significant Risk Factors for Brucellosis (Odds Ratios)", 
+  scale_color_manual(values = c("Significant" = "blue", "Non-significant" = "gray")) +  # Custom colors
+  labs(title = "Risk Factors for Brucellosis (Odds Ratios)", 
        x = "Risk Factor", 
-       y = "Odds Ratio (with 95% CI)") +
+       y = "Odds Ratio (with 95% CI)", 
+       color = "Significance") +
   theme_minimal()
-
 ```
-
-
