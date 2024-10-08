@@ -14,7 +14,7 @@
 <meta name="date" content="2024-10-08" />
 
 <title>Seroprevalence and Risk Factors of Human Brucellosis in Nyatatare Disrict of Rwanda</title>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -249,14 +249,6 @@ if (window.hljs) {
 }
 </script>
 
-
-
-
-
-
-
-
-
 <style type="text/css">
 .main-container {
 max-width: 940px;
@@ -364,6 +356,19 @@ display: none;
 
 <body>
 
+ <!-- Bootstrap Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">My R Markdown Reports</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="file1.html">Report 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="file2.html">Report 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="file3.html">Report 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="file4.html">Report 4</a></li>
+      </ul>
+    </div>
+  </nav>
 
 <div class="container-fluid main-container">
 
@@ -392,17 +397,15 @@ display: none;
     <ul>
       <li><a href="Humans_Data_Cleaning.html">Data Cleaning: Humans</a></li>
       <li><a href="Humans_Regression_Analysis.html">Regression Analysis: Humans</a></li>
-      <li><a href="file3.html">Data Cleaning: Livestock</a></li>
-      <li><a href="file4.html">Regression Analysis: Livestock</a></li>
+      <li><a href="Livestock_Data_Cleaning.html">Data Cleaning: Livestock</a></li>
+      <li><a href="Livestock_Regression_Analysis.html">Regression Analysis: Livestock</a></li>
     </ul>
 
   </div>
 
 
-
-
-
 </div>
+
 
 <script>
 
@@ -442,7 +445,14 @@ $(document).ready(function () {
     script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+
 </script>
+
+  <!-- Optionally include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
