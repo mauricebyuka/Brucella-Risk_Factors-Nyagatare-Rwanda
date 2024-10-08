@@ -1,0 +1,15 @@
+---
+title: "Seroprevalence and Risk Factors of Human Brucellosis in Nyatatare Disrict of Rwanda"
+author: "Maurice Byukusenge"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message = FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the ............. journal. This code and associated data are made available to readers who would like to reproduce the results presented in the publication. 
+
