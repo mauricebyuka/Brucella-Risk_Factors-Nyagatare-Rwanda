@@ -1,0 +1,299 @@
+
+```{r setup, message = FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load necessary libraries
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)         # For data wrangling when necessary
+library(ggplot2)           # For data visualization
+library(broom)             # For making tidy tibles from stats objects
+library(boot)              # For cross-validation analysis
+library(pROC)              # For ROC curve
+library(tidyr)             # For changing the shape of data
+library(car)               # For VIF calculation (multicollinearity)
+library(MASS)              # For stepwise model selection
+library(gtsummary)         # Cleaner table of the model summary
+library(ResourceSelection) # For  Hosmer–Lemeshow test
+library(knitr)             # For a better formatting of tabular output
+```
+
+### Read the dataset
+
+```{r}
+data <- read.csv('../output/Humans_regression_data.csv') # Output of the previous step
+```
+
+### Convert categorical variables to factors and set reference categories for some variables.
+
+All the other variables will keep their default reference categories. For example, all Yes or No variables have "No" as their ref category.
+
+```{r}
+data$ELISA <- ifelse(data[['ELISA']] == 'Positive', 1, 0)
+
+# Convert categorical variables to factors
+data <- data %>% mutate_if(is.character, as.factor)
+
+# Set "livestock farmers" as the reference occupation category
+data$OccupGroup <- relevel(data$OccupGroup, ref = "livestock farmers")
+```
+
+
+### UNIVARIABLE LOGISTIC REGRESSION FOR EACH RISK FACTOR
+
+```{r}
+# List of predictor variables for univariable logistic regression
+predictors <- c("Sector", "Gender", "Age", "Marital_status", "Education", "OccupGroup", 
+                "parturition", "contact_with_waste", "aborted_fetus", 
+                "milking", "Herded_livestock", "Slaughtered", 
+                "boiled_milk", "Raw_milk")
+
+# Outcome variable
+outcome <- "ELISA"
+
+# Function to run univariable logistic regression for a single predictor and extract OR, CIs, p-value
+run_univariable_logistic <- function(predictor, data) {
+  formula <- as.formula(paste(outcome, "~", predictor))
+  model <- glm(formula, data = data, family = binomial)
+  tidy_model <- tidy(model, conf.int = TRUE)
+  
+  # Calculate odds ratios and confidence intervals
+  tidy_model <- tidy_model %>%
+    mutate(odds_ratio = round(exp(estimate), 2),
+           lower_ci = round(exp(conf.low), 2),
+           upper_ci = round(exp(conf.high), 2),
+           p.value = round(p.value, 2)) %>%
+    filter(term != "(Intercept)")  # Exclude the intercept
+  
+  # Extract the variable name (e.g., "Male" instead of "GenderMale")
+  tidy_model <- tidy_model %>%
+    mutate(term = str_replace(term, paste0(predictor), ""))  # Remove predictor from term
+
+  
+  # Add reference category (first category in each group)
+  reference_category <- data %>%
+    select(!!sym(predictor)) %>%
+    distinct() %>%
+    arrange(!!sym(predictor)) %>%
+    slice(1) %>%
+    pull(!!sym(predictor))
+  
+  # Create reference row with dashes and convert all columns to character
+  reference_row <- data.frame(term = reference_category, 
+                              odds_ratio = "-", 
+                              lower_ci = "-", 
+                              upper_ci = "-", 
+                              p.value = "-", 
+                              predictor = predictor,
+                              stringsAsFactors = FALSE)
+  
+  # Convert all columns in tidy_model to character before combining
+  tidy_model <- tidy_model %>%
+    mutate(odds_ratio = as.character(odds_ratio),
+           lower_ci = as.character(lower_ci),
+           upper_ci = as.character(upper_ci),
+           p.value = as.character(p.value))
+  
+  # Combine reference category with the model results
+    tidy_model <- bind_rows(reference_row, tidy_model)
+    
+  # Select relevant columns: odds ratios, confidence intervals, and p-values
+   tidy_model <- tidy_model %>%
+    select(predictor, term, odds_ratio, lower_ci, upper_ci, p.value)
+  
+    #  tidy_model <- tidy_model %>%
+    # select(term, odds_ratio, lower_ci, upper_ci, p.value) %>%
+    # mutate(predictor = predictor)  # Add the predictor name to the result
+  
+  return(tidy_model)
+}
+```
+
+
+
+```{r, message=FALSE, warning=FALSE}
+# Run univariable logistic regression for each predictor and store results in a list
+results_list <- lapply(predictors, run_univariable_logistic, data = data)
+
+# Combine all results into a single data frame
+univariable_results <- bind_rows(results_list)
+
+# Replace NA values in the Predictor column with empty strings
+univariable_results <- univariable_results %>%
+  replace_na(list(predictor = ""))
+
+# Rename the columns for better presentation
+univariable_results <- univariable_results %>%
+  rename(`Predictor` = predictor, 
+         `Variable` = term, 
+         `Odds Ratio` = odds_ratio, 
+         `Lower 95% CI` = lower_ci, 
+         `Upper 95% CI` = upper_ci, 
+         `P-value` = p.value)
+
+# Print the univariable logistic regression results
+
+kable(univariable_results, 
+      col.names = c("Risk factor", "Category", "Odds Ratio", "Lower 95% CI", "Upper 95% CI", "P-value"),
+      caption = "Univariable Logistic Regression Results",
+      format = "markdown")
+
+
+# Save results to a CSV file
+write.csv(univariable_results, "../output/humans_univariable_logistic.csv", row.names = FALSE)
+```
+
+
+###  FITTING A MULTIPLE LOGISTIC REGRESSION 
+
+####  Step 1: Fit the full logistic regression model with all predictors
+
+```{r, message=FALSE, warning=FALSE}
+
+set.seed(123)
+full_model <- glm(ELISA ~ Gender + Age + Marital_status + Education + OccupGroup + 
+                    parturition + contact_with_waste + aborted_fetus + milking + 
+                    Herded_livestock + Slaughtered + boiled_milk + Raw_milk, 
+                  data = data, family = binomial())
+```
+
+#### Step 2: Check for multicollinearity using VIF
+
+This step was run by curiosity. The following step should be enough to take care of predictors with multicollineality.
+This is because predictive accuracy of the model is more important to us than it interpretability.
+
+
+```{r}
+vif_values <- vif(full_model)
+print(vif_values)  # Print VIF values
+
+```
+
+
+Despite a VIF of 14.07 for the OccupGroup variable, it was retained in the model due to its importance in the overall predictive performance, as verified by stepwise regression based on the Akaike Information Criterion (AIC). Stepwise model selection (see below) was conducted to reduce the number of predictors and identify the most parsimonious model.
+
+
+#### Step 3: Perform stepwise model selection using AIC to reduce variables
+
+```{r, message=FALSE, warning=FALSE, results = FALSE}
+step_model <- step(full_model, direction = "backward")
+```
+
+
+#### Step 4: Evaluate the goodness of fit
+
+
+####Step 4.1: Cross-validation to evaluate model performance
+
+```{r}
+cv_model <- cv.glm(data, step_model, K = 10)
+print(cv_model$delta)  # Print cross-validated error (lower is better)
+```
+
+####Step 4.2: ROC curve to assess the model's goodness of fit
+
+```{r}
+pred <- predict(step_model, type = "response")
+roc_curve <- roc(data$ELISA, pred)
+plot(roc_curve, main = "ROC Curve for Human Brucellosis Prediction Model", col = "blue")
+auc_value <- auc(roc_curve)
+print(paste("AUC:", auc_value))
+```
+
+#### Hosmer–Lemeshow test
+
+Hosmer–Lemeshow test run by curiosity but will not report it due to its documented limitations and problems.
+Cross-validation and ROC curve are prefered and enough for assessing the model performance and generalizability.
+
+```{r}
+gf <- hoslem.test(data$ELISA, fitted(step_model), g = 10)
+print(gf)
+```
+
+####  Step 5: Extract the significant risk factors and convert to odds ratios
+
+```{r}
+tidy_model <- tidy(step_model, conf.int = TRUE)
+significant_terms <- tidy_model %>%
+  filter(p.value < 0.05) %>%
+  select(term, estimate, conf.low, conf.high, p.value) %>%
+  mutate(odds_ratio = exp(estimate),
+         lower_ci = exp(conf.low),
+         upper_ci = exp(conf.high))
+
+print(significant_terms)
+```
+
+####  Step 6: Write model results to table
+
+```{r}
+# Display summary of the best model from stepwise regression
+# summary(step_model)
+
+tbl_regression(step_model, exponentiate = TRUE)
+```
+
+
+```{r}
+# Function to calculate odds ratios, confidence intervals, and p-values
+calculate_results <- function(model) {
+  results <- tidy(model, conf.int = TRUE) %>%
+    mutate(odds_ratio = exp(estimate),
+           lower_ci = exp(conf.low),
+           upper_ci = exp(conf.high),
+           p.value = p.value,  # Do not round p-values
+           odds_ratio = round(odds_ratio, 2),
+           lower_ci = round(lower_ci, 2),
+           upper_ci = round(upper_ci, 2)) %>%
+    select(term, odds_ratio, lower_ci, upper_ci, p.value) %>%
+  return(results)
+}
+```
+
+
+```{r}
+# Use broom::tidy to get coefficients from the best model
+
+tidy_model <- calculate_results(step_model)
+
+# Add a column to distinguish between significant and non-significant factors
+# p-value < 0.05 is considered significant
+tidy_model <- tidy_model %>%
+  mutate(significance = ifelse(p.value < 0.05, "Significant", "Non-significant"))
+
+# Modify the variable name to include a colon to separate variables and categories
+tidy_model <- tidy_model %>%
+  mutate(term = case_when(
+    str_detect(term, "Gender") ~ str_replace(term, "Gender", "Gender: "),
+    str_detect(term, "Age") ~ str_replace(term, "Age", "Age: "),
+    str_detect(term, "Education") ~ str_replace(term, "Education", "Education: "),
+    str_detect(term, "OccupGroup") ~ str_replace(term, "OccupGroup", "OccupGroup: "),
+    str_detect(term, "contact_with_waste") ~ str_replace(term, "contact_with_waste", "Contact with waste: "),
+    str_detect(term, "aborted_fetus") ~ str_replace(term, "aborted_fetus", "Handled aborted fetus: "),
+    str_detect(term, "milking") ~ str_replace(term, "milking", "Milking: "),
+    str_detect(term, "Herded_livestock") ~ str_replace(term, "Herded_livestock", "Herded livestock: ")
+  )) %>%drop_na()
+
+# Write to table
+out_table <- tidy_model %>% select(c("term", "odds_ratio", "lower_ci", "upper_ci", "p.value"))
+write.csv(out_table, "../output/Humans_multivariable_results_with_ci.csv", row.names = FALSE)
+
+```
+
+### Step 7: Plot the odds ratios for all risk factors and color significant ones differently
+
+```{r}
+tidy_model %>%
+  ggplot(aes(x = term, y = odds_ratio, color = significance)) +
+  geom_point() +
+  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), width = 0.2) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +  # Reference line at OR = 1
+  coord_flip() +
+  scale_color_manual(values = c("Significant" = "blue", "Non-significant" = "gray")) +  # Custom colors
+  labs(title = "Risk Factors for Brucellosis (Odds Ratios)", 
+       x = "Risk Factor", 
+       y = "Odds Ratio (with 95% CI)", 
+       color = "Significance") +
+  theme_minimal()
+```

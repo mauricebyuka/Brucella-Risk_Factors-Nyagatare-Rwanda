@@ -1,0 +1,283 @@
+
+```{r setup, message = FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load necessary libraries
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)  # For data wrangling when necessary
+library(ggplot2)    # For data visualization
+library(broom)      # For making tidy tibles from stats objects
+library(boot)       # For cross-validation analysis
+library(pROC)       # For ROC curve
+library(tidyr)      # For changing the shape of data
+library(car)        # For VIF calculation (multicollinearity)
+library(MASS)       # For stepwise model selection
+library(gtsummary)  # Cleaner table of the model summary
+library(knitr)      # For outputing nicer tables
+```
+
+### Read the dataset
+
+```{r}
+data <- read.csv('../output/Livestock_regression_data.csv') # Output of the previous step
+```
+
+### Convert categorical variables to factors and set reference categories for saome variables.
+
+All the other variables will keep their default reference categories. For example, all Yes or No variables have "No" as their ref category.
+
+```{r}
+data$ELISA_samplw <- ifelse(data[['ELISA_sample']] == 'Positive', 1, 0)
+
+data <-data %>% mutate_if(is.character, as.factor)
+
+# Set reference categories for some variables
+data$Breed <- relevel(data$Breed, ref = 'Local')
+data$aborted_animal_fate <- relevel(data$aborted_animal_fate, ref = 'Not applicable')
+data$Age <- relevel(data$Age, ref = 'Young')
+
+```
+
+
+### Function to calculate odds ratios, confidence intervals, and p-values
+
+```{r}
+calculate_results <- function(model) {
+  results <- tidy(model, conf.int = TRUE) %>%
+    mutate(odds_ratio = exp(estimate),
+           lower_ci = exp(conf.low),
+           upper_ci = exp(conf.high),
+           p.value = p.value,  # Do not round p-values
+           odds_ratio = round(odds_ratio, 2),
+           lower_ci = round(lower_ci, 2),
+           upper_ci = round(upper_ci, 2)) %>%
+    select(term, odds_ratio, lower_ci, upper_ci, p.value) %>%
+  return(results)
+}
+```
+
+### Univariable Logistic Regression
+
+```{r}
+# List of predictor variables for univariable logistic regression
+
+predictors <- c('sector', 'herd_size_cattle', 'herd_size_sheep', 'Herdsizegoats',
+                'animals_live_with_people', 'farm_fenced','wildlife_interaction',
+                'shared_water','breeding_methods','having_vet','animalFeedAbort',
+                'throwingAbort','new_introduction', 'brucellosis_awareness', 
+                  'species', 'Breed', 'Age', 'Sex')
+
+
+# Outcome variable
+outcome <- "ELISA_sample"
+```
+
+
+### Function to run univariable logistic regression for a single predictor and extract OR, CIs, p-value
+
+```{r}
+run_univariable_logistic <- function(predictor, data) {
+  formula <- as.formula(paste(outcome, "~", predictor))
+  model <- glm(formula, data = data, family = binomial)
+  tidy_model <- tidy(model, conf.int = TRUE)
+  
+  # Calculate odds ratios and confidence intervals
+  tidy_model <- tidy_model %>%
+    mutate(odds_ratio = round(exp(estimate), 2),
+           lower_ci = round(exp(conf.low), 2),
+           upper_ci = round(exp(conf.high), 2),
+           p.value = round(p.value, 2)) %>%
+    filter(term != "(Intercept)")  # Exclude the intercept
+  
+  # Extract the variable name
+  tidy_model <- tidy_model %>%
+    mutate(term = str_replace(term, paste0(predictor), ""))  # Remove predictor from term
+  
+  # Check if the predictor is categorical (factor)
+  if (is.factor(data[[predictor]])) {
+    # For categorical predictors, find the reference category
+    reference_category <- data %>%
+      select(!!sym(predictor)) %>%
+      distinct() %>%
+      arrange(!!sym(predictor)) %>%
+      slice(1) %>%
+      pull(!!sym(predictor))
+    
+    # Create a row for the reference category with dashes
+    reference_row <- data.frame(
+      predictor = predictor, 
+      term = reference_category, 
+      odds_ratio = "-", 
+      lower_ci = "-", 
+      upper_ci = "-", 
+      p.value = "-", 
+      stringsAsFactors = FALSE
+    )
+    
+    # Combine the reference row with the model results
+    tidy_model <- tidy_model %>%
+      dplyr::mutate(odds_ratio = as.character(odds_ratio),
+                    lower_ci = as.character(lower_ci),
+                    upper_ci = as.character(upper_ci),
+                    p.value = as.character(p.value)) %>%
+      dplyr::mutate(predictor = predictor)  # Add predictor name to each row
+    
+    tidy_model <- bind_rows(reference_row, tidy_model)
+  } else {
+    # For numerical predictors, just add the predictor name to each row
+    tidy_model <- tidy_model %>%
+      mutate(predictor = predictor) %>%
+      mutate(across(everything(), as.character))
+  }
+  
+  # Select relevant columns: odds ratios, confidence intervals, and p-values
+   tidy_model <- tidy_model %>%
+    select(predictor, term, odds_ratio, lower_ci, upper_ci, p.value)
+
+  return(tidy_model)
+}
+```
+
+
+```{r, message=FALSE, warning=FALSE}
+# Run univariable logistic regression for each predictor and store results in a list
+results_list <- lapply(predictors, run_univariable_logistic, data = data)
+```
+
+```{r}
+# Combine all results into a single data frame
+univariable_results <- bind_rows(results_list)
+
+# Replace NA values in the Predictor column with empty strings
+univariable_results <- univariable_results %>%
+  replace_na(list(predictor = ""))
+
+# Print the univariable logistic regression results
+
+kable(univariable_results, 
+      col.names = c("Risk factor", "Category", "Odds Ratio", "Lower 95% CI", "Upper 95% CI", "P-value"),
+      caption = "Univariable Logistic Regression Results",
+      format = "markdown")
+
+
+# Save results to a CSV file
+write.csv(univariable_results, "../output/Livestock_univariable_results_with_ci.csv", row.names = FALSE)
+```
+
+
+### Multivariable Logistic Regression
+
+```{r}
+# Multivariable Logistic Regression (before stepwise selection)
+initial_model <- glm(ELISA_sample ~ sector + herd_size_cattle + herd_size_sheep + 
+                       Herdsizegoats + animals_live_with_people + farm_fenced + 
+                       wildlife_interaction + shared_water + breeding_methods + 
+                       having_vet + animalFeedAbort + throwingAbort + new_introduction + 
+                       brucellosis_awareness + species + Breed + Age + Sex + 
+                       aborted_animal_fate + buryingAbort,  # Add missing variables
+                     data = data, family = "binomial")
+
+print(summary(initial_model))
+
+```
+
+```{r}
+# Remove variables with estimate signs that don't make sense
+initial_model <- update(initial_model, . ~ . - new_introduction - wildlife_interaction - animals_live_with_people - 
+                          brucellosis_awareness)
+
+```
+
+```{r}
+# Perform multicollinearity assessment using VIF on the fitted logistic regression model
+vif_values <- vif(initial_model)  # Calculate VIF for all predictors in the model
+print(vif_values)
+```
+
+### Model secltion
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+# Perform stepwise model selection based on AIC
+stepwise_model <- stepAIC(initial_model, direction = "both", trace = FALSE)
+```
+
+```{r}
+# Print the final selected model
+tbl_regression(stepwise_model, exponentiate = TRUE)
+```
+
+
+```{r}
+
+# Get the multivariable results with odds ratios, confidence intervals, and p-values
+multivariable_results_df <- calculate_results(stepwise_model)
+
+multivariable_results_df <- multivariable_results_df %>%
+  mutate(term = case_when(
+    str_detect(term, "sector") ~ str_replace(term, "sector", "Sector: "),
+    str_detect(term, "Age") ~ str_replace(term, "Age", "Age category: "),
+    str_detect(term, "herd_size_") ~ str_replace(term, "herd_size_", "Herd size: "),
+    str_detect(term, "Herdsize") ~ str_replace(term, "Herdsize", "Herd size: "),
+    str_detect(term, "farm_fenced") ~ str_replace(term, "farm_fenced", "Farm fenced: "),
+    str_detect(term, "shared_water") ~ str_replace(term, "shared_water", "Shared water points: "),
+    str_detect(term, "animalFeedAbort") ~ str_replace(term, "animalFeedAbort", "Feeding aborted materials to Animals: "),
+    str_detect(term, "throwingAbort") ~ str_replace(term, "throwingAbort", "Throwing aborted materials in open fields: "),
+    str_detect(term, "buryingAbort") ~ str_replace(term, "buryingAbort", "Burying aborted materials: "),
+    str_detect(term, "species") ~ str_replace(term, "species", "Livestock species: "),
+    str_detect(term, "Sex") ~ str_replace(term, "Sex", "Livestock sex: "),
+    str_detect(term, "aborted_animal_fate") ~ str_replace(term, "aborted_animal_fate", "Aborting animal fate: ")
+
+  )) %>% drop_na()
+
+
+# Save the results to a CSV file
+write.csv(multivariable_results_df, "../output/Livestock_multivariable_results_with_ci.csv", row.names = FALSE)
+```
+
+### Model Performance Evaluation
+
+```{r}
+# Cross-validation (10-fold) using cv.glm from the boot package
+set.seed(123)
+cv_results <- cv.glm(data, stepwise_model, K=10)
+print(cv_results$delta)  # Cross-validation prediction error
+
+# ROC Curve and AUC
+predictions <- predict(stepwise_model, newdata = data, type = "response")
+roc_curve <- roc(data$ELISA_sample, predictions)
+
+# Plot ROC Curve
+plot(roc_curve, main = "ROC Curve for Animal Brucellosis Prediction Model", col = "blue")
+auc_value <- auc(roc_curve)
+print(paste("AUC: ", auc_value))
+
+```
+
+### Plot odds ratios and their 95% confidence intervals
+
+```{r}
+# Odds Ratios from the final model for visualization
+odds_data <- multivariable_results_df %>%
+  filter(odds_ratio != "-") %>%
+  mutate(odds_ratio = as.numeric(odds_ratio),
+         significant = ifelse(p.value < 0.05, "Significant", "Non-significant"))
+
+# Create a forest plot (odds ratios with confidence intervals)
+ggplot(odds_data, aes(x = term, y = odds_ratio, ymin = lower_ci, ymax = upper_ci, color = significant)) +
+  geom_point() +  # Add points and error bars for confidence intervals
+  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), width = 0.2) +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "red") +  # Reference line at OR=1
+  coord_flip() +
+  theme_minimal() +
+  labs(x = 'Risk Factors', y = 'Odds Ratios', title = 'Forest Plot of Odds Ratios with 95% Confidence Intervals') +
+  scale_color_manual(values = c("Significant" = "blue", "Non-significant" = "gray")) +  # Custom colors for significant vs. non-significant
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+
+
+

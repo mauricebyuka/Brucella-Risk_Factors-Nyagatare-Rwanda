@@ -1,0 +1,212 @@
+
+```{r setup, message = FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load necessary libraries
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+### Read the dataset
+
+```{r}
+data1 <- read.csv('../data/Livestock_raw_form1.tsv', sep = '\t')
+data2 <- read.csv('../data/Livestock_raw_Lab_Data.tsv', sep = '\t')
+data2 <- data2 %>% dplyr::select(-c(SN, Date, Earing, Sector, Cell, Village, RBTDate, ELISADate)) # Removed: not needed for analysis or duplicated 
+dim(data2)
+```
+
+## DATA CLEANING
+
+### Initial Data Cleaning
+
+```{r}
+#Remove samples from form Y since the questionnaire was not completed (due to issue with data entry)
+
+data2 <- data2 %>% filter(form_ID != 'KAR003Y')
+#Some records do not have ELISA data. Marked as "no serum".
+data2 <- data2 %>% filter(ELISA_sample != 'no serum')
+# write.table(data2, 'updated_sample_and_Lab_Data.tsv', quote = F, sep = '\t', row.names = F)
+data1 <- data1 %>% dplyr::select(-c(age, education, gender, Occupation)) # The respondents' demographic data not used for analysis
+
+# Merge forms 1 (questionnaire) and samples & Lab results
+mergedData <- merge(data1, data2, by = 'form_ID')
+
+# Check that all records were captured after merging the two forms?
+dim(data2)[1] == dim(mergedData)[1]
+```
+
+### Split disposal of aborted materials into separate variables
+
+```{r}
+mergedData <- mergedData %>% mutate(
+  buryingAbort = case_when(
+    grepl('Burying them in the ground', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ),
+  
+  animalFeedAbort = case_when(
+    grepl('Feeding them to other animals like dogs', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ),
+  
+ throwingAbort = case_when(
+    grepl('Throwing them to the field without burying them', disposal_aborted_materials) ~ 'Yes',
+    .default = 'No'
+  ), 
+  
+  .after =  disposal_aborted_materials
+)
+
+mergedData <- mergedData %>% dplyr::select(-c(disposal_aborted_materials, production_mode))
+
+colnames(mergedData) # verify that the column names make sense
+```
+
+
+### Prep the data for regression analysis
+
+```{r}
+# Remove variables that are not relevant for regression analysis
+regData <- mergedData %>% dplyr::select(-c(form_ID, date, lat, long, infertility_history, ELISA_herd, RBT_herd, HerdID, AnimalID, Healthy, Sick, Lactating, Recovered, SampleID, RBT_sample, RBT_ELISA, fetch_water_points))
+
+# # Check to verify the balance in the level distribution
+# for (i in colnames(regData)){
+#   print(i)
+#   print(table(regData[,i]))
+# }
+
+# Remove variables that are dependent on others. To be reintroduced if the parent variables are significantly associated. This will help reduce potential multicollineality
+
+regData <- regData %>% dplyr::select(-c(introduction_time, introduction_origin, bull_origin, herd_size, cell, village))
+
+colnames(regData)
+
+
+# Remove animals that are vaccinated! This is because of imbalance in answers to this question. It was determined that may did not have information on vaccication status.
+regData <- regData %>% filter(vaccinated != 'Yes')
+regData <- regData %>% dplyr::select(- vaccinated)
+
+dim(regData)
+
+write.csv(regData, '../output/Livestock_regression_data.csv', row.names = FALSE)
+```
+
+
+## DESCRIPTIVE STATISTICS
+
+
+### Convert ELISA Result to a Factor
+```{r}
+data <- regData
+data$ELISA_sample <- factor(data$ELISA_sample, levels = c("Negative", "Positive"))
+```
+
+### Calculate Prevalence
+```{r}
+prevalence <- data %>% 
+  count(ELISA_sample) %>% 
+  mutate(Percentage = n / sum(n) * 100)
+prevalence
+```
+
+### Plot Prevalence
+```{r message = FALSE, warning = FALSE}
+ggplot(prevalence, aes(x = ELISA_sample, y = Percentage, fill = ELISA_sample)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(round(Percentage, 1), "%")), vjust = 0.5, position = position_stack(vjust = 0.5)) +
+  labs(title = "Prevalence of Brucellosis in Livestock", x = "ELISA Result", y = "Percentage (%)") +
+  theme_minimal()
+```
+
+### Summary Statistics for Age
+```{r message = FALSE, warning = FALSE}
+age_summary <- data %>% 
+  group_by(Age) %>% 
+  summarise(Count = n(), Percentage = Count / nrow(data) * 100)
+age_summary
+```
+
+### Plot Age Distribution
+```{r message = FALSE, warning = FALSE}
+ggplot(data, aes(x = Age)) +
+  geom_bar(fill = "skyblue") +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / sum(..count..) * 100, 1), "%", ")")), vjust = 0.5, position = position_stack(vjust = 0.5)) +
+  labs(title = "Age Distribution of Livestock", x = "Age Group", y = "Count") +
+  theme_minimal()
+```
+
+### Sex Distribution
+```{r message = FALSE, warning = FALSE}
+sex_summary <- data %>% 
+  group_by(Sex) %>% 
+  summarise(Count = n(), Percentage = Count / nrow(data) * 100)
+sex_summary
+```
+
+### Plot Sex Distribution
+```{r message = FALSE, warning = FALSE}
+ggplot(data, aes(x = Sex)) +
+  geom_bar(fill = "lightgreen") +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / sum(..count..) * 100, 1), "%", ")")), vjust = 0.5, position = position_stack(vjust = 0.5)) +
+  labs(title = "Sex Distribution of Livestock", x = "Sex", y = "Count") +
+  theme_minimal()
+```
+
+### Breed Distribution
+```{r message = FALSE, warning = FALSE}
+breed_summary <- data %>% 
+  group_by(Breed) %>% 
+  summarise(Count = n(), Percentage = Count / nrow(data) * 100)
+breed_summary
+```
+
+### Plot Breed Distribution
+```{r message = FALSE, warning = FALSE}
+ggplot(data, aes(x = Breed)) +
+  geom_bar(fill = "orange") +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / sum(..count..) * 100, 1), "%", ")")), vjust = 0.5, position = position_stack(vjust = 0.5)) +
+  labs(title = "Breed Distribution in Livestock", x = "Breed", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+### Shared Water vs ELISA Result
+```{r message = FALSE, warning = FALSE}
+shared_water_vs_elisa <- data %>% 
+  group_by(shared_water, ELISA_sample) %>% 
+  summarise(Count = n()) %>% 
+  group_by(shared_water) %>% 
+  mutate(Percentage = Count / sum(Count) * 100)
+shared_water_vs_elisa
+```
+
+### Plot Shared Water vs ELISA Result
+```{r message = FALSE, warning = FALSE}
+ggplot(data, aes(x = shared_water, fill = ELISA_sample)) +
+  geom_bar(position = "fill") +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / tapply(..count.., ..x.., sum)[..x..] * 100, 1), "%", ")")), position = position_fill(vjust = 0.5)) +
+  labs(title = "Shared Water vs ELISA Result in Livestock", x = "Shared Water", y = "Proportion", fill = "ELISA Result") +
+  theme_minimal()
+```
+
+### Plot for Other Variables vs ELISA Result
+```{r message = FALSE, warning = FALSE}
+variables <- c("Age", "Sex", "Breed", "sector", "animals_live_with_people", "farm_fenced", "wildlife_interaction", "shared_water", "breeding_methods", "having_vet", "buryingAbort", "animalFeedAbort", "throwingAbort", "new_introduction", "brucellosis_awareness")
+
+for (var in variables) {
+  p <- ggplot(data, aes_string(x = var, fill = "ELISA_sample")) +
+    geom_bar(position = "fill") +
+    geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / tapply(..count.., ..x.., sum)[..x..] * 100, 1), "%", ")")), position = position_fill(vjust = 0.5)) +
+    labs(title = paste("ELISA Result vs", var, "in Livestock"), x = var, y = "Proportion", fill = "ELISA Result") +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  print(p)
+}
+```
+
+
+
