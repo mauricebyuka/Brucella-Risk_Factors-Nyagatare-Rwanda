@@ -10,17 +10,16 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* Ensure there's no unnecessary scroll bar */
+      overflow-y: auto; /* Allow the entire page to scroll */
     }
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
       text-align: center;
       padding: 20px;
-      min-height: 100vh;
       box-sizing: border-box;
+      width: 100%;
     }
     .tab-container {
       display: flex;
@@ -40,50 +39,35 @@
     }
     iframe {
       width: 100%;
-      height: 100%;
-      flex-grow: 1;
+      min-height: 80vh;
       border: none;
+      margin-top: 20px;
     }
-    h1 {
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 20px;
-      width: 80%;
-    }
-    /* Allow the entire page to scroll if needed */
-    .scroll-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      overflow-y: auto;
-      width: 100%;
+    h1, h2, h3, p {
+      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
-  <div class="scroll-container">
-    <div class="container">
-      <!-- Introduction Section -->
-      <h1>Seroprevalence and Risk Factors of Brucellosis in Nyatatare District of Rwanda</h1>
-      <h2>Maurice Byukusenge</h2>
-      <h2>2024-10-08 </h2>
+  <div class="container">
+    <!-- Introduction Section -->
+    <h1>Seroprevalence and Risk Factors of Brucellosis in Nyatatare District of Rwanda</h1>
+    <h3>Author: Maurice Byukusenge (bmaurice@psu.edu)</h3>
+    <h3>2024-10-08</h3>
 
-      <p>This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the journal PLOS Neglected Tropical Diseases. This code and associated data are made available to readers who would like to reproduce the results presented in the publication.</p>
+    <h2>Introduction</h2>
+    <p>This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the journal PLOS Neglected Tropical Diseases. This code and associated data are made available to readers who would like to reproduce the results presented in the publication.</p>
 
-      <!-- Tab Container -->
-      <div class="tab-container">
-        <div class="tab active" onclick="showTab('Humans_Data_Cleaning.html')">Humans Data Cleaning</div>
-        <div class="tab" onclick="showTab('Humans_Regression_Analysis.html')">Humans Regression Analysis</div>
-        <div class="tab" onclick="showTab('Livestock_Data_Cleaning.html')">Livestock Data Cleaning</div>
-        <div class="tab" onclick="showTab('Livestock_Regression_Analysis.html')">Livestock Regression Analysis</div>
-      </div>
-      
-      <!-- Iframe to load the HTML content -->
-      <iframe id="content-frame" src="Humans_Data_Cleaning.html"></iframe>
+    <!-- Tab Container -->
+    <div class="tab-container">
+      <div class="tab active" onclick="showTab('Humans_Data_Cleaning.html')">Humans Data Cleaning</div>
+      <div class="tab" onclick="showTab('Humans_Regression_Analysis.html')">Humans Regression Analysis</div>
+      <div class="tab" onclick="showTab('Livestock_Data_Cleaning.html')">Livestock Data Cleaning</div>
+      <div class="tab" onclick="showTab('Livestock_Regression_Analysis.html')">Livestock Regression Analysis</div>
     </div>
+
+    <!-- Iframe to load the HTML content -->
+    <iframe id="content-frame" src="Humans_Data_Cleaning.html"></iframe>
   </div>
 
   <script>
