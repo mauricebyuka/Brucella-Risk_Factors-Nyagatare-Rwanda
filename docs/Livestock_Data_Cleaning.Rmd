@@ -122,6 +122,25 @@ ggplot(prevalence, aes(x = ELISA_sample, y = Percentage, fill = ELISA_sample)) +
   theme_minimal()
 ```
 
+### Species Distribution
+```{r}
+species_summary <- data %>% 
+  group_by(species) %>% 
+  summarise(Count = n(), Percentage = Count / nrow(data) * 100)
+species_summary
+```
+
+### Plot Species Distribution
+```{r, message=FALSE, warning=FALSE}
+ggplot(data, aes(x = species)) +
+  geom_bar(fill = "blue") +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / sum(..count..) * 100, 1), "%", ")")), vjust = 0.5, position = position_stack(vjust = 0.5)) +
+  labs(title = "Species Distribution in Livestock", x = "Species", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
 ### Summary Statistics for Age
 ```{r message = FALSE, warning = FALSE}
 age_summary <- data %>% 
@@ -195,7 +214,7 @@ ggplot(data, aes(x = shared_water, fill = ELISA_sample)) +
 
 ### Plot for Other Variables vs ELISA Result
 ```{r message = FALSE, warning = FALSE}
-variables <- c("Age", "Sex", "Breed", "sector", "animals_live_with_people", "farm_fenced", "wildlife_interaction", "shared_water", "breeding_methods", "having_vet", "buryingAbort", "animalFeedAbort", "throwingAbort", "new_introduction", "brucellosis_awareness")
+variables <- c("species","Age", "Sex", "Breed", "sector", "animals_live_with_people", "farm_fenced", "wildlife_interaction", "shared_water", "breeding_methods", "having_vet", "buryingAbort", "animalFeedAbort", "throwingAbort", "new_introduction", "brucellosis_awareness")
 
 for (var in variables) {
   p <- ggplot(data, aes_string(x = var, fill = "ELISA_sample")) +
