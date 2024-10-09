@@ -8,20 +8,18 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 70%;
+      height: 100%;
       font-family: Arial, sans-serif;
       overflow-y: auto; /* Allow the entire page to scroll */
       font-size: 16px; /* Standardize the font size */
     }
-
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 80%; /* Set the same width for all contents */
+      max-width: 1200px; /* Optional: max width for large screens */
+      margin: 0 auto; /* Center the content */
       text-align: justify; /* Justify the text */
       padding: 20px;
       box-sizing: border-box;
-      width: 100%;
     }
     .tab-container {
       display: flex;
@@ -39,24 +37,20 @@
     .tab.active {
       background-color: blue;
     }
-    /*iframe {
+    iframe {
       width: 100%;
-      height: 300;
+      height: auto; /* Allow the iframe to grow with content */
       border: none;
-    }*/
+      margin-top: 20px;
+    }
     h1, h2, h3 {
-      text-align: left; /* Justify headings */
-      margin-bottom: 15px; /* Keep space below h1 and h2 */
+      text-align: justify;
+      margin-bottom: 15px;
     }
     p {
       margin-bottom: 15px;
-      text-align: left; /* Justify paragraphs */
-      width: 80%; /* Ensure paragraphs are well formatted */
+      text-align: justify;
     }
-    h3 {
-      margin-bottom: 0; /* Remove space below h3 */
-    }
-
   </style>
 </head>
 <body>
