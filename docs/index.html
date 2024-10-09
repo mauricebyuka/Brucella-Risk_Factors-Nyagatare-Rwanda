@@ -17,8 +17,9 @@
       width: 80%; /* Set the same width for all contents */
       max-width: 1200px; /* Optional: max width for large screens */
       margin: 0 auto; /* Center the content */
+      padding-left: 20px; /* Adjust for left and right margins */
+      padding-right: 20px;
       text-align: justify; /* Justify the text */
-      padding: 20px;
       box-sizing: border-box;
     }
     .tab-container {
@@ -38,10 +39,11 @@
       background-color: blue;
     }
     iframe {
-      width: 100%;
-      height: 600vh;
+      width: calc(100% - 40px); /* Add the same padding to align with text */
+      height: 90vh; /* Increased to 90% of the viewport height */
       border: none;
       margin-top: 20px;
+      margin-left: 0; /* Remove any extra left margin */
     }
     h1, h2, h3 {
       text-align: justify;
@@ -61,10 +63,10 @@
     <h3>2024-10-08</h3>
 
     <h2>Introduction</h2>
+    
     <p>This document contains the code used for assessing the risk factors associated with Brucellosis in the Nyagatare district of Rwanda. The results of this analysis have been published in the journal PLOS Neglected Tropical Diseases. This code and associated data are made available to readers who would like to reproduce the results presented in the publication.</p>
 
     <p>To reproduce this analysis, clone (or dowbload) the content of this repository. The R markdown files are in the folder docs. The data are in the "data" folder. The output folder (empty after cloning or downloading will receive files resulting from running the commands. You will ensure that all required libraries are installed prior to running the code chuncs of the R markdown</p>
-
 
     <!-- Tab Container -->
     <div class="tab-container">
