@@ -352,9 +352,10 @@ display: none;
 </div>
 
 
-<div id="load-necessary-libraries" class="section level2">
-<h2>Load necessary libraries</h2>
+<div id="load-necessary-libraries" class="section level3">
+<h3>Load necessary libraries</h3>
 <pre class="r"><code>library(tidyverse)</code></pre>
+</div>
 <div id="read-the-dataset" class="section level3">
 <h3>Read the dataset</h3>
 <pre class="r"><code>database &lt;- read.csv(&#39;../data/Humans_raw_Combined_Data.csv&#39;)
@@ -365,9 +366,7 @@ variables &lt;- read.csv(&#39;../data/Human_data_variables.csv&#39;)</code></pre
 <p>This will allow us to create subdatasets for the high risk groups:
 veterinarians and butchers.</p>
 <pre class="r"><code>all_variables &lt;- variables$all_entries
-
 all_data &lt;- database %&gt;% select(all_of(all_variables))
-
 dim(all_data)</code></pre>
 <pre><code>## [1] 886  45</code></pre>
 <pre class="r"><code># Make a sub-dataset for butchers
@@ -420,7 +419,7 @@ all_data &lt;- all_data %&gt;% select(-c(&quot;Sleeping_with_animals&quot;, &quo
 #Removing symptom variables (we can re-introduce them leter as a separate analysis together with pregancy and miscarriage information)
 rfData &lt;- all_data %&gt;% select(-c(&quot;fever&quot;, &quot;Night_Sweats&quot;, &quot;Fatigue&quot;, &quot;Joint_pain&quot;, &quot;Swollen_joints&quot;, &quot;Muscular_pain&quot;, &quot;Back_pain&quot;, &quot;Headaches&quot;, &quot;Loss_of_appetite&quot;, &quot;fever_time&quot;, &quot;fever_type&quot;, &quot;Fever_duration&quot;, &quot;Seek_health_care_If_feve&quot;, &quot;Hospitalized&quot;, &quot;Recovered&quot;))
 
-## Removing Placeholders and RBT )
+## Removing Placeholder variables and RBT )
 rfData &lt;- rfData  %&gt;% select(-c(&quot;female&quot;, &quot;pregrant&quot;, &quot;live_births&quot;, &quot;miscarrage_or_stillbirths&quot;, &quot;RBT&quot;)) #rfData = Dataset for risk factors
 # table(rfData$OccupGroup)</code></pre>
 </div>
@@ -438,7 +437,6 @@ colnames(rfData)</code></pre>
 <pre class="r"><code># Write data to a file.
 
 write.csv(rfData, &#39;../output/Humans_regression_data.csv&#39;, row.names = FALSE)</code></pre>
-</div>
 </div>
 
 

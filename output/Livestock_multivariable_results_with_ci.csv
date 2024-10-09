@@ -1,0 +1,17 @@
+"term","odds_ratio","lower_ci","upper_ci","p.value"
+"Sector: Rwempasha",1.9,0.79,4.72,0.154989918537498
+"Sector: Rwimiyaga",3.06,1.37,7.45,0.0089953789670818
+"Herd size: cattle",1.02,1.01,1.04,0.00843018489861954
+"Herd size: sheep",0.97,0.94,1,0.0999587689433398
+"Herd size: goats",1.01,1,1.03,0.150264748975505
+"Farm fenced: Yes",2.4,0.79,9.27,0.15555887630082
+"Shared water points: Yes",2.49,1.27,4.93,0.00812875395644262
+"Feeding aborted materials to Animals: Yes",0.33,0.11,0.91,0.036614145988122
+"Throwing aborted materials in open fields: Yes",3.15,1.18,7.99,0.0176009292785126
+"Livestock species: goat",0.99,0.54,1.76,0.969558493484471
+"Livestock species: sheep",0.12,0.01,0.6,0.0416806925280535
+"Age category: Adult",9.26,1.82,169.73,0.0331989157523248
+"Age category: Young Adult ",4.44,0.16,126.41,0.320562810603443
+"Livestock sex: Male",0.34,0.08,1,0.0864565342884364
+"Aborting animal fate: Kept in the herd",10.01,2.27,49.19,0.00311298255915768
+"Burying aborted materials: Yes",0.08,0.02,0.26,6.6115419379633e-05
