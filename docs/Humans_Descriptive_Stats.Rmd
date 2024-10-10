@@ -193,7 +193,7 @@ contact_vs_elisa
 ```{r, message=FALSE, warning=FALSE}
 ggplot(data, aes(x = contact_with_waste, fill = ELISA)) +
   geom_bar(position = "fill") +
-  geom_text(stat = "count", aes(label = scales::percent(..count.. / sum(..count..))), position = position_fill(vjust = 0.5)) +
+  geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / tapply(..count.., ..x.., sum)[..x..] * 100, 1), "%", ")")), position = position_fill(vjust = 0.5)) +
   labs(title = "Contact with Waste vs ELISA Result", x = "Contact with Waste", y = "Proportion", fill = "ELISA Result") +
   theme_minimal()
 ```
@@ -205,8 +205,8 @@ variables <- c("Age", "Gender", "OccupGroup", "Marital_status", "Education", "pa
 for (var in variables) {
   p <- ggplot(data, aes_string(x = var, fill = "ELISA")) +
     geom_bar(position = "fill") +
-    geom_text(stat = "count", aes(label = scales::percent(..count.. / sum(..count..))), position = position_fill(vjust = 0.5)) +
-    labs(title = paste("ELISA Result vs", var), x = var, y = "Proportion", fill = "ELISA Result") +
+    geom_text(stat = "count", aes(label = paste0(..count.., " (", round(..count.. / tapply(..count.., ..x.., sum)[..x..] * 100, 1), "%", ")")), position = position_fill(vjust = 0.5)) +
+    labs(title = paste("ELISA Result vs", var, "in Livestock"), x = var, y = "Proportion", fill = "ELISA Result") +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
   print(p)
