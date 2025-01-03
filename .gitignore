@@ -48,3 +48,11 @@ po/*~
 rsconnect/
 .DS_Store
 docs_backup
+docs/.DS_Store
+data/.DS_Store
+output/.DS_Store
+output/.outputfiles
+docs/Humans_Descriptive_Stats.Rmd
+docs/Humans_Regression_Analysis.Rmd
+docs/Livestock_Descriptive_Stats.Rmd
+docs/Livestock_Regression_Analysis.Rmd
